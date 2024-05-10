@@ -12,7 +12,6 @@ public class Minion : MonoBehaviour
     private  Transform currentPoint; 
     private Rigidbody2D rb;    
     [Header("Stats")]
-    public float health = 5; 
     public float damage = 2;
     public float speed = 3;
     // Start is called before the first frame update
@@ -55,4 +54,9 @@ public class Minion : MonoBehaviour
         Scaler.x*= -1; 
         transform.localScale = Scaler;
     }
+
+    void OnCollisionEnter2D(Collision2D other){
+            if(other.gameObject.CompareTag("Player")){}
+                other.gameObject.GetComponent<PlayerController>().takeDamage(damage);
+            }
 }

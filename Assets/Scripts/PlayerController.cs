@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
@@ -9,12 +10,16 @@ The PlayerController is to control the Actual player with WASD controlling
 */
 public class PlayerController : MonoBehaviour
 {
+    [Header("Stats")]
+    [SerializeField]private float health = 100f; 
+    
     // movementspeed from the character 
     [SerializeField]private float speed; 
     
      // movementspeed from the character 
     [SerializeField]private float JumpForce; 
 
+    [SerializeField]private float damage= 2;
     // rigidbody 2d to move the Player
     private new Rigidbody2D rigidbody2D; 
 
@@ -209,4 +214,13 @@ public class PlayerController : MonoBehaviour
         isWallJumping = false;
     }
     
+    void OnCollisionEnter2D(Collision2D other){
+        if(isDashing && other.gameObject.CompareTag("Enemy")){
+                other.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);   
+        }
+    }
+
+    public void takeDamage(float damage){
+        health-=damage; 
+    }
 }
