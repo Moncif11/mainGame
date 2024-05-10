@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     // boolean to check the Player are under a ground or not  
     bool grounded; 
 
+    private float horizontal; 
     //Dash implemented variables 
     private bool canDash = true ;
     private bool isDashing ;
@@ -38,9 +39,10 @@ public class PlayerController : MonoBehaviour
     //gravtiy 
 
     [Header("Gravity")]
-    public float multGravity = 9.81f;
+    public float baseGravity = 2f;
+    public float multGravity = 18f;
 
-    public  float maxFallSpeed = 12; 
+    public  float maxFallSpeed = 2; 
 
       //variables all for wall Jump 
     [Header("Ground Check")]
@@ -76,11 +78,14 @@ public class PlayerController : MonoBehaviour
     }
     void Update(){
         Jump();
-        float moveInput = Input.GetAxis("Horizontal");
-        if(facingRight==false && moveInput<0){
+        processGravity();
+        processWallSliding();
+        ProcessWallJumping(); 
+        horizontal = Input.GetAxisRaw("Horizontal");
+        if(facingRight==false && horizontal<0){
             Flip();
         }
-        else if (facingRight==true && moveInput>0){
+        else if (facingRight==true && horizontal>0){
              Flip();
         }
         
@@ -88,10 +93,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   //grounded = Physics2D.OverlapCircle(groundCheck.position); 
-            processWallSliding();
-            ProcessWallJumping(); 
-            float moveInput = Input.GetAxis("Horizontal");
-            rigidbody2D.velocity = new Vector2(moveInput*speed,rigidbody2D.velocity.y);
+            rigidbody2D.velocity = new Vector2(horizontal*speed,rigidbody2D.velocity.y);
 
         if(Input.GetKey(KeyCode.E) && canDash){
             StartCoroutine(Dash()); 
@@ -111,11 +113,25 @@ public class PlayerController : MonoBehaviour
             if(grounded){
             rigidbody2D.velocity =  new Vector2(rigidbody2D.velocity.x,JumpForce);
             Debug.Log("Jump Velocity: " + rigidbody2D.velocity);
-            grounded = false; 
             }
         }
         grounded = Physics2D.OverlapBox(groundCheckPos.position,groundCheckSize,0,groundCheckLayer);
         Debug.Log("grounded : "+grounded);
+
+        if(WallJumpTimer >0f && Input.GetKeyDown(KeyCode.Space)){
+                isWallJumping = true; 
+                rigidbody2D.velocity = new Vector2(WallJumpDirection*WallJumpPower.x,WallJumpPower.y); 
+                WallJumpTimer = 0f; 
+                if(transform.localScale.x != WallJumpDirection){
+                    facingRight = !facingRight;
+                    Vector3 Scaler = transform.localScale;
+                    Scaler.x*= -1; 
+                    transform.localScale = Scaler;
+                }
+            Invoke(nameof(CancelWallJump),wallJumpDuration + 0.1f);
+        }
+
+        
     }
     private IEnumerator Dash(){
         canDash = false; 
@@ -133,18 +149,20 @@ public class PlayerController : MonoBehaviour
     }
 
     void processGravity(){
-        if (rigidbody2D.velocity.y > 0){
-            float baseGravity= rigidbody2D.gravityScale;
+        if (rigidbody2D.velocity.y < 0){
             rigidbody2D.gravityScale = baseGravity*multGravity; 
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,Mathf.Max(rigidbody2D.velocity.y,-maxFallSpeed)); 
+        }
+        else{
+            rigidbody2D.gravityScale= baseGravity;
         }
     }
 
     private void processWallSliding(){
-        if (grounded==false && WallCheck()&&Input.GetAxis("Horizontal")!=0){
+        if (grounded==false && WallCheck()&&horizontal!= 0){
             isWallSliding = true;
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,Mathf.Max(rigidbody2D.velocity.y,-WallSlideSpeed));
-            Debug.Log("Wall sliding velocity: " + rigidbody2D.velocity.ToString());
+            Debug.Log("Gravity : " + rigidbody2D.gravityScale);
         }
         else{
             isWallSliding = false;
@@ -184,20 +202,6 @@ public class PlayerController : MonoBehaviour
             WallJumpTimer -= Time.deltaTime; 
 
         }
-
-        if(WallJumpTimer >0f && Input.GetKeyDown(KeyCode.Space)){
-                isWallJumping = true; 
-                rigidbody2D.velocity = new Vector2(WallJumpDirection*WallJumpPower.x,WallJumpPower.y); 
-                WallJumpTimer = 0f; 
-        }
-
-        /*if(transform.localScale.x != WallJumpDirection){
-            facingRight = !facingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *=-1f;
-            transform.localScale = localScale;
-        }*/
-        Invoke(nameof(CancelWallJump),wallJumpDuration);
     }
     private void CancelWallJump(){
         isWallJumping = false;

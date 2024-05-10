@@ -149,8 +149,8 @@ Transform:
   m_GameObject: {fileID: 341344964}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4920001, y: 0.23699999, z: 0}
-  m_LocalScale: {x: 0.4551, y: 0.4487, z: 1}
+  m_LocalPosition: {x: 0.25, y: 0.17, z: 0}
+  m_LocalScale: {x: 0.28293568, y: 0.26639318, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 904743034}
@@ -197,7 +197,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -233,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 551589062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.739, y: -0, z: 0}
+  m_LocalPosition: {x: 0.59, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,8 +401,9 @@ MonoBehaviour:
   dashingCooldown: 1
   dashsingPower: 24
   tr: {fileID: 904743036}
-  multGravity: 9.81
-  maxFallSpeed: 12
+  baseGravity: 2
+  multGravity: 18
+  maxFallSpeed: 2
   groundCheckPos: {fileID: 1306549826}
   groundCheckSize: {x: 1, y: 0.1106626}
   groundCheckLayer:
@@ -429,7 +430,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 11
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
