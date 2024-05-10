@@ -77,11 +77,11 @@ public class PlayerController : MonoBehaviour
         tr = GetComponent<TrailRenderer>();
     }
     void Update(){
+        horizontal = Input.GetAxisRaw("Horizontal");
         Jump();
         processGravity();
         processWallSliding();
-        ProcessWallJumping(); 
-        horizontal = Input.GetAxisRaw("Horizontal");
+        ProcessWallJumping();  
         if(facingRight==false && horizontal<0){
             Flip();
         }
@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
     }
     // Update is called once per frame
     void FixedUpdate()
-    {   //grounded = Physics2D.OverlapCircle(groundCheck.position); 
+    {   //grounded = Physics2D.OverlapCircle(groundCheck.position);
             rigidbody2D.velocity = new Vector2(horizontal*speed,rigidbody2D.velocity.y);
 
         if(Input.GetKey(KeyCode.E) && canDash){
@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
     }
     
     void Jump(){
-        if(Input.GetKey(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Space)){
             Debug.Log("Jumped");
             if(grounded){
             rigidbody2D.velocity =  new Vector2(rigidbody2D.velocity.x,JumpForce);
@@ -159,8 +159,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private void processWallSliding(){
-        if (grounded==false && WallCheck()&&horizontal!= 0){
+        if (grounded==false && WallCheck()){
+            Debug.Log("WallSliding");
             isWallSliding = true;
+            Debug.Log("Horizontal Input: "+horizontal); 
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,Mathf.Max(rigidbody2D.velocity.y,-WallSlideSpeed));
             Debug.Log("Gravity : " + rigidbody2D.gravityScale);
         }

@@ -403,7 +403,7 @@ MonoBehaviour:
   tr: {fileID: 904743036}
   baseGravity: 2
   multGravity: 18
-  maxFallSpeed: 2
+  maxFallSpeed: 5
   groundCheckPos: {fileID: 1306549826}
   groundCheckSize: {x: 1, y: 0.1106626}
   groundCheckLayer:
