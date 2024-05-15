@@ -34,22 +34,35 @@ public class CapePlayerController : MonoBehaviour
     public Transform myCam;
     public float jumpforce;
     public float speed;
+    [Header("Dash")]
+
+    [SerializeField] private TrailRenderer tr; 
+     [SerializeField] private float  dashingPower=24f; 
     public float dashSpeed;
     public float dashTime;
     public float dashCooldown;
     public float wallJumpCooldown;
+
+    [Header("Enviroment Settings")]
     public float feetCheckRadius;
     public float handCheckRadius;
     public float jumptime;
     public float deadEnd;
     public float movBorderX;
     public float movBorderY;
+
+    [Header("Camera Settings")]
     public float cameraOffsetY;
     public float worldEndMinX;
     public float worldEndMaxX;
     public float worldEndMinY;
     public float coyoteTime;
     public float slideSpeed;
+
+    [Header("Stats")]
+    [SerializeField] private float damage = 2;
+    [SerializeField] private float health = 2;
+
 
     void Start()
     {
@@ -60,6 +73,7 @@ public class CapePlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         originGravity = rb.gravityScale;
+        tr = GetComponent<TrailRenderer>();
     }
 
     void FixedUpdate()
@@ -342,13 +356,17 @@ public class CapePlayerController : MonoBehaviour
     }
 
     IEnumerator dashing()
-    {
-        dash = true;
-        dashReady = false;
-        yield return new WaitForSecondsRealtime(dashTime);
-        dash = false;
-        yield return new WaitForSecondsRealtime(dashCooldown);
-        dashReady = true;
+    {   dash = true;
+        float originalGravity = rb.gravityScale ;  
+        rb.gravityScale = 0f; 
+        rb.velocity = new Vector2(transform.localScale.x * dashingPower,0f); 
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashTime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        dash = false; 
+        yield return new WaitForSeconds(dashCooldown);
+        dashReady =  true;
     }
 
     IEnumerator wallJumping()
@@ -368,6 +386,14 @@ public class CapePlayerController : MonoBehaviour
         isWallJumping = false;
     }
     
+    void OnCollisionEnter2D(Collision2D other){
+        if(dash && other.gameObject.CompareTag("Enemy")){
+                other.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);   
+        }
+    }
+    public void takeDamage(float damage){
+        health-=damage; 
+    }
     void changeAnimationState(string newState)
     {
         if (currentState == newState) return;

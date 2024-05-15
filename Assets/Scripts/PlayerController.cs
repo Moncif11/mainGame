@@ -1,9 +1,6 @@
 using System;
 using System.Collections;
-using Unity.VisualScripting;
-using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 
 /*
 The PlayerController is to control the Actual player with WASD controlling  
@@ -64,9 +61,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask WallCheckLayer;
 
     [Header("Wall Movement")]
-    public float WallSlideSpeed = 2;
+    public float WallSlideSpeed = 2f;
     bool isWallSliding; 
     
+    bool isTouchingWall; 
     bool isWallJumping;
     public float WallJumpDirection; 
     float WallJumpTime;
@@ -77,16 +75,44 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        isDashing = false; 
+        isWallJumping = false;        
         rigidbody2D = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
     }
     void Update(){
-        horizontal = Input.GetAxisRaw("Horizontal");
-        Jump();
-        processGravity();
-        processWallSliding();
-        ProcessWallJumping();  
+            horizontal = Input.GetAxisRaw("Horizontal");
+            rigidbody2D.velocity = new Vector2(horizontal*speed,rigidbody2D.velocity.y);
+             grounded = Physics2D.OverlapBox(groundCheckPos.position,groundCheckSize,0 ,groundCheckLayer);
+            isTouchingWall = Physics2D.OverlapBox(wallCheckPos.position,wallCheckSize , 0, WallCheckLayer);
+            processGravity(); 
+         if (isTouchingWall && !grounded && rigidbody2D.velocity.y < 0)
+        {
+            isWallSliding = true;
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+
+        if (isWallSliding)
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, -WallSlideSpeed);
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isWallSliding)
+            {
+                WallJump();
+            }
+            else if (grounded)
+            {
+                Jump();
+            }
+        }
+
         if(facingRight==false && horizontal<0){
             Flip();
         }
@@ -97,9 +123,7 @@ public class PlayerController : MonoBehaviour
     }
     // Update is called once per frame
     void FixedUpdate()
-    {   //grounded = Physics2D.OverlapCircle(groundCheck.position);
-            rigidbody2D.velocity = new Vector2(horizontal*speed,rigidbody2D.velocity.y);
-
+    { 
         if(Input.GetKey(KeyCode.E) && canDash){
             StartCoroutine(Dash()); 
         }
@@ -113,30 +137,15 @@ public class PlayerController : MonoBehaviour
     }
     
     void Jump(){
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("Jumped");
+       // if(Input.GetKeyDown(KeyCode.Space)){
+            //grounded = Physics2D.OverlapBox(groundCheckPos.position,groundCheckSize,0,groundCheckLayer);
             if(grounded){
+            grounded =false;
+            Debug.Log("Jumped");
             rigidbody2D.velocity =  new Vector2(rigidbody2D.velocity.x,JumpForce);
             Debug.Log("Jump Velocity: " + rigidbody2D.velocity);
             }
-        }
-        grounded = Physics2D.OverlapBox(groundCheckPos.position,groundCheckSize,0,groundCheckLayer);
-        Debug.Log("grounded : "+grounded);
-
-        if(WallJumpTimer >0f && Input.GetKeyDown(KeyCode.Space)){
-                isWallJumping = true; 
-                rigidbody2D.velocity = new Vector2(WallJumpDirection*WallJumpPower.x,WallJumpPower.y); 
-                WallJumpTimer = 0f; 
-                if(transform.localScale.x != WallJumpDirection){
-                    facingRight = !facingRight;
-                    Vector3 Scaler = transform.localScale;
-                    Scaler.x*= -1; 
-                    transform.localScale = Scaler;
-                }
-            Invoke(nameof(CancelWallJump),wallJumpDuration + 0.1f);
-        }
-
-        
+        //}
     }
     private IEnumerator Dash(){
         canDash = false; 
@@ -162,65 +171,32 @@ public class PlayerController : MonoBehaviour
             rigidbody2D.gravityScale= baseGravity;
         }
     }
-
-    private void processWallSliding(){
-        if (grounded==false && WallCheck()){
-            Debug.Log("WallSliding");
-            isWallSliding = true;
-            Debug.Log("Horizontal Input: "+horizontal); 
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x,Mathf.Max(rigidbody2D.velocity.y,-WallSlideSpeed));
-            Debug.Log("Gravity : " + rigidbody2D.gravityScale);
-        }
-        else{
-            isWallSliding = false;
-        }
-        Debug.Log("isWallSliding: " + isWallSliding); 
-    }
-
-    //Gizmo color by selecting the separating the boxColliders 
-    void OnDrawGizmoSelected(){
-        Gizmos.color = Color.yellow; 
-        Gizmos.DrawWireCube(wallCheckPos.position, wallCheckSize);
-        }
-    
     private bool WallCheck() {
         return Physics2D.OverlapBox(wallCheckPos.position,wallCheckSize,0,WallCheckLayer); 
     }
 
-    private void WallJump( ){
-        if(isWallSliding){
-            isWallJumping = false; 
-            WallJumpDirection = -transform.localScale.x;
-            WallJumpTimer = WallJumpTime;
-        }
-        else{
-            WallJumpTimer -=Time.deltaTime; 
-        }
-    }
 
-    private void ProcessWallJumping(){
-        if(isWallSliding){
-            isWallJumping = false; 
-            WallJumpDirection = -transform.localScale.x;
-            WallJumpTimer = WallJumpTime;
-            CancelInvoke(nameof(CancelWallJump));
+    //Gizmo color by selecting the separating the boxColliders 
+    void OnDrawGizmoSelected(){
+        Gizmos.color = Color.red; 
+        Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
+        Gizmos.color = Color.blue; 
+        Gizmos.DrawWireCube(wallCheckPos.position, wallCheckSize);
         }
-        else{
-            WallJumpTimer -= Time.deltaTime; 
-
-        }
-    }
-    private void CancelWallJump(){
-        isWallJumping = false;
-    }
+    
     
     void OnCollisionEnter2D(Collision2D other){
         if(isDashing && other.gameObject.CompareTag("Enemy")){
                 other.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);   
         }
     }
-
+    
     public void takeDamage(float damage){
         health-=damage; 
+    }
+
+    void WallJump()
+    {
+        rigidbody2D.velocity = new Vector2(- rigidbody2D.velocity.x, JumpForce);
     }
 }
