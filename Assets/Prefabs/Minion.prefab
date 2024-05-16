@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7173942629771558065}
   - component: {fileID: 1908990461475907065}
   - component: {fileID: 5462075400919935071}
+  - component: {fileID: 5615516442985632711}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Enemy
@@ -282,9 +283,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointA: {fileID: 6311348795418319453}
   PointB: {fileID: 5174902751668330605}
-  health: 5
   damage: 2
   speed: 3
+--- !u!114 &5615516442985632711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606653256878649838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411263ab81bfa0649b237f73abad2579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 5
 --- !u!1 &5174902751668330605
 GameObject:
   m_ObjectHideFlags: 0

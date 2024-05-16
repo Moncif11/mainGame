@@ -57,8 +57,11 @@ public class Minion : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Player")) {
+            if (!other.gameObject.GetComponent<CapePlayerController>().dash){
             other.gameObject.GetComponent<PlayerController>()?.takeDamage(damage);
             other.gameObject.GetComponent<CapePlayerController>()?.takeDamage(damage);
+            Debug.Log("Damage: " + damage);
+            }
         }
     }
 }

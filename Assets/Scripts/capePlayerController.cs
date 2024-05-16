@@ -24,7 +24,7 @@ public class CapePlayerController : MonoBehaviour
     private bool isWallJumping;
     bool movementFreezed;
     bool jump;
-    bool dash;
+    public bool dash;
     bool dashReady;
 
     public LayerMask platform;
@@ -61,7 +61,7 @@ public class CapePlayerController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float damage = 2;
-    [SerializeField] private float health = 2;
+    [SerializeField] public float health = 2;
 
 
     void Start()
@@ -392,6 +392,7 @@ public class CapePlayerController : MonoBehaviour
         }
     }
     public void takeDamage(float damage){
+        if(!dash)
         health-=damage; 
     }
     void changeAnimationState(string newState)
