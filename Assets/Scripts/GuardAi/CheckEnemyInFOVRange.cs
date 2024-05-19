@@ -4,8 +4,10 @@ using UnityEngine;
 public class CheckEnemyInFOVRange : Node
 {
     public Transform _transform; 
+ 
     public CheckEnemyInFOVRange(Transform transform){
         _transform = transform;
+
     }   
 
     public override NodeState Evaluate(){

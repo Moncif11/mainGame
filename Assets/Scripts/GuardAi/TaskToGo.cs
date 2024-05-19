@@ -11,13 +11,15 @@ public class TaskToGo : Node
     public override NodeState Evaluate()
     {   
         Transform target = (Transform)GetData("target");
-        Debug.Log("Target Position: "+ target.position);  
+        Debug.Log("Target Position: "+ target.position);
+        Debug.Log("Runningstate: "+state);  
         if(Vector2.Distance(_transform.position, target.position)>0.01f){
             Debug.Log("TaskToGo: Success");
              _transform.position = Vector2.MoveTowards(_transform.position,target.position, GuardBT.speed*Time.deltaTime);
         }
         Debug.Log("TaskToGo: Running");
-        state = NodeState.RUNNING; 
-        return state;  
+         state = NodeState.RUNNING; 
+         return state;  
+        
     }
 }
