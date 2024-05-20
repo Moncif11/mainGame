@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other){
         if(isDashing && other.gameObject.CompareTag("Enemy")){
-                other.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);   
+                other.gameObject.GetComponent<Health>().takeDamage(damage);   
         }
     }
     

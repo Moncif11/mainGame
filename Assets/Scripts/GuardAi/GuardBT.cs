@@ -8,7 +8,7 @@ public class GuardBT : Tree {
 
     public static float fovRange = 8f;
 
-    public static float attackRange = 2f; 
+    public static float attackRange = 5f; 
 
     public UnityEngine.GameObject bulletPrefab; 
 
@@ -19,7 +19,7 @@ public class GuardBT : Tree {
             new List<Node>{
                 new Sequence( new List<Node>{
                             new CheckEnemyAttack(transform),  
-                            new TaskAttack(bulletPrefab),
+                            new TaskAttack(bulletPrefab,transform),
                         }),
                     new Sequence(
                         new List<Node>{

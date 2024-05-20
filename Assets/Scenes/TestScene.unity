@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 411263ab81bfa0649b237f73abad2579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 5
 --- !u!50 &177870093
 Rigidbody2D:
@@ -336,7 +337,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 872739248}
   - {fileID: 736274681}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 7315785336683993725, guid: caa038be75a610840bb87b4a96ac8c64, type: 3}
 --- !u!1 &269736950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6975059743569921169, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
@@ -464,6 +465,20 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &269736957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269736950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411263ab81bfa0649b237f73abad2579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 5
 --- !u!1 &413697324
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +781,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6975059743569921169, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 269736956}
+    - targetCorrespondingSourceObject: {fileID: 6975059743569921169, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269736957}
   m_SourcePrefab: {fileID: 100100000, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
 --- !u!1 &872739247
 GameObject:

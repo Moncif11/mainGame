@@ -61,7 +61,6 @@ public class CapePlayerController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float damage = 2;
-    [SerializeField] public float health = 2;
 
 
     void Start()
@@ -388,12 +387,8 @@ public class CapePlayerController : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other){
         if(dash && other.gameObject.CompareTag("Enemy")){
-                other.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);   
+                other.gameObject.GetComponent<Health>().takeDamage(damage);   
         }
-    }
-    public void takeDamage(float damage){
-        if(!dash)
-        health-=damage; 
     }
     void changeAnimationState(string newState)
     {
