@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -9088794221617938359}
   - component: {fileID: -6422113528232985979}
   - component: {fileID: 660143978171534214}
-  - component: {fileID: 3216277492712529756}
+  - component: {fileID: -7588879415348910488}
   m_Layer: 0
   m_Name: IceShot
   m_TagString: Untagged
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3216277492712529756
+--- !u!114 &-7588879415348910488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7315785336683993725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906996e42f73ffa44981f5c876865a1a, type: 3}
+  m_Script: {fileID: 11500000, guid: aa32c757650f92c4b90e942792706d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   user: 1
