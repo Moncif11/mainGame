@@ -61,8 +61,7 @@ public class CapePlayerController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float damage = 2;
-
-
+    public GameObject bulletPrefab; 
     void Start()
     {
         isWallJumping = false;
@@ -326,6 +325,12 @@ public class CapePlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        /*if(Input.GetKeyDown(KeyCode.E)){
+            GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
+                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
+                bulletRB.AddForce(transform.right*1000);
+        }
+        */
     }
 
     void OnTriggerStay2D(Collider2D other)
