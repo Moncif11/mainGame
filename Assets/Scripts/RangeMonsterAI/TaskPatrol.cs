@@ -25,6 +25,7 @@ public class TaskPatrol : Node
             _currentWayPointIndex = (_currentWayPointIndex+1) % _waypoints.Length;
             Flip(); 
             isRight(); 
+            state = NodeState.SUCCESS;
         }
         else{
             _transform.position = Vector2.MoveTowards(_transform.position,wp.position, GuardBT.speed*Time.deltaTime);

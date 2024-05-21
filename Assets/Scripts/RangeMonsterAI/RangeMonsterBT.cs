@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using BehaviorTree;
 
-public class GuardBT : Tree {
+public class RangeMonsterBT : Tree {
 
     public UnityEngine.Transform[] waypoints;
     public static float speed = 2f;

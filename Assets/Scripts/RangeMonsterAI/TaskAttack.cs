@@ -26,6 +26,7 @@ public class TaskAttack : Node{
         }  
         attackCounter+= Time.deltaTime;
         if(attackCounter >= attackTime){
+            _transform.position = _transform.position;
             if(GuardBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
