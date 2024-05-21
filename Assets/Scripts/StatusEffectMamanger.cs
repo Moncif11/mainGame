@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class StatusEffectManager : MonoBehaviour
@@ -44,6 +43,5 @@ public class StatusEffectManager : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitForSeconds(freezeTicktimer);  
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;   
-    
     }
 }
