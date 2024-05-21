@@ -23,7 +23,7 @@ public class CheckEnemyInFOVRange : Node
                 targetPlayer = players[i].transform;
             }
             }
-            if(minDistance <= GuardBT.fovRange){
+            if(minDistance <= RangeMonsterBT.fovRange){
                 parent.parent.SetData("target",targetPlayer); 
                 Debug.Log("CheckEnemyInFOVRange : SUCCESS");
                 state= NodeState.SUCCESS; 

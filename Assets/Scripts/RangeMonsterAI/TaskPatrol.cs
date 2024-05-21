@@ -28,7 +28,7 @@ public class TaskPatrol : Node
             state = NodeState.SUCCESS;
         }
         else{
-            _transform.position = Vector2.MoveTowards(_transform.position,wp.position, GuardBT.speed*Time.deltaTime);
+            _transform.position = Vector2.MoveTowards(_transform.position,wp.position, RangeMonsterBT.speed*Time.deltaTime);
         }   
         state = NodeState.RUNNING;
         return state;
@@ -44,11 +44,11 @@ public class TaskPatrol : Node
          Vector2 direction = (_transform.position - _waypoints[_currentWayPointIndex].position).normalized; 
          if (direction.x < 0)
         {
-            GuardBT.isRight = false; // Nach links schauen
+            RangeMonsterBT.isRight = false; // Nach links schauen
         }
         else if (direction.x > 0)
         {
-            GuardBT.isRight = true; // Nach rechts schauen
+            RangeMonsterBT.isRight = true; // Nach rechts schauen
         }  
     }
 }
