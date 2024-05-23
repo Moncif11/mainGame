@@ -23,21 +23,28 @@ public class TaskPatrol : Node
         if(Vector2.Distance(wp.position,_transform.position)<0.01f){
             _transform.position = wp.position;   
             _currentWayPointIndex = (_currentWayPointIndex+1) % _waypoints.Length;
-            Flip(); 
-            isRight(); 
-            state = NodeState.SUCCESS;
+            //state = NodeState.SUCCESS;
         }
         else{
             _transform.position = Vector2.MoveTowards(_transform.position,wp.position, RangeMonsterBT.speed*Time.deltaTime);
         }   
+         isRight();
+         Flip();
         state = NodeState.RUNNING;
         return state;
     }
 
     private void Flip(){
-        Vector3 Scaler = _transform.localScale;
-        Scaler.x*= -1; 
-        _transform.localScale = Scaler;
+        if(RangeMonsterBT.isRight){
+            Vector3 Scaler = _transform.localScale;
+            Scaler.x = -1; 
+            _transform.localScale = Scaler;
+        }
+        else{
+            Vector3 Scaler = _transform.localScale;
+            Scaler.x = 1; 
+            _transform.localScale = Scaler;
+        }
     }
 
     private void isRight(){

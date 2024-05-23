@@ -37,7 +37,6 @@ public class CheckEnemyInFOVRange : Node
                 return state;
         }
             Debug.Log("CheckEnemyInFOVRange : FAILURE");
-
             state= NodeState.FAILURE; 
             return state;
     }
