@@ -21,8 +21,6 @@ public class RangeMonsterBT : Tree {
                             new CheckEnemyAttack(transform),  
                             new TaskAttack(bulletPrefab,transform),
                        }),
-
-
                     new Sequence(
                         new List<Node>{
                             new CheckEnemyInFOVRange(transform),  

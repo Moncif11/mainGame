@@ -1,3 +1,4 @@
+using System.Runtime.Versioning;
 using BehaviorTree;
 using UnityEngine;
 
@@ -14,7 +15,11 @@ public class CheckEnemyInFOVRange : Node
         object t = GetData("target");
          float minDistance = 0f;
          Transform targetPlayer= GameObject.FindGameObjectWithTag("Player").transform; 
-        if(t==null){
+        //if(t==null){
+            if(targetPlayer ==null){
+                state=NodeState.FAILURE; 
+                return state; 
+            }
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player"); 
             minDistance = Vector2.Distance(_transform.position,players[0].transform.position); 
             targetPlayer = players[0].transform;
@@ -24,7 +29,7 @@ public class CheckEnemyInFOVRange : Node
                 targetPlayer = players[i].transform;
             }
             }
-        }
+        //}
         if(minDistance <= RangeMonsterBT.fovRange){
                 parent.parent.SetData("target",targetPlayer); 
                 Debug.Log("CheckEnemyInFOVRange : SUCCESS");
