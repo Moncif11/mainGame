@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 660143978171534214}
   - component: {fileID: 3216277492712529756}
   m_Layer: 0
-  m_Name: WaterShot
+  m_Name: WaterShot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906996e42f73ffa44981f5c876865a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  user: 1
+  user: 0

@@ -84,7 +84,7 @@ public class AbilityManager : MonoBehaviour
         if(capePlayerController.direction == "left"){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + -transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(-transform.right*1000);
+                bulletRB.AddForce(transform.right*1000);
             }
         else if(capePlayerController.direction == "right"){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
@@ -97,7 +97,7 @@ public class AbilityManager : MonoBehaviour
 
     }
     private void FreezeAll(){
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 10f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 11.2f);
 
         foreach (Collider2D collider in colliders)
         {
@@ -110,5 +110,10 @@ public class AbilityManager : MonoBehaviour
                 }
             }  
         }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 11.2f);
     }
 }

@@ -317,6 +317,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   burnTickTimer: 0
   freezeTicktimer: 0
+--- !u!114 &269736964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269736950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cb4218ab77f834788bc0dfa61fc956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilty: 1
+  fireShot: {fileID: 7315785336683993725, guid: 2c8b2a56748fd42498e825a2ba737052, type: 3}
+  fireUlt: {fileID: 0}
+  iceShot: {fileID: 7315785336683993725, guid: 125e8cfd6acf8a04897e4e27cc9b3d15, type: 3}
+  waterShot: {fileID: 7315785336683993725, guid: ad29d9577e6a8c14ba2b9fcf4c1925d4, type: 3}
+  maxUltbar: 100
+  ultBar: 0
 --- !u!1 &736274680
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +564,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6975059743569921169, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 269736958}
+    - targetCorrespondingSourceObject: {fileID: 6975059743569921169, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 269736964}
   m_SourcePrefab: {fileID: 100100000, guid: 8c1ffce5bc41f3946b1064baebc153d4, type: 3}
 --- !u!1 &872739247
 GameObject:
@@ -1146,6 +1168,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5972624283927165147, guid: 2795291114abca846afdea392b83813a, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7315785336683993725, guid: 65cb870712497c0409bfd5f7be4dc6c9, type: 3}
     - target: {fileID: 5972624283927165147, guid: 2795291114abca846afdea392b83813a, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
