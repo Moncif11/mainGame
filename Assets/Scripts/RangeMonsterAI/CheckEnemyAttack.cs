@@ -18,10 +18,10 @@ public class CheckEnemyAttack : Node
         }
         Transform target = (Transform) t;
         Vector2 direction = (_transform.position - target.position).normalized; 
-        if(direction.x<0 && !RangeMonsterBT.isRight){
+        if(direction.x<0 && RangeMonsterBT.isRight){
             isFacing = true; 
         }
-        else if (direction.x>0 && RangeMonsterBT.isRight){
+        else if (direction.x>0 && !RangeMonsterBT.isRight){
             isFacing = true;
         }
         else{

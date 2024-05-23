@@ -1,6 +1,5 @@
 using System.Collections.Generic;
-using System.Diagnostics;
-
+using UnityEngine;
 namespace BehaviorTree{
     public class Sequence : Node
     {
@@ -12,20 +11,26 @@ namespace BehaviorTree{
             foreach(Node node in children){
                 switch(node.Evaluate()){
                     case NodeState.SUCCESS:
+                        Debug.Log("Sequence success.");
+
                         continue;
                     case NodeState.FAILURE:
                         state  = NodeState.FAILURE;
+                        Debug.Log("Sequence failed.");
+
                         return state; 
                     case NodeState.RUNNING:
                         anyChildIsRunning = true;
-                        return state; 
-                    default:
-                        state = NodeState.SUCCESS;
-                        return state;
+                        Debug.Log("Sequence running.");
+
+                        break;
                     }
                 }
+
+               // Debug.Log("Sequence is empty");
+                //return NodeState.SUCCESS;
                 state = anyChildIsRunning ? NodeState.RUNNING: NodeState.SUCCESS;
-                return state;
+               return state;
             } 
         }
 }

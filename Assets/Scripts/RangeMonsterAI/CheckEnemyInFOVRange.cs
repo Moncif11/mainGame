@@ -12,27 +12,28 @@ public class CheckEnemyInFOVRange : Node
 
     public override NodeState Evaluate(){
         object t = GetData("target");
+         float minDistance = 0f;
+         Transform targetPlayer= GameObject.FindGameObjectWithTag("Player").transform; 
         if(t==null){
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            float minDistance = 0f; 
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player"); 
             minDistance = Vector2.Distance(_transform.position,players[0].transform.position); 
-            Transform targetPlayer = players[0].transform;
+            targetPlayer = players[0].transform;
             for(int i = 1; i < players.Length; i++){
             if(Vector2.Distance(_transform.position,players[0].transform.position)<minDistance){
                 minDistance = Vector2.Distance(_transform.position,players[0].transform.position); 
                 targetPlayer = players[i].transform;
             }
             }
-            if(minDistance <= RangeMonsterBT.fovRange){
+        }
+        if(minDistance <= RangeMonsterBT.fovRange){
                 parent.parent.SetData("target",targetPlayer); 
                 Debug.Log("CheckEnemyInFOVRange : SUCCESS");
                 state= NodeState.SUCCESS; 
                 return state;
-            }
+        }
+            Debug.Log("CheckEnemyInFOVRange : FAILURE");
+
             state= NodeState.FAILURE; 
             return state;
-        }
-        state = NodeState.RUNNING; 
-        return state; 
     }
 }

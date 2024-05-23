@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace BehaviorTree{
     public class Selector : Node
@@ -12,13 +13,14 @@ namespace BehaviorTree{
                     case NodeState.SUCCESS:
                         state = NodeState.SUCCESS;
                         return state;
-                    case NodeState.FAILURE:
-                        continue;
                     case NodeState.RUNNING:
                         state = NodeState.RUNNING;
-                        return state; 
-                    default:
-                        break;
+                        
+                        return state;                         
+                    case NodeState.FAILURE:
+                        continue;
+
+
                     }
                 }
                 state = NodeState.FAILURE;

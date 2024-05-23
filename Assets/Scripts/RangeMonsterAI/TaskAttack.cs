@@ -28,14 +28,15 @@ public class TaskAttack : Node{
         if(attackCounter >= attackTime){           
             Debug.Log("Shoot: "+bulletPrefab.name);
             if(RangeMonsterBT.isRight){
-                GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
-                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(-_transform.right*1000);
-            }
-            else{
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(_transform.right*1000);
+            }
+            else{
+                Debug.Log("Shoot left");
+                GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
+                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
+                bulletRB.AddForce(-_transform.right*1000);
             }
             if(capePlayerHealth.health <= 0){
                 Debug.Log("Data Cleared");

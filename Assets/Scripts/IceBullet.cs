@@ -5,7 +5,7 @@ public class IceBullet : MonoBehaviour
 {
    public User user;
   private void OnTriggerEnter2D(Collider2D other){
-    Debug.Log("Hit");
+    Debug.Log("Hit : " + other.gameObject.name);
     if(user== User.PLAYER){
         if(other.CompareTag("Enemy")){
         other.GetComponent<Health>()?.takeDamage(2);
