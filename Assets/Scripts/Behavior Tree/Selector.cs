@@ -18,7 +18,7 @@ namespace BehaviorTree{
                         state = NodeState.RUNNING;
                         return state; 
                     default:
-                        continue;
+                        break;
                     }
                 }
                 state = NodeState.FAILURE;

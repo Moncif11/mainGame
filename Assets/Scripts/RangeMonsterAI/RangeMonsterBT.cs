@@ -8,7 +8,7 @@ public class RangeMonsterBT : Tree {
 
     public static float fovRange = 8f;
 
-    public static float attackRange = 5f; 
+    public static float attackRange = 3f; 
 
     public UnityEngine.GameObject bulletPrefab; 
 

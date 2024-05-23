@@ -10,7 +10,7 @@ public class CapePlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     string lastDir;
-    string direction;
+   public string direction;
     string currentState;
     string currentCapeState;
     float moveInput;

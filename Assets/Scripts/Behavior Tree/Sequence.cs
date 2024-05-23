@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace BehaviorTree{
     public class Sequence : Node
@@ -23,7 +24,7 @@ namespace BehaviorTree{
                         return state;
                     }
                 }
-                state = anyChildIsRunning?NodeState.RUNNING: NodeState.SUCCESS;
+                state = anyChildIsRunning ? NodeState.RUNNING: NodeState.SUCCESS;
                 return state;
             } 
         }
