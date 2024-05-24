@@ -4,9 +4,12 @@ using UnityEngine.UIElements;
 
 public class TaskToGo : Node
 {
-    private Transform _transform; 
+    private Transform _transform;
+
+    Animator animator;  
     public TaskToGo(Transform transform){
         _transform = transform;
+        animator = _transform.GetComponent<Animator>();
     }
 
     public override NodeState Evaluate()
@@ -27,6 +30,8 @@ public class TaskToGo : Node
             Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, RangeMonsterBT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
         }
+        animator.SetTrigger("Running");
+        animator.ResetTrigger("Attack");
         Debug.Log("TaskToGo: Running");
         state = NodeState.RUNNING; 
         return state;         

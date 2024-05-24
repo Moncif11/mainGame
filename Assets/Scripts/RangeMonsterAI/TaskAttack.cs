@@ -10,9 +10,12 @@ public class TaskAttack : Node{
     public float attackTime = 1f; 
     public float attackCounter = 0; 
 
+    Animator animator;
+
     public TaskAttack(GameObject bulletPrefab , Transform transform){
        this.bulletPrefab = bulletPrefab;
        this._transform = transform;
+       animator = _transform.GetComponent<Animator>();
     }
 
     public override NodeState Evaluate()
@@ -27,6 +30,8 @@ public class TaskAttack : Node{
         attackCounter+= Time.deltaTime;
         if(attackCounter >= attackTime){           
             Debug.Log("Shoot: "+bulletPrefab.name);
+            animator.SetTrigger("Attack");
+            animator.ResetTrigger("Running"); 
             if(RangeMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 

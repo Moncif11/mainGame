@@ -10,10 +10,12 @@ public class TaskPatrol : Node
 
     public float speed = 2f ;
 
+    Animator animator;
 
     public TaskPatrol(Transform transform, Transform[] waypoints){
         _transform = transform;
         _waypoints = waypoints;
+        animator = _transform.GetComponent<Animator>();
     }
 
     public override NodeState Evaluate()
@@ -30,6 +32,8 @@ public class TaskPatrol : Node
         }   
          isRight();
          Flip();
+        animator.SetTrigger("Running");
+        animator.ResetTrigger("Attack");
         state = NodeState.RUNNING;
         return state;
     }

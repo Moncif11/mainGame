@@ -118,7 +118,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 521, y: 150}
+    uvTransform: {x: 521, y: -15}
     spritePosition: {x: 311, y: 229}
   - name: Kopie von Malebene 3
     originalName: 
