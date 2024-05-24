@@ -37,12 +37,14 @@ public class TaskPatrol : Node
     private void Flip(){
         if(RangeMonsterBT.isRight){
             Vector3 Scaler = _transform.localScale;
-            Scaler.x = -1; 
+            if(Scaler.x >0){
+                Scaler.x = -Scaler.x;
+            } 
             _transform.localScale = Scaler;
         }
         else{
             Vector3 Scaler = _transform.localScale;
-            Scaler.x = 1; 
+            Scaler.x = Mathf.Abs(Scaler.x); 
             _transform.localScale = Scaler;
         }
     }

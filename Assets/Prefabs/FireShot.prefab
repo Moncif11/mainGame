@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -9088794221617938359}
   - component: {fileID: -6422113528232985979}
   - component: {fileID: 660143978171534214}
-  - component: {fileID: -369509674539318649}
+  - component: {fileID: 5027982682622873095}
   m_Layer: 0
   m_Name: FireShot
   m_TagString: Untagged
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a982e0cd2c8256048a74edae72e670d4, type: 3}
-  m_Color: {r: 0.5849056, g: 0.15690362, b: 0.15266402, a: 1}
+  m_Color: {r: 0.64779866, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-369509674539318649
+--- !u!114 &5027982682622873095
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

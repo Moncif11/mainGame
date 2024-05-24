@@ -1,6 +1,6 @@
 using BehaviorTree;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TaskToGo : Node
 {
@@ -37,7 +37,9 @@ public class TaskToGo : Node
          if (direction.x > 0)
         {
              Vector3 Scaler = _transform.localScale;
-            Scaler.x = -1; 
+             if(Scaler.x >0){
+                 Scaler.x = -Scaler.x;
+             } 
             _transform.localScale = Scaler;
             return false; 
         }
@@ -45,7 +47,7 @@ public class TaskToGo : Node
         {
             RangeMonsterBT.isRight = true; // Nach rechts schauen
               Vector3 Scaler = _transform.localScale;
-            Scaler.x = 1; 
+            Scaler.x = Mathf.Abs(Scaler.x); 
             _transform.localScale = Scaler;
             return true;
         }  

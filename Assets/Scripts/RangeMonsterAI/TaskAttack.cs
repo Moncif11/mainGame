@@ -37,6 +37,7 @@ public class TaskAttack : Node{
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(-_transform.right*1000);
+                Debug.Log("Bullet : " + bullet.transform.position);
             }
             if(capePlayerHealth.health <= 0){
                 Debug.Log("Data Cleared");
