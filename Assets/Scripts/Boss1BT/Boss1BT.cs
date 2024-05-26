@@ -1,9 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using BehaviorTree;
-using UnityEngine.UIElements;
 
+public enum BossPhase{
+    ONE, 
+    TWO,
+}
 public class Boss1BT : Tree{
+
+    public static BossPhase bossPhase = BossPhase.ONE; 
      protected override Node SetupTree(){
         Node root = new Selector( new List<Node> {new Selector(new List<Node>{ //Phase2 addition to special move
             new Sequence(new List<Node>{
