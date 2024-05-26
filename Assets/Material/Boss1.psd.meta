@@ -1,0 +1,711 @@
+fileFormatVersion: 2
+guid: da3ebb79febb4734092372e4e7919431
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Linkes Schwert
+    originalName: 
+    pivot: {x: 0.43022165, y: 0.8156621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 286
+      y: 4
+      width: 316
+      height: 475
+    spriteID: 67370f2b0592c1d46a6dbe59b1d2498b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 286, y: 4}
+    spritePosition: {x: 260, y: 181}
+  - name: Linker UnterArm
+    originalName: 
+    pivot: {x: 0.36400884, y: 0.67492574}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 1035
+      width: 227
+      height: 479
+    spriteID: a336422abf0e3ab41858ed75b064d509
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 610, y: 1035}
+    spritePosition: {x: 331, y: 390}
+  - name: 'Linker Oberarm '
+    originalName: 
+    pivot: {x: 0.58647037, y: 0.7929709}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 286
+      y: 1497
+      width: 102
+      height: 286
+    spriteID: 636e706e631e3234782cc94f7c6872e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 286, y: 1497}
+    spritePosition: {x: 367, y: 755}
+  - name: "LInker Fu\xDF"
+    originalName: 
+    pivot: {x: 0.7133865, y: 0.22761779}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 4
+      width: 372
+      height: 340
+    spriteID: 7040ad5799a4fd04b945a903d3a9641b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 610, y: 4}
+    spritePosition: {x: 250, y: 68}
+  - name: Linkes Unterknie
+    originalName: 
+    pivot: {x: 0.5899997, y: 0.8050932}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 286
+      y: 845
+      width: 147
+      height: 318
+    spriteID: 75ed6b91783d8d4438b35f6bb83ff8ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 286, y: 845}
+    spritePosition: {x: 405, y: 128}
+  - name: Linkes Oberschenkel
+    originalName: 
+    pivot: {x: 0.40343073, y: 0.48986205}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 274
+      height: 870
+    spriteID: 59e72d7898e54b54499fdb13a94ed050
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 365, y: 166}
+  - name: Becken
+    originalName: 
+    pivot: {x: 0.718513, y: 0.44959977}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 286
+      y: 487
+      width: 222
+      height: 350
+    spriteID: 615970f0400591f49b5a29b3ed992956
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 286, y: 487}
+    spritePosition: {x: 339, y: 511}
+  - name: Rumpf
+    originalName: 
+    pivot: {x: 0.21038836, y: 0.91560066}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 990
+      y: 4
+      width: 335
+      height: 191
+    spriteID: 2af606693d230e749828bbf98663296f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 990, y: 4}
+    spritePosition: {x: 279, y: 663}
+  - name: Halskrage
+    originalName: 
+    pivot: {x: 0.61424834, y: 0.6978838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 990
+      y: 203
+      width: 193
+      height: 156
+    spriteID: 7da23a60718b18a479fb1885f88af896
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 990, y: 203}
+    spritePosition: {x: 260, y: 1030}
+  - name: Kopf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 700
+      width: 360
+      height: 327
+    spriteID: a21287c910cc55b4ca0bdaaf34609ee9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 610, y: 700}
+    spritePosition: {x: 146, y: 981}
+  - name: Brust
+    originalName: 
+    pivot: {x: 0.58258355, y: 0.40227038}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 1522
+      width: 267
+      height: 361
+    spriteID: 6bfd9be08e702684bbc594fe79536f08
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 610, y: 1522}
+    spritePosition: {x: 222, y: 742}
+  - name: Rechter Oberschenkel
+    originalName: 
+    pivot: {x: 0.37124112, y: 0.47465497}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 882
+      width: 274
+      height: 870
+    spriteID: 549d1ae6bc697354399396aefd1c2139
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 882}
+    spritePosition: {x: 365, y: 166}
+  - name: Rechtes Unterknie
+    originalName: 
+    pivot: {x: 0.5899997, y: 0.8605646}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 286
+      y: 1171
+      width: 147
+      height: 318
+    spriteID: 3ccf26734bd52d24dad1cea1596b1f1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 286, y: 1171}
+    spritePosition: {x: 405, y: 128}
+  - name: "Rechter Fu\xDF"
+    originalName: 
+    pivot: {x: 0.7015317, y: 0.24058874}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 352
+      width: 372
+      height: 340
+    spriteID: 610ba4fd0628dfe4f8919f941cf49877
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 610, y: 352}
+    spritePosition: {x: 250, y: 68}
+  - name: Rechte Kanone
+    originalName: 
+    pivot: {x: 0.60079974, y: 0.7616091}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1760
+      width: 175
+      height: 236
+    spriteID: 82fcfe0a7d41af74bbb43c5ad36538ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1760}
+    spritePosition: {x: 286, y: 416}
+  - name: Rechter Unterarm
+    originalName: 
+    pivot: {x: 0.6633329, y: 0.7261529}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 845
+      y: 1035
+      width: 108
+      height: 273
+    spriteID: 1f4df8e3424187342a121d2ac6247d0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 845, y: 1035}
+    spritePosition: {x: 350, y: 568}
+  - name: Rechter Oberarm
+    originalName: 
+    pivot: {x: 0.59284157, y: 0.7682878}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 885
+      y: 1522
+      width: 95
+      height: 263
+    spriteID: 213313c1ed4adce46be2b80651d271ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 885, y: 1522}
+    spritePosition: {x: 375, y: 773}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 0
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Linkes Schwert
+    spriteName: Linkes Schwert
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 67370f2b0592c1d46a6dbe59b1d2498b
+    layerID: 0
+    mosaicPosition: {x: 286, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Linker UnterArm
+    spriteName: Linker UnterArm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a336422abf0e3ab41858ed75b064d509
+    layerID: 612188713
+    mosaicPosition: {x: 610, y: 1035}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 'Linker Oberarm '
+    spriteName: 'Linker Oberarm '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 636e706e631e3234782cc94f7c6872e7
+    layerID: -691763137
+    mosaicPosition: {x: 286, y: 1497}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "LInker Fu\xDF"
+    spriteName: "LInker Fu\xDF"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7040ad5799a4fd04b945a903d3a9641b
+    layerID: 1026521267
+    mosaicPosition: {x: 610, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Linkes Unterknie
+    spriteName: Linkes Unterknie
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 75ed6b91783d8d4438b35f6bb83ff8ec
+    layerID: -161133177
+    mosaicPosition: {x: 286, y: 845}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Linkes Oberschenkel
+    spriteName: Linkes Oberschenkel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 59e72d7898e54b54499fdb13a94ed050
+    layerID: 1204909305
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Becken
+    spriteName: Becken
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 615970f0400591f49b5a29b3ed992956
+    layerID: 1153531162
+    mosaicPosition: {x: 286, y: 487}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rumpf
+    spriteName: Rumpf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2af606693d230e749828bbf98663296f
+    layerID: -822555364
+    mosaicPosition: {x: 990, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Halskrage
+    spriteName: Halskrage
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7da23a60718b18a479fb1885f88af896
+    layerID: 769304216
+    mosaicPosition: {x: 990, y: 203}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Kopf
+    spriteName: Kopf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a21287c910cc55b4ca0bdaaf34609ee9
+    layerID: 1198557530
+    mosaicPosition: {x: 610, y: 700}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Brust
+    spriteName: Brust
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6bfd9be08e702684bbc594fe79536f08
+    layerID: -1107670790
+    mosaicPosition: {x: 610, y: 1522}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rechter Oberschenkel
+    spriteName: Rechter Oberschenkel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 549d1ae6bc697354399396aefd1c2139
+    layerID: -496207756
+    mosaicPosition: {x: 4, y: 882}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rechtes Unterknie
+    spriteName: Rechtes Unterknie
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3ccf26734bd52d24dad1cea1596b1f1f
+    layerID: -1834218465
+    mosaicPosition: {x: 286, y: 1171}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "Rechter Fu\xDF"
+    spriteName: "Rechter Fu\xDF"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 610ba4fd0628dfe4f8919f941cf49877
+    layerID: -640759805
+    mosaicPosition: {x: 610, y: 352}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rechte Kanone
+    spriteName: Rechte Kanone
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 82fcfe0a7d41af74bbb43c5ad36538ef
+    layerID: -890345911
+    mosaicPosition: {x: 4, y: 1760}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rechter Unterarm
+    spriteName: Rechter Unterarm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1f4df8e3424187342a121d2ac6247d0e
+    layerID: 346498565
+    mosaicPosition: {x: 845, y: 1035}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Rechter Oberarm
+    spriteName: Rechter Oberarm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 213313c1ed4adce46be2b80651d271ae
+    layerID: -1363069953
+    mosaicPosition: {x: 885, y: 1522}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
