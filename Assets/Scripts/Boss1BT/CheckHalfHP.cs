@@ -14,7 +14,7 @@ public class CheckHalfHP : Node{
     }
     public override NodeState Evaluate()
     {
-        if(_hp<=_maxHP && Boss1BT.bossPhase== BossPhase.ONE){
+        if(_hp<=(0.5 *_maxHP)&& Boss1BT.bossPhase== BossPhase.ONE){
             Boss1BT.bossPhase = BossPhase.TWO;
             state= NodeState.SUCCESS; 
             return state;
