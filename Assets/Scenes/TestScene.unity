@@ -427,6 +427,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &669514602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+  m_PrefabInstance: {fileID: 1042325414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &669514608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669514602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42697ae840159c54e871c3d3eccce94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &837241958 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3606653256878649838, guid: df922a3fbdbbc5a4e8edbb4a8f6decab, type: 3}
@@ -661,6 +678,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2506264573179936047, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506264573179936047, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      propertyPath: m_LinearDrag
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2506264573179936047, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
@@ -770,7 +791,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669514608}
   m_SourcePrefab: {fileID: 100100000, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
 --- !u!4 &1180993301 stripped
 Transform:
@@ -1181,6 +1205,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 1180993301}
+    - target: {fileID: 1374840443420443783, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374840443420443783, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1374840443420443783, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2134738443697491799, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1228,6 +1264,10 @@ PrefabInstance:
     - target: {fileID: 5973620133835666966, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
       propertyPath: m_Name
       value: MonsterSkizze  1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5973620133835666966, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6566409025504826759, guid: 37ff104d9e0a39d4b99e188cadc2a716, type: 3}
       propertyPath: m_Controller

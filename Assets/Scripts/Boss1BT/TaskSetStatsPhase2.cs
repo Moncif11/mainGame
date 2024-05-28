@@ -13,7 +13,10 @@ public class TaskSetStatsPhase2 : Node{
         _maxHP = transform.GetComponent<Health>().maxHealth;
     }
     public override NodeState Evaluate()
-    {
+    {   Debug.Log("Boss Phase 2");
+        Boss1BT.bossPhase = BossPhase.TWO;
+        Boss1BT.attack *= 1.5f; 
+        Boss1BT.speed *= 3;
         state = NodeState.RUNNING;
         return state;
     }

@@ -4,18 +4,17 @@ using UnityEngine;
 public class CheckHalfHP : Node{
 
     Transform _transform;
-    float _hp;
-
-    float _maxHP;
+    Health _health; 
      public CheckHalfHP(Transform transform){
         _transform = transform;
-        _hp = transform.GetComponent<Health>().health;
-        _maxHP = transform.GetComponent<Health>().maxHealth;
+        _health = transform.GetComponent<Health>(); 
     }
     public override NodeState Evaluate()
-    {
-        if(_hp<=(0.5 *_maxHP)&& Boss1BT.bossPhase== BossPhase.ONE){
-            Boss1BT.bossPhase = BossPhase.TWO;
+    {   // Aktualisieren Sie den HP-Wert jedes Mal, wenn die Methode aufgerufen wird
+        float currentHP = _health.health;
+        float maxHP = _health.maxHealth;
+
+        if(currentHP<=(maxHP/2)&& Boss1BT.bossPhase== BossPhase.ONE){
             state= NodeState.SUCCESS; 
             return state;
         }
