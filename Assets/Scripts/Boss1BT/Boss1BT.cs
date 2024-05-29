@@ -21,6 +21,16 @@ public class Boss1BT : BehaviorTree.Tree{
     public static float meleeRange = 2f; 
 
     public static float shootRange = 5f;
+
+    public static int amountShoot = 3; 
+
+    public static float coolDownSA = 5f; 
+
+    
+    public static float coolDownSP1 = 10f; 
+    
+    public static float coolDownSP2 = 7.5f; 
+    
      protected override Node SetupTree(){
         Node root = 
         new Selector( 
@@ -34,11 +44,17 @@ public class Boss1BT : BehaviorTree.Tree{
         }),
         //new Sequence(), // Normal Attacks
         /*new Selector (new List<Node>{
-            new Sequence(),//Shooting
-            new Sequence()  //going to AttackRange
+            new Sequence(new List<Node>{
+                new CheckToShoot(transform),  
+                new TaskToShoot(transform),
+                } 
+            ),//Shooting
+            new Sequence(
+                new CheckGoToAttackRange()
+            )  //going to AttackRange
             }) ,    
             */
-        new TaskToGoB1(transform),      //Going to the enemy;
+        new TaskToGoShootRange(transform),      //Going to the enemy;
          });
         return root;
         }

@@ -1,40 +1,26 @@
-using BehaviorTree;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using BehaviorTree;
 
-public class TaskToGoB1 : Node
+public class CheckShooting : Node
 {
-    private Transform _transform;
-
-    Animator animator;  
-    public TaskToGoB1(Transform transform){
+    Transform _transform;
+    public CheckShooting(Transform transform){
         _transform = transform;
-        animator = _transform.GetComponent<Animator>();
     }
-
-    public override NodeState Evaluate()
-    {  
-        Transform target = nearestPlayer(); 
-        if(target==null){
-            state= NodeState.FAILURE;
-            return state;
-        }
-        if(Vector2.Distance(_transform.position, target.position)>0.01f){
-             float stopRange = -(Boss1BT.shootRange-1);
-            Boss1BT.isLeft=isLeft(target);
-            if(!Boss1BT.isLeft){
-                stopRange*=-1; 
-            }
-            Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y-stopRange); 
-            Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
-            _transform.position = new Vector2(direction.x,_transform.position.y);
-        }
-        Debug.Log("TaskToGo: Running");
-        state = NodeState.RUNNING; 
-        return state;         
+   public override NodeState Evaluate(){
+    Transform t = nearestPlayer();
+    if(Vector2.Distance(_transform.position,t.position)<Boss1BT.shootRange){
+        parent.parent.parent.SetData("target",(Object)t);
+        state = NodeState.SUCCESS; 
+        return state;    
     }
+    state = NodeState.FAILURE; 
+    return state; 
+   }
 
-    private bool isLeft(Transform target){
+       private bool isLeft(Transform target){
          Vector2 direction = (_transform.position - target.position).normalized; 
          if (direction.x > 0)
         {
