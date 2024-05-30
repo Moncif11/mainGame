@@ -7,7 +7,7 @@ public class CheckHalfHP : Node{
     Health _health; 
      public CheckHalfHP(Transform transform){
         _transform = transform;
-        _health = transform.GetComponent<Health>(); 
+        _health = _transform.GetComponent<Health>(); 
     }
     public override NodeState Evaluate()
     {   // Aktualisieren Sie den HP-Wert jedes Mal, wenn die Methode aufgerufen wird

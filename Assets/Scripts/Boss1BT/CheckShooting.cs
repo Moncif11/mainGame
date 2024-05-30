@@ -19,7 +19,6 @@ public class CheckShooting : Node
     state = NodeState.FAILURE; 
     return state; 
    }
-
        private bool isLeft(Transform target){
          Vector2 direction = (_transform.position - target.position).normalized; 
          if (direction.x > 0)
