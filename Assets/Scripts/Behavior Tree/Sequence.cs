@@ -12,18 +12,15 @@ namespace BehaviorTree{
                 switch(node.Evaluate()){
                     case NodeState.SUCCESS:
                         Debug.Log("Sequence success.");
-
                         continue;
                     case NodeState.FAILURE:
                         state  = NodeState.FAILURE;
                         Debug.Log("Sequence failed.");
-
                         return state; 
                     case NodeState.RUNNING:
                         anyChildIsRunning = true;
                         Debug.Log("Sequence running.");
-
-                        break;
+                        continue;
                     }
                 }
 

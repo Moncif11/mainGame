@@ -12,21 +12,21 @@ public class TaskToMeleeAttack : Node
     GameObject _sword; 
     MonoBehaviour _monobehavior; 
 
-    public TaskToMeleeAttack(Transform transform , GameObject Sword){
+    public TaskToMeleeAttack(Transform transform /*, GameObject Sword*/){
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
         _monobehavior = transform.GetComponent<MonoBehaviour>();
     }
 
     public override NodeState Evaluate()
-    {   
-       _monobehavior.StartCoroutine("MeleeAttack");
+    {   _animator.SetTrigger("Melee");
+       //_monobehavior.StartCoroutine("MeleeAttack");
 
         state = NodeState.RUNNING; 
         return state; 
     }
 
-    IEnumerator MeleeAttack(){
+    /*IEnumerator MeleeAttack(){
         _animator.SetTrigger("Melee1");
         if(_animator.GetCurrentAnimatorClipInfo(0).Length<0){
             yield break; 
@@ -40,4 +40,5 @@ public class TaskToMeleeAttack : Node
         remainingTime = _animator.GetCurrentAnimatorClipInfo(0)[0].clip.length; 
         yield return new WaitForSeconds(remainingTime);
     }
+    */
 }

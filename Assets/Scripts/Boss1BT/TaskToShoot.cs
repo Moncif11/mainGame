@@ -1,5 +1,6 @@
 using UnityEngine; 
-using BehaviorTree; 
+using BehaviorTree;
+using TMPro;
 
 public class TaskToShoot : Node{
     Transform _transform; 
@@ -9,16 +10,19 @@ public class TaskToShoot : Node{
 
     public float attackTime = 1f; 
     public float attackCounter = 0; 
+    Animator _animator ; 
     public TaskToShoot(Transform transform ,GameObject bullet){
         _transform = transform;
         playerHealth = _transform.GetComponent<Health>();  
         _bulletPrefab = bullet;
+        _animator = _transform.GetComponent<Animator>(); 
     }
 
     public override NodeState Evaluate()
     {   
         Transform target = (Transform)GetData("target"); 
-        Debug.Log("Attack");
+        _animator.SetTrigger("Shoot");
+        Debug.Log("Shoot");
         Debug.Log("Attackstate :" +state);
         attackCounter+= Time.deltaTime;
         if(attackCounter >= attackTime){           

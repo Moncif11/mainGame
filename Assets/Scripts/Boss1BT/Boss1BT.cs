@@ -42,10 +42,11 @@ public class Boss1BT : BehaviorTree.Tree{
             //new Sequence(), //Move SP1 an Dash attack with amount of speed
             // new Sequence(), //Move SP2 an Shoot Attack with a bigger ball 
         }),
-        //new Sequence( 
-            //new CheckMeleeAttack(transform); 
-            //new TaskMeleeAttack(transform); 
-        //), // Normal Attacks
+        new Sequence(new List<Node>{
+             new CheckMeleeAttack(transform), 
+            new TaskToMeleeAttack(transform)
+            }
+        ),// Normal Attacks
         /*new Selector (new List<Node>{
             new Sequence(new List<Node>{
                 new CheckToShoot(transform),  
@@ -56,8 +57,8 @@ public class Boss1BT : BehaviorTree.Tree{
                 new CheckGoToAttackRange(transform),
                 new TaskToGoToAttackRange(transform),
             )  //going to AttackRange
-            }) ,    
-            */
+            }) ,
+            */    
         new TaskToGoShootRange(transform),      //Going to the enemy;
          });
         return root;

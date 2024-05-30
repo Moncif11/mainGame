@@ -12,7 +12,7 @@ public class CheckMeleeAttack : Node
     } 
     public override NodeState Evaluate(){
     Transform t = nearestPlayer();
-    if(Vector2.Distance(_transform.position,t.position)<Boss1BT.attack){
+    if(Vector2.Distance(_transform.position,t.position)<Boss1BT.meleeRange){
         parent.parent.SetData("target",(Object)t);
         state = NodeState.SUCCESS; 
         return state;    
