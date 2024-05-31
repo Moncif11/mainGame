@@ -12,7 +12,6 @@ public class TaskToShoot : Node
     private float lastAttackTime = -Mathf.Infinity; // Initialize to a very old time
 
     Animator _animator;
-    bool shootEventTriggered = false;
 
     public TaskToShoot(Transform transform)
     {
@@ -39,6 +38,7 @@ public class TaskToShoot : Node
         lastAttackTime = Time.time;
 
         Boss1BT.amountShoot--;
+        _animator.ResetTrigger("Shoot");
         _animator.ResetTrigger("Walking");
         _animator.ResetTrigger("SP1");
         _animator.ResetTrigger("Melee");

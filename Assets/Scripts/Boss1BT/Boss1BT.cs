@@ -87,4 +87,7 @@ public class Boss1BT : BehaviorTree.Tree{
          });
         return root;
         }
+    public bool LeftLooking(){
+        return isLeft;
+    }
 }
