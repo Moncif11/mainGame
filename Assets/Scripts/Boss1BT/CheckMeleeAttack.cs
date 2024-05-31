@@ -6,7 +6,8 @@ using BehaviorTree;
 public class CheckMeleeAttack : Node
 {
     Transform _transform;
-
+    float cooldown = 3f;
+    float cooldownCounter=0f; 
     public CheckMeleeAttack(Transform transform){
         _transform = transform; 
     } 
@@ -56,4 +57,12 @@ public class CheckMeleeAttack : Node
             }
             return targetPlayer;
     }
+
+    public void cooldownShoot(){
+        cooldownCounter+= Time.deltaTime;
+        if(cooldownCounter == cooldown){
+            Boss1BT.amountShoot = (Boss1BT.bossPhase==BossPhase.ONE) ? 3 : 5;  
+        }
+    }
+        
 }

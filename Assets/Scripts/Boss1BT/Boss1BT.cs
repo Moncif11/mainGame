@@ -32,7 +32,14 @@ public class Boss1BT : BehaviorTree.Tree{
     public static float coolDownSP1 = 10f; 
     
     public static float coolDownSP2 = 7.5f; 
-    
+
+    public static float coolDownSACounter = 0f;
+     public static float coolDownSP2Counter = 0f;
+    public static float coolDownSP1Counter = 0f; 
+
+    public static bool SP1Ready=true; 
+    public static bool SP2Ready=true;
+ 
      protected override Node SetupTree(){
         Node root = 
         new Selector( 
@@ -43,6 +50,7 @@ public class Boss1BT : BehaviorTree.Tree{
             }),
             /*new Sequence(
                 new List<Node>{
+                      new CheckCooldown(coolDownSP1, ref lastSP1Time),
                     new CheckSP1Ready(transform),
                      new TaskToSP1(transform),
                 }
@@ -50,8 +58,9 @@ public class Boss1BT : BehaviorTree.Tree{
             */
             /* new Sequence(
                 new List<Node>{
-                    new CheckSP1Ready(transform),
-                     new TaskToSP1(transform),
+                      new CheckCooldown(coolDownSP2, ref lastSP2Time),
+                    new CheckSP2Ready(transform),
+                     new TaskToSP2(transform),
                 }
             ), *///Move SP2 an Shoot Attack with a bigger ball 
         }),
@@ -63,7 +72,7 @@ public class Boss1BT : BehaviorTree.Tree{
         new Selector (new List<Node>{
             new Sequence(new List<Node>{
                 new CheckShooting(transform),  
-                new TaskToShoot(transform,normalBulletPrefab),
+                new TaskToShoot(transform),
                 } 
             ),//Shooting
             new Sequence(

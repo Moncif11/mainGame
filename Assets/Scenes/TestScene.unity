@@ -297,6 +297,11 @@ MonoBehaviour:
   waterShot: {fileID: 7315785336683993725, guid: ad29d9577e6a8c14ba2b9fcf4c1925d4, type: 3}
   maxUltbar: 100
   ultBar: 0
+--- !u!4 &275809608 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5724254642905118918, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+  m_PrefabInstance: {fileID: 1042325414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &599030817
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +447,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42697ae840159c54e871c3d3eccce94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalBulletPrefab: {fileID: 0}
+--- !u!114 &669514614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669514602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77b7f508e754db41a0b984401448d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &837241958 stripped
@@ -866,11 +884,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5724254642905118918, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1779800716}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       insertIndex: -1
       addedObject: {fileID: 669514608}
+    - targetCorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669514614}
   m_SourcePrefab: {fileID: 100100000, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
 --- !u!4 &1180993301 stripped
 Transform:
@@ -1024,7 +1048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1365256206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1490,6 +1514,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1779800715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779800716}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779800716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779800715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65, y: -1.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 275809608}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7766608166796146052
 PrefabInstance:
   m_ObjectHideFlags: 0

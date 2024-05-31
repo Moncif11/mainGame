@@ -1,55 +1,87 @@
-using UnityEngine; 
+using UnityEngine;
 using BehaviorTree;
-using TMPro;
 
-public class TaskToShoot : Node{
-    Transform _transform; 
-    GameObject _bulletPrefab;
+public class TaskToShoot : Node
+{
+    Transform _transform;
+    Health playerHealth;
 
-    Health playerHealth; 
+    public float attackTime = 0.5f;
+    public float attackCounter = 0;
 
-    public float attackTime = 1f; 
-    public float attackCounter = 0; 
-    Animator _animator ; 
-    public TaskToShoot(Transform transform ,GameObject bullet){
+    private float lastAttackTime = -Mathf.Infinity; // Initialize to a very old time
+
+    Animator _animator;
+    bool shootEventTriggered = false;
+
+    public TaskToShoot(Transform transform)
+    {
         _transform = transform;
-        playerHealth = _transform.GetComponent<Health>();  
-        _bulletPrefab = bullet;
-        _animator = _transform.GetComponent<Animator>(); 
+        playerHealth = _transform.GetComponent<Health>();
+        _animator = _transform.GetComponent<Animator>();
     }
 
     public override NodeState Evaluate()
-    {   
-        Transform target = (Transform)GetData("target"); 
-        _animator.SetTrigger("Shoot");
-        Debug.Log("Shoot");
-        Debug.Log("Attackstate :" +state);
-        attackCounter+= Time.deltaTime;
-        if(attackCounter >= attackTime){           
-            Debug.Log("Shoot: "+_bulletPrefab.name);
-            if(!Boss1BT.isLeft){
-                GameObject bullet = GameObject.Instantiate(_bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
-                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(_transform.right*1000);
-            }
-            else{
-                Debug.Log("Shoot left");
-                GameObject bullet = GameObject.Instantiate(_bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
-                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(-_transform.right*1000);
-                Debug.Log("Bullet : " + bullet.transform.position);
-            }
-            if(playerHealth.health <= 0){
-                Debug.Log("Data Cleared");
-                ClearData("target"); 
-                }
-            else{
-                attackCounter= 0f; 
-            }
-        }
+    {
+        Transform target = (Transform)GetData("target");
 
+        if (target == null)
+        {
+            state = NodeState.FAILURE;
+            return state;
+        }     
+        Boss1BT.isLeft = IsLeft(target);
+        float currentTime = Time.time;
+        attackCounter+=Time.deltaTime;
+        if(currentTime - lastAttackTime >= Boss1BT.coolDownSA && attackCounter>=attackTime){
+            
+        
+        lastAttackTime = Time.time;
+
+        Boss1BT.amountShoot--;
+        _animator.ResetTrigger("Walking");
+        _animator.ResetTrigger("SP1");
+        _animator.ResetTrigger("Melee");
+        _animator.SetTrigger("Shoot");
+
+        if (playerHealth.health <= 0)
+        {
+            Debug.Log("Data Cleared");
+            ClearData("target");
+        }
+        else{
+            attackCounter =0;
+        }
+        }
         state = NodeState.RUNNING;
         return state;
+        }
+
+
+    private bool IsLeft(Transform target)
+    {
+        Vector2 direction = (_transform.position - target.position).normalized;
+        Vector3 scaler = _transform.localScale;
+
+        if (direction.x > 0)
+        {
+            if (scaler.x < 0)
+            {
+                scaler.x = -scaler.x;
+            }
+            _transform.localScale = scaler;
+            return true;
+        }
+        else if (direction.x < 0)
+        {
+            if (scaler.x > 0)
+            {
+                scaler.x = -scaler.x;
+            }
+            _transform.localScale = scaler;
+            return false;
+        }
+
+        return true;
     }
-    
 }

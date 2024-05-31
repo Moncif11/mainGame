@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using BehaviorTree;
 using UnityEngine;
 
-public class CheckSP2Ready : MonoBehaviour
+public class CheckSP2Ready : Node
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    Transform _transform; 
+    public CheckSP2Ready(Transform transform){
+        _transform = transform;
     }
 }
