@@ -753,6 +753,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3670771518140645387, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670771518140645387, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 54c20685f270f264db4d5e1f8583f502, type: 2}
@@ -851,6 +855,10 @@ PrefabInstance:
     - target: {fileID: 6237140997854647190, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237140997854647190, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8675249080862853017, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_Enabled

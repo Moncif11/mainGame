@@ -1,25 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using BehaviorTree;
+using UnityEngine;
 
-public class CheckShooting : Node
-{
+public class CheckGoToAttackRange : Node{
     Transform _transform;
-    public CheckShooting(Transform transform){
+
+    public CheckGoToAttackRange(Transform transform){
         _transform = transform;
     }
-   public override NodeState Evaluate(){
-    Transform t = nearestPlayer();
-    if(Vector2.Distance(_transform.position,t.position)<Boss1BT.shootRange && Boss1BT.amountShoot>0){
-        parent.parent.parent.SetData("target",(Object)t);
-        state = NodeState.SUCCESS; 
-        return state;    
+
+    public override NodeState Evaluate()
+    {  
+        Transform target = nearestPlayer();
+        float distance = Vector2.Distance(_transform.position,target.position);    
+        if(target==null){
+            state= NodeState.FAILURE;
+            return state;
+        }
+        if(distance > Boss1BT.meleeRange){
+            parent.parent.parent.SetData("target",(Object)target);
+            state = NodeState.SUCCESS; 
+            return state; 
+        } 
+        state = NodeState.FAILURE; 
+        return state;
     }
-    state = NodeState.FAILURE; 
-    return state; 
-   }
-       private bool isLeft(Transform target){
+
+    private bool isLeft(Transform target){
          Vector2 direction = (_transform.position - target.position).normalized; 
          if (direction.x > 0)
         {

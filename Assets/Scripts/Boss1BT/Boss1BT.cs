@@ -15,6 +15,8 @@ public class Boss1BT : BehaviorTree.Tree{
 
     public static float speed=2f;
 
+    public GameObject normalBulletPrefab; 
+
     [Header("Direction")]
     public static bool isLeft = true;  
 
@@ -39,26 +41,39 @@ public class Boss1BT : BehaviorTree.Tree{
                 new CheckHalfHP(transform), 
                 new TaskSetStatsPhase2(transform),
             }),
-            //new Sequence(), //Move SP1 an Dash attack with amount of speed
-            // new Sequence(), //Move SP2 an Shoot Attack with a bigger ball 
+            /*new Sequence(
+                new List<Node>{
+                    new CheckSP1Ready(transform),
+                     new TaskToSP1(transform),
+                }
+            ), //Move SP1 an Dash attack with amount of speed
+            */
+            /* new Sequence(
+                new List<Node>{
+                    new CheckSP1Ready(transform),
+                     new TaskToSP1(transform),
+                }
+            ), *///Move SP2 an Shoot Attack with a bigger ball 
         }),
         new Sequence(new List<Node>{
              new CheckMeleeAttack(transform), 
             new TaskToMeleeAttack(transform)
             }
         ),// Normal Attacks
-        /*new Selector (new List<Node>{
+        new Selector (new List<Node>{
             new Sequence(new List<Node>{
-                new CheckToShoot(transform),  
-                new TaskToShoot(transform),
+                new CheckShooting(transform),  
+                new TaskToShoot(transform,normalBulletPrefab),
                 } 
             ),//Shooting
             new Sequence(
+                new List<Node>{
                 new CheckGoToAttackRange(transform),
                 new TaskToGoToAttackRange(transform),
-            )  //going to AttackRange
+                }
+            ) //going to AttackRange
             }) ,
-            */    
+            
         new TaskToGoShootRange(transform),      //Going to the enemy;
          });
         return root;
