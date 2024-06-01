@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShootBullet : MonoBehaviour
 {
+    public GameObject SP2ShotPrefab;
     public GameObject bulletPrefab;
     public Transform shootPoint; 
      public Boss1BT boss1BT; 
@@ -26,6 +27,25 @@ public class ShootBullet : MonoBehaviour
             else{
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPoint.position + Vector3.left, Quaternion.identity);
+                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
+                bulletRB.AddForce(-Vector2.right*1000);
+                Debug.Log("Bullet : " + bullet.transform.position);
+            }   
+            
+    }
+
+     public void shootSP2()
+    {   
+        Debug.Log("Boss ?" +boss1BT);
+        bool isLeft = boss1BT.LeftLooking();
+        if(!isLeft){
+                GameObject bullet = GameObject.Instantiate(SP2ShotPrefab, shootPoint.position + Vector3.right, Quaternion.identity);
+                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
+                bulletRB.AddForce(Vector2.right*1000);
+            }
+            else{
+                Debug.Log("Shoot left");
+                GameObject bullet = GameObject.Instantiate(SP2ShotPrefab, shootPoint.position + Vector3.left, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(-Vector2.right*1000);
                 Debug.Log("Bullet : " + bullet.transform.position);

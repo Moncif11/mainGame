@@ -56,13 +56,6 @@ public class CheckMeleeAttack : Node
             }
             }
             return targetPlayer;
-    }
-
-    public void cooldownShoot(){
-        cooldownCounter+= Time.deltaTime;
-        if(cooldownCounter == cooldown){
-            Boss1BT.amountShoot = (Boss1BT.bossPhase==BossPhase.ONE) ? 3 : 5;  
         }
-    }
         
 }

@@ -48,21 +48,26 @@ public class Boss1BT : BehaviorTree.Tree{
                 new CheckHalfHP(transform), 
                 new TaskSetStatsPhase2(transform),
             }),
-            /*new Sequence(
-                new List<Node>{
-                      new CheckCooldown(coolDownSP1, ref lastSP1Time),
-                    new CheckSP1Ready(transform),
-                     new TaskToSP1(transform),
-                }
-            ), //Move SP1 an Dash attack with amount of speed
-            */
-            /* new Sequence(
-                new List<Node>{
-                      new CheckCooldown(coolDownSP2, ref lastSP2Time),
-                    new CheckSP2Ready(transform),
-                     new TaskToSP2(transform),
-                }
-            ), *///Move SP2 an Shoot Attack with a bigger ball 
+            new Sequence(new List<Node>{
+                new CheckBossPhase2(),
+                new Selector(
+                    new List<Node>{
+                        new Sequence(
+                            new List<Node>{
+                            new CheckSP1Ready(transform),
+                            new TaskToSP1(transform),
+                            }
+                        ), //Move SP1 an Dash attack with amount of speed
+                        new Sequence(
+                            new List<Node>{
+                            new CheckSP2Ready(transform),
+                            new TaskToSP2(transform),
+                    }//Move SP2 an Shoot Attack with a bigger ball
+                    ),  
+                    }
+                )
+            }
+            )
         }),
         new Sequence(new List<Node>{
              new CheckMeleeAttack(transform), 
@@ -85,6 +90,8 @@ public class Boss1BT : BehaviorTree.Tree{
             
         new TaskToGoShootRange(transform),      //Going to the enemy;
          });
+
+        
         return root;
         }
     public bool LeftLooking(){
