@@ -21,7 +21,8 @@ public class TaskToMeleeAttack : Node
         _animator.SetTrigger("Melee");
         _animator.ResetTrigger("Walking");
         _animator.ResetTrigger("Shoot");
-        _animator.ResetTrigger("SP1"); 
+        _animator.ResetTrigger("SP1");
+        _animator.ResetTrigger("SP2"); 
         state = NodeState.RUNNING; 
         return state; 
     }

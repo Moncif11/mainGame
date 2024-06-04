@@ -14,12 +14,13 @@ public class CheckSP2Ready : Node
     {
         Transform target = nearestPlayer(); 
         if(Boss1BT.SP2Ready){
-            parent.parent.parent.SetData("target",target);
+            parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 
         }
         else{
             state = NodeState.FAILURE; 
         }
+        Debug.Log("SP2 Check: " + state);
         return state; 
     }
 

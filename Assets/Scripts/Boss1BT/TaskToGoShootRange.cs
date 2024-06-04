@@ -24,11 +24,13 @@ public class TaskToGoShootRange : Node
             Boss1BT.isLeft=isLeft(target);
             if(!Boss1BT.isLeft){
                 stopRange*=-1; 
-            }
+            } 
+            animator.ResetTrigger("SP2"); 
             animator.ResetTrigger("Shoot");
             animator.ResetTrigger("Melee");
             animator.ResetTrigger("SP1"); 
             animator.SetTrigger("Walking"); 
+           
             Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y-stopRange); 
             Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);

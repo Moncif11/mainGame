@@ -13,12 +13,13 @@ public class CheckSP1Ready : Node
     public override NodeState Evaluate()
     {   Transform target = nearestPlayer();
         if(Boss1BT.SP1Ready && BossPhase.TWO == Boss1BT.bossPhase){
-             parent.parent.parent.SetData("target",target);
+             parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 
         }
         else{
             state = NodeState.FAILURE; 
         }
+        Debug.Log("SP1 Check: " + state);
         return state; 
     }
 

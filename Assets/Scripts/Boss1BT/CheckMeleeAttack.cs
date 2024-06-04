@@ -6,8 +6,6 @@ using BehaviorTree;
 public class CheckMeleeAttack : Node
 {
     Transform _transform;
-    float cooldown = 3f;
-    float cooldownCounter=0f; 
     public CheckMeleeAttack(Transform transform){
         _transform = transform; 
     } 

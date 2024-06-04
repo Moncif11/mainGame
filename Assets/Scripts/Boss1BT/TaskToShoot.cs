@@ -38,6 +38,7 @@ public class TaskToShoot : Node
         lastAttackTime = Time.time;
 
         Boss1BT.amountShoot--;
+        _animator.ResetTrigger("SP2");
         _animator.ResetTrigger("Shoot");
         _animator.ResetTrigger("Walking");
         _animator.ResetTrigger("SP1");

@@ -22,6 +22,7 @@ public class TaskToGoToAttackRange : Node
             if(!Boss1BT.isLeft){
                 stopRange*=-1; 
             }
+            _animator.ResetTrigger("SP2");
             _animator.ResetTrigger("Shoot");
             _animator.ResetTrigger("Melee");
             _animator.ResetTrigger("SP1"); 

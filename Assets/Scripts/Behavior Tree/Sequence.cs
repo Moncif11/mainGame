@@ -20,7 +20,7 @@ namespace BehaviorTree{
                     case NodeState.RUNNING:
                         anyChildIsRunning = true;
                         Debug.Log("Sequence running.");
-                         break;
+                         continue;
                     }
                 }
                // Debug.Log("Sequence is empty");

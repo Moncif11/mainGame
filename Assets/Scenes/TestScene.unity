@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6825fae92989584795aa22f0ed25cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SP2ShotPrefab: {fileID: 0}
   bulletPrefab: {fileID: 7315785336683993725, guid: 44d37af458e7d9242b0212d12da70594, type: 3}
   shootPoint: {fileID: 1779800716}
   boss1BT: {fileID: 669514608}

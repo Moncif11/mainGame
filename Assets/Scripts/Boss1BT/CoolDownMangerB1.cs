@@ -29,7 +29,7 @@ public class CoolDownMangerB1 : MonoBehaviour
         if(!Boss1BT.SP2Ready){
             Boss1BT.coolDownSP2Counter+= Time.deltaTime;
             if(Boss1BT.coolDownSP2Counter>=Boss1BT.coolDownSP2){
-                Boss1BT.coolDownSP1Counter = 0;
+                Boss1BT.coolDownSP2Counter = 0;
                Boss1BT.SP2Ready = true;  
             }   
         }
