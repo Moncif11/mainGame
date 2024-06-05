@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/game_background_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/game_background_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/clouds_4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/rocks_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/rocks_1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/rocks_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/rocks_2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/sky.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/layers/sky.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Demo/Demo/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/README.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Scripts/GameBuffsInitializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Scripts/GameBuffsInitializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Ancient_Cobblestone_5/Ancient_Cobblestone_5_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Arctic_Forest_Ground_12/Arctic_Forest_Ground_12_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Bones_Debris_1/Bones_Debris_1_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Brick_Wall_18/Brick_Wall_18_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cliff_Rock_Surface_21/Cliff_Rock_Surface_21_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Coal_Surface_2/Coal_Surface_2_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Asphalt_5/Cracked_Asphalt_5_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Concrete_26/Cracked_Concrete_26_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Cracked_Ice_4/Cracked_Ice_4_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Crystal_Surface_1/Crystal_Surface_1_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Dirty_Snow_2/Dirty_Snow_2_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Forest_Ground_38/Forest_Ground_38_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Fur_3/Fur_3_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Grass_37/Grass_37_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Lava_And_Pavement_2/Lava_And_Pavement_2_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Marble_Surface_20/Marble_Surface_20_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Pavement_7/Pavement_7_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Planks_Wood_16/Planks_Wood_16_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rocky_Dirt_2/Rocky_Dirt_2_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Sandy_Rock_Surface_17/Sandy_Rock_Surface_17_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Underwater_Rock_Surface_3/Underwater_Rock_Surface_3_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Water_6/Water_6_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1.terrainlayer.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_AO.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Albedo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Albedo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Mask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Wood_Wall_1/Wood_Wall_1_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass_diffuse.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Materials/Stylize_Grass_diffuse.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Scene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Scene/Stylized Grass Texture.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Scene/Stylized Grass Texture.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Ambient_Occlusion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Ambient_Occlusion.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Base_Color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Base_Color.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LowlyPoly/Stylized Grass Texture/Textures/Vol_42_1_Roughness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/full-m2i8Z5i8i8b1A0N4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/full-m2i8Z5i8i8b1A0N4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2h00sk9c8x3OudjN2FXiQEr5u9f" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Moncif\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Moncif\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Moncif\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\Moncif\OneDrive\Desktop\DET\Mainproject\mainGame -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Moncif\OneDrive\Desktop\DET\Mainproject\mainGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\Moncif\OneDrive\Desktop\DET\Mainproject\mainGame -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Moncif\OneDrive\Desktop\DET\Mainproject\mainGame" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="" />
+      <created>1716715897307</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716715897307</updated>
+      <workItem from="1716715901250" duration="20000" />
+      <workItem from="1717420904895" duration="168000" />
+      <workItem from="1717503253576" duration="3392000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

@@ -28,6 +28,7 @@ public class CapePlayerController : MonoBehaviour
     bool dashReady;
 
     public LayerMask platform;
+    public LayerMask enemy;
     //public Joystick joystick;
     public Transform feetPos;
     public Transform handPos;
@@ -214,6 +215,9 @@ public class CapePlayerController : MonoBehaviour
         }
         touchesWall = Physics2D.OverlapCircle(handPos.position, handCheckRadius, platform);
         isGrounded = Physics2D.OverlapCircle(feetPos.position, feetCheckRadius, platform);
+        if (!isGrounded) {
+            isGrounded = Physics2D.OverlapCircle(feetPos.position, feetCheckRadius, enemy);
+        }
         if (dash)
         {
             animator.speed = 2;
