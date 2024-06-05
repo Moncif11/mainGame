@@ -8,16 +8,19 @@ public class TaskToSP1 : Node
     Transform _transform;
     Animator _animator;  
 
+    SP1Attack _SP1Attack; 
 
     public TaskToSP1(Transform transform){
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
+        _SP1Attack= transform.GetComponent<SP1Attack>();
     }
     public override NodeState Evaluate()
     {   
         Transform target = (Transform)GetData("target");
         Debug.Log("Target ? " + target);
         Boss1BT.isLeft = IsLeft(target);
+        //_SP1Attack.target = target;
         Debug.Log("SP1 activated");
         _animator.SetTrigger("SP1");
         _animator.ResetTrigger("SP2");

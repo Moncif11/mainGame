@@ -61,9 +61,9 @@ public class Boss1BT : BehaviorTree.Tree{
                         new Sequence(
                             new List<Node>{
                             new CheckSP2Ready(transform),
-                            new TaskToSP2(transform),
+                            new TaskToSP2(transform),     
                     }//Move SP2 an Shoot Attack with a bigger ball
-                    ),  
+                    ), 
                     }
                 )
             }
