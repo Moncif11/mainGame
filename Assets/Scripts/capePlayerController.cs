@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
+using Unity.Netcode.Components;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using UnityEngine.UI;
 
-public class CapePlayerController : MonoBehaviour
+public class CapePlayerController : NetworkBehaviour
 {
     Rigidbody2D rb;
     Animator animator;
     string lastDir;
-   public string direction;
+    public string direction;
     string currentState;
     string currentCapeState;
     float moveInput;
@@ -62,7 +64,9 @@ public class CapePlayerController : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float damage = 2;
-    public GameObject bulletPrefab; 
+    public GameObject bulletPrefab;
+
+
     void Start()
     {
         isWallJumping = false;
@@ -73,10 +77,14 @@ public class CapePlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         originGravity = rb.gravityScale;
         tr = GetComponent<TrailRenderer>();
+        myCam = Camera.main.transform;
     }
 
     void FixedUpdate()
     {
+        if (!IsOwner) {
+            return;
+        }
         //moveInput = joystick.Horizontal;
         
             if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetKey(KeyCode.A))
@@ -190,6 +198,10 @@ public class CapePlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!IsOwner) {
+            return;
+        }
+        
         lastOnGroundTime += Time.deltaTime;
         jump = false;
         for (int i = 0; i < Input.touchCount; i++)
@@ -267,15 +279,17 @@ public class CapePlayerController : MonoBehaviour
 
         if (!isWallJumping)
         {
-            if (moveInput > 0)
+            if (moveInput > 0 && direction != "right")
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 direction = "right";
+                GetComponent<NetworkTransform>().Teleport(transform.localPosition, transform.localRotation, transform.localScale);
             }
-            else if (moveInput < 0)
+            else if (moveInput < 0 && direction != "left")
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 direction = "left";
+                GetComponent<NetworkTransform>().Teleport(transform.localPosition, transform.localRotation, transform.localScale);
             }   
         }
 
