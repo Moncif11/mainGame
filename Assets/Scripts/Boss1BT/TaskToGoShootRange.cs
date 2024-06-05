@@ -19,19 +19,19 @@ public class TaskToGoShootRange : Node
             state= NodeState.FAILURE;
             return state;
         }
-        if(Vector2.Distance(_transform.position, target.position)>0.01f){
+        if(Mathf.Abs(_transform.position.x-target.position.x)>0.01f){
              float stopRange = -(Boss1BT.shootRange-1);
             Boss1BT.isLeft=isLeft(target);
             if(!Boss1BT.isLeft){
                 stopRange*=-1; 
             } 
+            Vector2 newPosition = new Vector2(target.position.x+stopRange,_transform.position.y);
             animator.ResetTrigger("SP2"); 
             animator.ResetTrigger("Shoot");
             animator.ResetTrigger("Melee");
             animator.ResetTrigger("SP1"); 
             animator.SetTrigger("Walking"); 
-           
-            Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y-stopRange); 
+            
             Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
         }

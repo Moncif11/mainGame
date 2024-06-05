@@ -14,10 +14,17 @@ public class SP1Attack : MonoBehaviour
     }
 
     void SP1(){
+        
         bool isLeft = Boss1BT.isLeft;
         Rigidbody2D rigidbody2D= GetComponent<Rigidbody2D>();
+        Vector2 originalVelocity = rigidbody2D.velocity; 
         float speed = Boss1BT.speed*100;
         Vector2 dashVelocity = isLeft ? Vector2.left * speed : Vector2.right * speed;
-        rigidbody2D.velocity = dashVelocity; 
+        rigidbody2D.velocity = dashVelocity;
+
+        Vector2 newPosition = new Vector2(target.position.x,transform.position.y); 
+        Vector2 direction = Vector2.MoveTowards(transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
+        transform.position = new Vector2(direction.x,target.position.y); 
+        rigidbody2D.velocity = originalVelocity; 
     }
 }
