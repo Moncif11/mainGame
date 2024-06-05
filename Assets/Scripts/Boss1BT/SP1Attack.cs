@@ -8,6 +8,7 @@ public class SP1Attack : MonoBehaviour
     public Transform target;
 
     public Boss1BT boss1;  
+    public Collider2D sword; 
 
     public SP1Attack(Transform transform){
         target = transform;
@@ -19,8 +20,13 @@ public class SP1Attack : MonoBehaviour
         Rigidbody2D rigidbody2D= GetComponent<Rigidbody2D>();
         Vector2 originalVelocity = rigidbody2D.velocity; 
         float speed = Boss1BT.speed*50;
-        Vector2 dashVelocity = isLeft ? Vector2.left * speed : Vector2.right * speed;
+        sword.enabled = true;
+        float damage = sword.GetComponent<Melee>().damage; 
+         sword.GetComponent<Melee>().damage = Boss1BT.attack*1.5f; 
+        Vector2 dashVelocity = isLeft ? Vector2.left * speed : Vector2.right * speed; 
         rigidbody2D.velocity = dashVelocity;
+        sword.enabled = false;
+        sword.GetComponent<Melee>().damage = damage; 
         //float stopRange = isLeft ? -5 * speed : 5 * speed;
         //Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y); 
         //Vector2 direction = Vector2.MoveTowards(transform.position,newPosition, Boss1BT.speed*100*Time.deltaTime);

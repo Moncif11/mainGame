@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 660143978171534214}
   - component: {fileID: 5027982682622873095}
   m_Layer: 0
-  m_Name: BossNormalShot 1
+  m_Name: BossSP2Shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,9 +146,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.03813958, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.6553445
 --- !u!114 &5027982682622873095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +162,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   user: 1
+  damage: 2
