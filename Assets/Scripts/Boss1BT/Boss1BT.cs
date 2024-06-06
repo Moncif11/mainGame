@@ -87,11 +87,8 @@ public class Boss1BT : BehaviorTree.Tree{
                 }
             ) //going to AttackRange
             }) ,
-            
-        new TaskToGoShootRange(transform),      //Going to the enemy;
-         });
-
-        
+            new TaskToGoShootRange(transform),      //Going to the enemy;
+         });        
         return root;
         }
     public bool LeftLooking(){

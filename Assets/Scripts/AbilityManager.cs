@@ -84,7 +84,7 @@ public class AbilityManager : MonoBehaviour
         if(capePlayerController.direction == "left"){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + -transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(transform.right*1000);
+                bulletRB.AddForce(-transform.right*1000);
             }
         else if(capePlayerController.direction == "right"){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);

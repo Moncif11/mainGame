@@ -82,9 +82,10 @@ public class CapePlayerController : NetworkBehaviour
 
     void FixedUpdate()
     {
-        if (!IsOwner) {
+        /*if (!IsOwner) {
             return;
         }
+        */
         //moveInput = joystick.Horizontal;
         
             if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetKey(KeyCode.A))
@@ -198,10 +199,10 @@ public class CapePlayerController : NetworkBehaviour
 
     void Update()
     {
-        if (!IsOwner) {
+        /*if (!IsOwner) {
             return;
         }
-        
+        */
         lastOnGroundTime += Time.deltaTime;
         jump = false;
         for (int i = 0; i < Input.touchCount; i++)
@@ -283,13 +284,13 @@ public class CapePlayerController : NetworkBehaviour
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 direction = "right";
-                GetComponent<NetworkTransform>().Teleport(transform.localPosition, transform.localRotation, transform.localScale);
+            //    GetComponent<NetworkTransform>().Teleport(transform.localPosition, transform.localRotation, transform.localScale);
             }
             else if (moveInput < 0 && direction != "left")
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 direction = "left";
-                GetComponent<NetworkTransform>().Teleport(transform.localPosition, transform.localRotation, transform.localScale);
+               // GetComponent<NetworkTransform>().Teleport(transform.localPosition, transform.localRotation, transform.localScale);
             }   
         }
 
