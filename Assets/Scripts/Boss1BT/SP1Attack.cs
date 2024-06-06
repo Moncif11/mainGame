@@ -24,7 +24,16 @@ public class SP1Attack : MonoBehaviour
         float damage = sword.GetComponent<Melee>().damage; 
          sword.GetComponent<Melee>().damage = Boss1BT.attack*1.5f; 
         Vector2 dashVelocity = isLeft ? Vector2.left * speed : Vector2.right * speed; 
-        rigidbody2D.velocity = dashVelocity;
+        //rigidbody2D.velocity = dashVelocity;
+
+        float dashTime = 0.2f; // Duration of the dash in seconds
+        float elapsedTime = 0f;
+        
+        while (elapsedTime < dashTime)
+        {
+            rigidbody2D.MovePosition(rigidbody2D.position +dashVelocity *  Time.fixedDeltaTime);
+            elapsedTime += Time.fixedDeltaTime;
+        }
         sword.enabled = false;
         sword.GetComponent<Melee>().damage = damage; 
         //float stopRange = isLeft ? -5 * speed : 5 * speed;
