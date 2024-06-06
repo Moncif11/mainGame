@@ -6,12 +6,18 @@ using UnityEngine;
 public class CheckSP1Ready : Node
 {   
     Transform _transform; 
+    Animator _animator;
 
     public CheckSP1Ready(Transform transform){
         _transform = transform;
+        _animator = transform.GetComponent<Animator>();
     }
     public override NodeState Evaluate()
-    {   Transform target = nearestPlayer();
+    {   if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")){
+           state = NodeState.FAILURE; 
+            return state; 
+        }
+        Transform target = nearestPlayer();
         if(Boss1BT.SP1Ready && BossPhase.TWO == Boss1BT.bossPhase){
              parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 

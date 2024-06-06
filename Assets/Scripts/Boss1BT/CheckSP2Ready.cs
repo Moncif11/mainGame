@@ -7,11 +7,18 @@ public class CheckSP2Ready : Node
 {   
     Transform _transform; 
 
+    Animator _animator;
     public CheckSP2Ready(Transform transform){
         _transform = transform;
+        _animator = transform.GetComponent<Animator>();
+
     }
     public override NodeState Evaluate()
     {
+         if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")){
+           state = NodeState.FAILURE; 
+            return state; 
+        }
         Transform target = nearestPlayer(); 
         if(Boss1BT.SP2Ready){
             parent.parent.parent.SetData("target",(Object)target);
