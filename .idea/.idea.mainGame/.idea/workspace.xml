@@ -2,47 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/DefaultNetworkPrefabs.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DefaultNetworkPrefabs.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/oldPlayer.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/oldPlayer.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientNetworkTransform.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ClientNetworkTransform.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OwnerNetworkAnimator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/OwnerNetworkAnimator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Scripts/GameBuffsInitializer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Scripts/GameBuffsInitializer.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behavior Tree/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behavior Tree/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkLobbyManger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkLobbyManger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClientNetworkTransform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OwnerNetworkAnimator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Components/NetworkAnimator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Components/NetworkTransform.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -130,7 +99,9 @@
       <workItem from="1717420904895" duration="168000" />
       <workItem from="1717503253576" duration="3685000" />
       <workItem from="1717598754861" duration="4561000" />
-      <workItem from="1717625121307" duration="3985000" />
+      <workItem from="1717625121307" duration="4582000" />
+      <workItem from="1717937015243" duration="1763000" />
+      <workItem from="1717939164283" duration="1515000" />
     </task>
     <servers />
   </component>
