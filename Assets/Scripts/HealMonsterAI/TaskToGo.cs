@@ -1,7 +1,6 @@
 using BehaviorTree;
 using UnityEngine;
-
-namespace RangeMonsterAI{
+namespace HealMonsterAI{
 public class TaskToGo : Node
 {
     private Transform _transform;

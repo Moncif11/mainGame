@@ -1,7 +1,7 @@
 using BehaviorTree;
 using UnityEngine;
 
-namespace RangeMonsterAI{
+namespace MidRangeMonsterAI{
 public class TaskToGo : Node
 {
     private Transform _transform;
@@ -50,7 +50,7 @@ public class TaskToGo : Node
         }
         else if (direction.x <0)
         {
-            RangeMonsterBT.isRight = true; // Nach rechts schauen
+            MidRangeMonsterBT.isRight = true; // Nach rechts schauen
               Vector3 Scaler = _transform.localScale;
             Scaler.x = Mathf.Abs(Scaler.x); 
             _transform.localScale = Scaler;

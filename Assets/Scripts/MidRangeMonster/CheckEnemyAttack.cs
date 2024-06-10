@@ -1,8 +1,7 @@
 using BehaviorTree;
 
 using UnityEngine;
-
-namespace RangeMonsterAI{
+namespace MidRangeMonsterAI{
 public class CheckEnemyAttack : Node
 {   Transform _transform; 
 
@@ -36,5 +35,5 @@ public class CheckEnemyAttack : Node
         state = NodeState.FAILURE;
         return state;
     }
-    }
+}
 }

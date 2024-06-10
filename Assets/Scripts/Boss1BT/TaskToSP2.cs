@@ -14,7 +14,7 @@ public class TaskToSP2 : Node
     }
     public override NodeState Evaluate()
     {
-         Transform target = (Transform)GetData("target");
+        Transform target = (Transform)GetData("target");
         Boss1BT.isLeft = IsLeft(target);
         Debug.Log("SP2 activated");
         _animator.SetTrigger("SP2");

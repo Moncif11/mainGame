@@ -1,7 +1,7 @@
 using UnityEngine; 
 using BehaviorTree;
 
-namespace RangeMonsterAI {
+namespace HealMonsterAI{
 public class TaskAttack : Node{
     Health capePlayerHealth; 
     Transform _lastTarger; 
@@ -33,7 +33,7 @@ public class TaskAttack : Node{
             Debug.Log("Shoot: "+bulletPrefab.name);
             animator.SetTrigger("Attack");
             animator.ResetTrigger("Running"); 
-            if(RangeMonsterBT.isRight){
+            if(HealMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(_transform.right*1000);
@@ -56,6 +56,5 @@ public class TaskAttack : Node{
         state= NodeState.RUNNING; 
         return state; 
     }
-
-}
+    }
 }

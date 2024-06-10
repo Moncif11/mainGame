@@ -2,7 +2,7 @@ using System.Runtime.Versioning;
 using BehaviorTree;
 using UnityEngine;
 
-namespace RangeMonsterAI{
+namespace HealMonsterAI{
 public class CheckEnemyInFOVRange : Node
 {
     public Transform _transform; 
@@ -31,7 +31,7 @@ public class CheckEnemyInFOVRange : Node
             }
             }
         //}
-        if(minDistance <= RangeMonsterBT.fovRange){
+        if(minDistance <= HealMonsterBT.fovRange){
                 parent.parent.SetData("target",targetPlayer); 
                 Debug.Log("CheckEnemyInFOVRange : SUCCESS");
                 state= NodeState.SUCCESS; 

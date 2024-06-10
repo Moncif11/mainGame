@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using BehaviorTree;
-using RangeMonsterAI;
+using HealMonsterAI;
 
-public class RangeMonsterBT : Tree {
+public class HealMonsterBT : Tree {
 
     public UnityEngine.Transform[] waypoints;
     public static float speed = 2f;
@@ -18,6 +18,10 @@ public class RangeMonsterBT : Tree {
     protected override Node SetupTree(){
         Node root = new Selector(
             new List<Node>{
+                new Sequence( new List<Node>{
+                            new CheckToHeal(transform),  
+                            new TaskAttack(bulletPrefab,transform),
+                       }),
                new Sequence( new List<Node>{
                             new CheckEnemyAttack(transform),  
                             new TaskAttack(bulletPrefab,transform),

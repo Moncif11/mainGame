@@ -1,7 +1,6 @@
 using BehaviorTree;
 using UnityEngine;
-
-namespace RangeMonsterAI{
+namespace HealMonsterAI{
 public class TaskPatrol : Node
 {
     private Transform _transform;
@@ -58,11 +57,11 @@ public class TaskPatrol : Node
          Vector2 direction = (_transform.position - _waypoints[_currentWayPointIndex].position).normalized; 
          if (direction.x < 0)
         {
-            RangeMonsterBT.isRight = false; // Nach links schauen
+            HealMonsterBT.isRight = false; // Nach links schauen
         }
         else if (direction.x > 0)
         {
-            RangeMonsterBT.isRight = true; // Nach rechts schauen
+            HealMonsterBT.isRight = true; // Nach rechts schauen
         }  
     }
     }

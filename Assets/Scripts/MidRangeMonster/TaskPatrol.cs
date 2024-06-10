@@ -1,7 +1,7 @@
 using BehaviorTree;
 using UnityEngine;
 
-namespace RangeMonsterAI{
+namespace MidRangeMonsterAI{
 public class TaskPatrol : Node
 {
     private Transform _transform;
@@ -40,7 +40,7 @@ public class TaskPatrol : Node
     }
 
     private void Flip(){
-        if(RangeMonsterBT.isRight){
+        if(MidRangeMonsterBT.isRight){
             Vector3 Scaler = _transform.localScale;
             if(Scaler.x >0){
                 Scaler.x = -Scaler.x;
@@ -58,12 +58,12 @@ public class TaskPatrol : Node
          Vector2 direction = (_transform.position - _waypoints[_currentWayPointIndex].position).normalized; 
          if (direction.x < 0)
         {
-            RangeMonsterBT.isRight = false; // Nach links schauen
+            MidRangeMonsterBT.isRight = false; // Nach links schauen
         }
         else if (direction.x > 0)
         {
-            RangeMonsterBT.isRight = true; // Nach rechts schauen
+            MidRangeMonsterBT.isRight = true; // Nach rechts schauen
         }  
     }
-    }
+}
 }
