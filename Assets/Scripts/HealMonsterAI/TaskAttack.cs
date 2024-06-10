@@ -35,12 +35,18 @@ public class TaskAttack : Node{
             //animator.ResetTrigger("Running"); 
             if(HealMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
+                Quaternion rotation = bullet.transform.rotation;
+                rotation *= Quaternion.Euler(0, 0, 90); // Ändere die Rotation um -90 Grad um die Z-Achse
+                bullet.transform.rotation = rotation;
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(_transform.right*1000);
             }
             else{
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
+                Quaternion rotation = bullet.transform.rotation;
+                rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse
+                bullet.transform.rotation = rotation;
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(-_transform.right*1000);
                 Debug.Log("Bullet : " + bullet.transform.position);
