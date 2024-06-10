@@ -28,18 +28,18 @@ public class TaskPatrol : Node
             //state = NodeState.SUCCESS;
         }
         else{
-            _transform.position = Vector2.MoveTowards(_transform.position,wp.position, RangeMonsterBT.speed*Time.deltaTime);
+            _transform.position = Vector2.MoveTowards(_transform.position,wp.position, HealMonsterBT.speed*Time.deltaTime);
         }   
          isRight();
          Flip();
-        animator.SetTrigger("Running");
-        animator.ResetTrigger("Attack");
+        //animator.SetTrigger("Running");
+        //animator.ResetTrigger("Attack");
         state = NodeState.RUNNING;
         return state;
     }
 
     private void Flip(){
-        if(RangeMonsterBT.isRight){
+        if(HealMonsterBT.isRight){
             Vector3 Scaler = _transform.localScale;
             if(Scaler.x >0){
                 Scaler.x = -Scaler.x;

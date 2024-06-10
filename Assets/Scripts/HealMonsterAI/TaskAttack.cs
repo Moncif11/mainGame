@@ -21,9 +21,9 @@ public class TaskAttack : Node{
 
     public override NodeState Evaluate()
     {
-        Transform target = (Transform)GetData("target"); 
+        Transform target = (Transform)GetData("target");
         Debug.Log("Attack");
-        Debug.Log("Attackstate :" +state);
+        Debug.Log("Heal");
         if(_lastTarger != target){
             _lastTarger = target;
             capePlayerHealth = target.GetComponent<Health>();
@@ -31,8 +31,8 @@ public class TaskAttack : Node{
         attackCounter+= Time.deltaTime;
         if(attackCounter >= attackTime){           
             Debug.Log("Shoot: "+bulletPrefab.name);
-            animator.SetTrigger("Attack");
-            animator.ResetTrigger("Running"); 
+           // animator.SetTrigger("Attack");
+            //animator.ResetTrigger("Running"); 
             if(HealMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
@@ -45,13 +45,7 @@ public class TaskAttack : Node{
                 bulletRB.AddForce(-_transform.right*1000);
                 Debug.Log("Bullet : " + bullet.transform.position);
             }
-            if(capePlayerHealth.health <= 0){
-                Debug.Log("Data Cleared");
-                ClearData("target"); 
-                }
-            else{
                 attackCounter= 0f; 
-            }
         }
         state= NodeState.RUNNING; 
         return state; 

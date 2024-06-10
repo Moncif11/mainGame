@@ -2,6 +2,7 @@ using BehaviorTree;
 
 using UnityEngine;
 
+namespace HealMonsterAI{
 public class CheckToHeal : Node
 {   Transform _transform; 
 
@@ -11,32 +12,39 @@ public class CheckToHeal : Node
     }
     public override NodeState Evaluate()
     {
-        float minDistance = 0f;
-         Transform targetEnemy= GameObject.FindGameObjectWithTag("Enemy").transform; 
+         GameObject[] enemies= GameObject.FindGameObjectsWithTag("Enemy"); 
         //if(t==null){
-            if(targetEnemy ==null){
+            Debug.Log(enemies.Length);
+            if(enemies.Length == 0){
                 state=NodeState.FAILURE; 
                 return state; 
             }
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy"); 
-            minDistance = Vector2.Distance(_transform.position,enemies[0].transform.position); 
-            targetEnemy = enemies[0].transform;
-            for(int i = 1; i < enemies.Length; i++){
-            if(Vector2.Distance(_transform.position,enemies[i].transform.position)<minDistance){
-                if(_transform = enemies[i].transform){continue;}
-                minDistance = Vector2.Distance(_transform.position,enemies[i].transform.position); 
-                targetEnemy = enemies[i].transform;
+            
+            Transform closestEnemy = null;
+            float minDistance = float.MaxValue;
+
+            foreach (GameObject enemy in enemies) {
+                float distance = Vector2.Distance(_transform.position, enemy.transform.position);
+                if (distance < minDistance) {
+                    if (enemy.transform == _transform) {
+                    continue;
+                }
+                    minDistance = distance;
+                    closestEnemy = enemy.transform;
+                }
             }
+
+            if (closestEnemy != null) {
+                Health health = closestEnemy.GetComponent<Health>();
+                if (health != null && health.health <= health.maxHealth / 2) {
+                    parent.parent.SetData("target", closestEnemy);
+                    Debug.Log("CheckToHeal: SUCCESS");
+                    state = NodeState.SUCCESS;
+                    return state;
+                }
             }
-                Health health = targetEnemy.GetComponent<Health>() ;          
-        //}
-        if(minDistance <= HealMonsterBT.attackRange && health.maxHealth/2 >= health.health){
-                parent.parent.SetData("target",targetEnemy); 
-                Debug.Log("CheckEnemyInFOVRange : SUCCESS");
-                state= NodeState.SUCCESS; 
-                return state;
-        }
                 state= NodeState.FAILURE; 
                 return state;
     }
+}
 }
