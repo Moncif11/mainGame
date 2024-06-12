@@ -17,15 +17,17 @@ public class Reflect : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other){
-        if(!other.GetComponent<GameObject>().CompareTag("Bullet")){
-            return; 
-        }
+void OnCollisionEnter2D(Collision2D collision)
+    {   
         Debug.Log("Reflect");
-        Collision2D coll = GetComponent<Collision2D>();
-            rb =  other.GetComponent<Rigidbody2D>(); 
-            lastVelocity = rb.velocity;
-            var speed = rb.velocity.magnitude; 
-            var direction = Vector3.Reflect(lastVelocity.normalized,coll.contacts[0].normal); 
+        Rigidbody2D bulletRB = collision.gameObject.GetComponent<Rigidbody2D>();
+        if(!collision.gameObject.CompareTag("Bullet")) return; 
+        // Prüft, ob das kollidierende Objekt ein Projektil ist
+        if (bulletRB != null)
+        {
+            // Berechnet die neue Richtung basierend auf der Kollisionsnormalen
+            Vector2 reflectDirection = Vector2.Reflect(rb.velocity, collision.contacts[0].normal);
+            rb.velocity = reflectDirection;
+        }
     }
 }

@@ -23,7 +23,6 @@ public class TaskAttack : Node{
     {
         Transform target = (Transform)GetData("target");
         Debug.Log("Attack");
-        Debug.Log("Heal");
         if(_lastTarger != target){
             _lastTarger = target;
             capePlayerHealth = target.GetComponent<Health>();
@@ -31,8 +30,9 @@ public class TaskAttack : Node{
         attackCounter+= Time.deltaTime;
         if(attackCounter >= attackTime){           
             Debug.Log("Shoot: "+bulletPrefab.name);
-           // animator.SetTrigger("Attack");
-            //animator.ResetTrigger("Running"); 
+            HealMonsterBT.isRight = isRight(target);
+            animator.SetTrigger("Attack");
+            animator.ResetTrigger("Running"); 
             if(HealMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;
@@ -55,6 +55,28 @@ public class TaskAttack : Node{
         }
         state= NodeState.RUNNING; 
         return state; 
+    }
+
+     private bool isRight(Transform target){
+         Vector2 direction = (_transform.position - target.position).normalized; 
+         if (direction.x > 0)
+        {
+             Vector3 Scaler = _transform.localScale;
+             if(Scaler.x >0){
+                 Scaler.x = -Scaler.x;
+             } 
+            _transform.localScale = Scaler;
+            return false; 
+        }
+        else if (direction.x <0)
+        {
+            RangeMonsterBT.isRight = true; // Nach rechts schauen
+              Vector3 Scaler = _transform.localScale;
+            Scaler.x = Mathf.Abs(Scaler.x); 
+            _transform.localScale = Scaler;
+            return true;
+        }  
+        return true; 
     }
     }
 }

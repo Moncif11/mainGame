@@ -6,7 +6,6 @@ namespace HealMonsterAI{
 public class CheckToHeal : Node
 {   Transform _transform; 
 
-    bool isFacing = false;  
     public CheckToHeal(Transform transform){
     _transform = transform;
     }
@@ -25,26 +24,25 @@ public class CheckToHeal : Node
 
             foreach (GameObject enemy in enemies) {
                 float distance = Vector2.Distance(_transform.position, enemy.transform.position);
-                if (distance < minDistance) {
+                if (distance < minDistance && distance < HealMonsterBT.attackRange) {
                     if (enemy.transform == _transform) {
                     continue;
                 }
+                Health health = enemy.GetComponent<Health>();
+                if (health != null && health.health <= health.maxHealth / 2) {
                     minDistance = distance;
                     closestEnemy = enemy.transform;
+                    }
                 }
             }
-
             if (closestEnemy != null) {
-                Health health = closestEnemy.GetComponent<Health>();
-                if (health != null && health.health <= health.maxHealth / 2) {
                     parent.parent.SetData("target", closestEnemy);
                     Debug.Log("CheckToHeal: SUCCESS");
                     state = NodeState.SUCCESS;
                     return state;
-                }
             }
                 state= NodeState.FAILURE; 
                 return state;
+        }
     }
-}
 }

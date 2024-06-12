@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BehaviorTree;
 using HealMonsterAI;
-
 public class HealMonsterBT : Tree {
 
     public UnityEngine.Transform[] waypoints;
@@ -19,9 +19,15 @@ public class HealMonsterBT : Tree {
         Node root = new Selector(
             new List<Node>{
                 new Sequence( new List<Node>{
-                            new CheckToHeal(transform),  
-                            new TaskAttack(bulletPrefab,transform),
-                       }),
+                            new CheckToHeal(transform),
+                            new Selector(new List<Node>{
+                                new Sequence(new List<Node>{
+                                    new CheckDistanceToEnemy(transform), 
+                                    new TaskToGoDistance(transform),       
+                                }), 
+                                  new TaskAttack(bulletPrefab,transform),
+                            }),
+            }),
                new Sequence( new List<Node>{
                             new CheckEnemyAttack(transform),  
                             new TaskAttack(bulletPrefab,transform),

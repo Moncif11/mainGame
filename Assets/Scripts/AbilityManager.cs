@@ -11,7 +11,7 @@ public enum Abilty{
 }
 public class AbilityManager : MonoBehaviour
 {   
-    public Abilty abilty;  
+    public Abilty ability;  
 
     public GameObject fireShot;
     public GameObject fireUlt; 
@@ -29,7 +29,7 @@ public class AbilityManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        abilty = Abilty.NONE; 
+        ability = Abilty.NONE; 
         ultReady = false;    
         capePlayerController = GetComponent<CapePlayerController>();
     }
@@ -38,7 +38,7 @@ public class AbilityManager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E)){
-        switch(abilty){
+        switch(ability){
             case Abilty.FIRE:
             Shoot(fireShot);
             return;
@@ -61,7 +61,7 @@ public class AbilityManager : MonoBehaviour
         }    
         if(Input.GetKey(KeyCode.Q)){
             if(ultReady){
-            switch(abilty){
+            switch(ability){
                 case Abilty.FIRE:
                 Shoot(fireUlt);
                 return; 
@@ -82,12 +82,18 @@ public class AbilityManager : MonoBehaviour
 
     private void Shoot(GameObject bulletPrefab){
         if(capePlayerController.direction == "left"){
-                GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + -transform.right, Quaternion.identity);
+                GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
+                Quaternion rotation = bullet.transform.rotation;
+                rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse
+                bullet.transform.rotation = rotation;
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(-transform.right*1000);
+                bulletRB.AddForce(transform.right*1000);
             }
         else if(capePlayerController.direction == "right"){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
+                Quaternion rotation = bullet.transform.rotation;
+                rotation *= Quaternion.Euler(0, 0, 90); // Ändere die Rotation um -90 Grad um die Z-Achse
+                bullet.transform.rotation = rotation;
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(transform.right*1000);
             }

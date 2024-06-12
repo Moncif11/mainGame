@@ -29,7 +29,7 @@ public class FireBullet : MonoBehaviour
         } 
       } 
     }   
-    Destroy(gameObject);
+    //Destroy(gameObject);
   }
 
 }
