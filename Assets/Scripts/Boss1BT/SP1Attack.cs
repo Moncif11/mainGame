@@ -36,6 +36,7 @@ public class SP1Attack : MonoBehaviour
         }
         sword.enabled = false;
         sword.GetComponent<Melee>().damage = damage; 
+        Boss1BT.SP1Ready= false; 
         //float stopRange = isLeft ? -5 * speed : 5 * speed;
         //Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y); 
         //Vector2 direction = Vector2.MoveTowards(transform.position,newPosition, Boss1BT.speed*100*Time.deltaTime);

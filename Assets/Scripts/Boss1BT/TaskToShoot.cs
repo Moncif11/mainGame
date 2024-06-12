@@ -6,7 +6,7 @@ public class TaskToShoot : Node
     Transform _transform;
     Health playerHealth;
 
-    public float attackTime = 0.5f;
+    public float attackTime = 0.3f;
     public float attackCounter = 0;
 
     private float lastAttackTime = -Mathf.Infinity; // Initialize to a very old time

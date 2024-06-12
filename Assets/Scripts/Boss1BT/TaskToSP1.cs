@@ -28,7 +28,6 @@ public class TaskToSP1 : Node
         _animator.ResetTrigger("Walking");
         _animator.ResetTrigger("Shoot");
         _animator.ResetTrigger("Melee");
-        Boss1BT.SP1Ready= false; 
         state = NodeState.RUNNING; 
         return state; 
     }

@@ -23,17 +23,16 @@ public class ShootBullet : MonoBehaviour
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPoint.position + Vector3.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
                 bullet.GetComponent<FireBullet>().damage =Boss1BT.attack;  
-                bulletRB.AddForce(Vector2.right*1000);
+                bulletRB.AddForce(Vector2.right*150);
             }
             else{
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPoint.position + Vector3.left, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();   
                 bullet.GetComponent<FireBullet>().damage =Boss1BT.attack;  
-                bulletRB.AddForce(-Vector2.right*1000);
+                bulletRB.AddForce(-Vector2.right*150);
                 Debug.Log("Bullet : " + bullet.transform.position);
             }   
-            
     }
 
      public void shootSP2()
@@ -54,7 +53,7 @@ public class ShootBullet : MonoBehaviour
                 bulletRB.AddForce(-Vector2.right*1000);
                 Debug.Log("Bullet : " + bullet.transform.position);
             }   
-            
+          Boss1BT.SP2Ready = false;  
     }
 }
 
