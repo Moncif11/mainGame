@@ -9,9 +9,7 @@ public class MidRangeMonsterBT : Tree {
 
     public static float fovRange = 10f;
 
-    public static float attackRange = 3f; 
-
-    public UnityEngine.GameObject bulletPrefab; 
+    public static float attackRange = 2f; 
 
     public static bool isRight = true; 
 

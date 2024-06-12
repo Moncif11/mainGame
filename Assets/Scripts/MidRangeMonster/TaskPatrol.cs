@@ -35,6 +35,7 @@ public class TaskPatrol : Node
          Flip();
         animator.SetTrigger("Running");
         animator.ResetTrigger("Attack");
+        animator.ResetTrigger("Guard");
         state = NodeState.RUNNING;
         return state;
     }
