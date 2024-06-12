@@ -29,6 +29,11 @@ public class TaskAttack : Node{
             capePlayerHealth = target.GetComponent<Health>();
         }  
         attackCounter+= Time.deltaTime;
+        if(attackCounter > attackTime){
+            if(MidRangeMonsterBT.isRight) 
+            rb.velocity = Vector2.right*15;
+            else rb.velocity = Vector2.left*15;  
+        }
             if(capePlayerHealth.health <= 0){
                 Debug.Log("Data Cleared");
                 ClearData("target"); 
@@ -36,6 +41,7 @@ public class TaskAttack : Node{
             else{
                 attackCounter= 0f; 
             }
+        
         state= NodeState.RUNNING; 
         return state; 
     }
