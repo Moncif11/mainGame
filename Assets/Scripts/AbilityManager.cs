@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
 public enum Abilty{
@@ -26,6 +27,9 @@ public class AbilityManager : MonoBehaviour
     private CapePlayerController capePlayerController;
 
     private bool ultReady;  
+
+    private bool ShieldActive = false ; 
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -54,8 +58,13 @@ public class AbilityManager : MonoBehaviour
             default:
             return; 
         }
+        
         }    
-
+        else{
+            if(ability ==Abilty.ROCK){
+                 DeactivateShield(); 
+            }
+        }
         if(maxUltbar ==ultBar){
             ultReady= true; 
         }    
@@ -66,7 +75,7 @@ public class AbilityManager : MonoBehaviour
                 Shoot(fireUlt);
                 return; 
                 case Abilty.WATER:
-                GetComponent<Health>().takeDamage(-50);
+                GetComponent<Health>().heal(50);
                 return; 
                 case Abilty.ICE: 
                 FreezeAll(); 
@@ -100,7 +109,30 @@ public class AbilityManager : MonoBehaviour
     }
 
     private void Shield(){
+        Health health = GetComponent<Health>();
+        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+        health.damageReduction = 100;
+        float tickTimer = Time.deltaTime;  
+        int tickCounter = 0; 
+        ShieldActive =true; 
+        while(tickCounter >10 && ShieldActive){
+            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            tickTimer+=Time.deltaTime;
+            if(tickTimer >= 1){
+             health.damageReduction-= 10;   
+            }
+        }
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;  
+        return; 
+    }
 
+        private void DeactivateShield(){
+        Health health = GetComponent<Health>();
+        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+        health.damageReduction = 0;
+        ShieldActive = false; 
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;  
+        return; 
     }
     private void FreezeAll(){
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 11.2f);

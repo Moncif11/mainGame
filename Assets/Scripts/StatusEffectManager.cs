@@ -27,7 +27,7 @@ public class StatusEffectManager : MonoBehaviour
 
     public void ApplyFreeze(int ticks , bool isUlt=false)
     {   
-        if(isUlt!){
+        if(!isUlt!|| freezeTicktimer == 0){
         freezeTicktimer = ticks;
         }
          StartCoroutine(Freeze());

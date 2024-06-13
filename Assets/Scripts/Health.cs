@@ -6,13 +6,23 @@ public class Health : MonoBehaviour {
     public float maxHealth;
      public float health = 5;
 
+    public float damageReduction = 0;
+
     public GameObject dropItem;
 
     private void Start(){
          health = maxHealth; 
     }
+    public void heal(float heal){
+        if(health+heal >= 100){
+                health = maxHealth;
+        }
+        else{
+            health+=heal; 
+        }
+    }
     public void takeDamage(float damage){
-        health-=damage;
+        health = health -(damage- damage*(damageReduction/100));
         if(gameObject.CompareTag("Enemy")){
              if(health<= 0){
             Destroy(gameObject);
@@ -20,7 +30,6 @@ public class Health : MonoBehaviour {
                     Instantiate(dropItem, transform.position, Quaternion.identity);
                 } 
         }
-        } 
-       
+        }       
     }
 }

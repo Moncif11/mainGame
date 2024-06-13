@@ -13,9 +13,7 @@ public class WaterBullet : MonoBehaviour
         other.GetComponent<Health>()?.takeDamage(damage);
         }
         if(other.CompareTag("Player")){
-        if(other.GetComponent<Health>().maxHealth >  other.GetComponent<Health>().health+2){
             other.GetComponent<Health>().health+=2;
-            }
         }
     }
     else if( user== User.ENEMY ){
@@ -23,9 +21,7 @@ public class WaterBullet : MonoBehaviour
         other.GetComponent<Health>()?.takeDamage(damage); 
         }
         if(other.CompareTag("Enemy")){
-        if(other.GetComponent<Health>().maxHealth >  other.GetComponent<Health>().health+2){
-            other.GetComponent<Health>().health+=2;
-        }
+            other.GetComponent<Health>().heal(2);
         }
     }   
     Destroy(gameObject);
