@@ -269,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 5
+  damageReduction: 0
   dropItem: {fileID: 0}
 --- !u!114 &269736958
 MonoBehaviour:
@@ -3726,6 +3727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RockEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.45
@@ -3989,6 +3994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   health: 10
+  damageReduction: 0
   dropItem: {fileID: 175668089732633245, guid: a8dff91814cde98429cea09b54ec5031, type: 3}
 --- !u!114 &1218137062
 MonoBehaviour:
@@ -4542,7 +4548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1726386419
 Transform:
   m_ObjectHideFlags: 0
