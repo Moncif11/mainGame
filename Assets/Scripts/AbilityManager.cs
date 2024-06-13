@@ -28,6 +28,7 @@ public class AbilityManager : MonoBehaviour
 
     private bool ultReady;  
 
+    private bool ultRunning; 
     private bool ShieldActive = false ; 
  
     // Start is called before the first frame update
@@ -109,6 +110,7 @@ public class AbilityManager : MonoBehaviour
     }
 
     private void Shield(){
+        if(ultRunning == true)return; 
         Health health = GetComponent<Health>();
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         health.damageReduction = 100;
@@ -127,6 +129,7 @@ public class AbilityManager : MonoBehaviour
     }
 
         private void DeactivateShield(){
+            if(ultRunning)return; 
         Health health = GetComponent<Health>();
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         health.damageReduction = 0;
@@ -148,6 +151,23 @@ public class AbilityManager : MonoBehaviour
                 }
             }  
         }
+    }
+
+     private void Instructable()
+    {
+        StartCoroutine(UltRoutine());
+    }
+
+    private IEnumerator UltRoutine()
+    {
+        Health health= GetComponent<Health>();
+        health.damageReduction = 100;
+        ultRunning = true;
+
+        yield return new WaitForSeconds(10);
+
+        health.damageReduction = 0; // oder setze den Schaden wieder auf den ursprünglichen Wert zurück
+        ultRunning = false;
     }
     private void OnDrawGizmosSelected()
     {
