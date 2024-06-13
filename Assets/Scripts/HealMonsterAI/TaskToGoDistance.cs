@@ -13,22 +13,28 @@ public class TaskToGoDistance : Node
     }
 
     public override NodeState Evaluate()
-    {  
+    {  Debug.Log("Distance");
         Transform target = (Transform)GetData("distance");
 //        Debug.Log("Target:" + target.name);
 //        Debug.Log("Target Position: "+ target.position);
 //        Debug.Log("Runningstate: "+state);  
         if(Vector2.Distance(_transform.position, target.position)>0.01f){
            // Debug.Log("TaskToGo: Success");
-            RangeMonsterBT.isRight=isRight(target);
+            RangeMonsterBT.isRight=!isRight(target);
 //            Debug.Log("IsRight: " + RangeMonsterBT.isRight);
-            Vector2 newPosition = new Vector2(target.position.x,target.position.y); 
-            Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, RangeMonsterBT.speed*Time.deltaTime);
+        float stopRange = 0; 
+        if (!HealMonsterBT.isRight) {
+            stopRange -= 3;
+         } else {
+            stopRange += 3; 
+        }
+           Vector2 newPosition = new Vector2(target.position.x-stopRange,target.position.y); 
+            Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, HealMonsterBT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
         }
         animator.SetTrigger("Running");
         animator.ResetTrigger("Attack");
-        Debug.Log("TaskToGo: Running");
+        Debug.Log("TaskToGoDistance: Running");
         state = NodeState.RUNNING; 
         return state;         
     }

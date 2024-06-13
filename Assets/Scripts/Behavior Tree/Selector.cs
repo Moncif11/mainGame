@@ -15,12 +15,9 @@ namespace BehaviorTree{
                         return state;
                     case NodeState.RUNNING:
                         state = NodeState.RUNNING;
-                        
                         return state;                         
                     case NodeState.FAILURE:
                         continue;
-
-
                     }
                 }
                 state = NodeState.FAILURE;

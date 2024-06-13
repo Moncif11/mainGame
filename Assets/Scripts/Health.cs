@@ -14,7 +14,7 @@ public class Health : MonoBehaviour {
          health = maxHealth; 
     }
     public void heal(float heal){
-        if(health+heal >= 100){
+        if(health+heal >=maxHealth ){
                 health = maxHealth;
         }
         else{

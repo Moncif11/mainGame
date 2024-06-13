@@ -11,8 +11,8 @@ public class CheckDistanceToEnemy : Node
     }
 
     public override NodeState Evaluate()
-    {
-        object t = GetData("target");
+    {   
+        object t = GetData("target");        
         if(t==null){
             state  = NodeState.FAILURE; 
             return state; 
@@ -29,18 +29,12 @@ public class CheckDistanceToEnemy : Node
             isFacing = false;
         }
 
-        if(Vector2.Distance(_transform.position, target.position)< HealMonsterBT.attackRange-3 && isFacing){            
-               Vector3 targetPosition = target.position;
-    
-        if (!HealMonsterBT.isRight) {
-            targetPosition.x -= 3;
-        } else {
-            targetPosition.x += 3; 
-        }
-    
-        target.position = targetPosition;
-            parent.parent.parent.SetData("distance", target);
-            state= NodeState.SUCCESS;
+        
+        if(Vector2.Distance(_transform.position, target.position)< HealMonsterBT.attackRange-3 && isFacing){
+        Debug.Log("isFacing: " + isFacing);
+        parent.parent.SetData("distance",(Object)target);
+        state= NodeState.SUCCESS;
+         Debug.Log("CheckDistance");
             return state;
         } 
         state = NodeState.FAILURE;

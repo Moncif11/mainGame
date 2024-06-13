@@ -26,7 +26,7 @@ public class TaskToGo : Node
             }
 //            Debug.Log("IsRight: " + RangeMonsterBT.isRight);
             Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y-stopRange); 
-            Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, RangeMonsterBT.speed*Time.deltaTime);
+            Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, HealMonsterBT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
         }
         animator.SetTrigger("Running");

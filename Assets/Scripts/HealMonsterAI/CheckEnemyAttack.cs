@@ -28,7 +28,7 @@ public class CheckEnemyAttack : Node
             isFacing = false;
         }
 
-        if(Vector2.Distance(_transform.position, target.position)<= HealMonsterBT.attackRange){            
+        if(Vector2.Distance(_transform.position, target.position)<= HealMonsterBT.attackRange &&isFacing){            
             state= NodeState.SUCCESS;
             return state;
         } 

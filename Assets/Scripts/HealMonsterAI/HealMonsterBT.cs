@@ -9,7 +9,7 @@ public class HealMonsterBT : Tree {
 
     public static float fovRange = 10f;
 
-    public static float attackRange = 3f; 
+    public static float attackRange = 6f; 
 
     public UnityEngine.GameObject bulletPrefab; 
 

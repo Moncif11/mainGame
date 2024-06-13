@@ -29,7 +29,7 @@ public class CheckToHeal : Node
                     continue;
                 }
                 Health health = enemy.GetComponent<Health>();
-                if (health != null && health.health <= health.maxHealth / 2) {
+                if (health != null && health.health <= (health.maxHealth/2)) {
                     minDistance = distance;
                     closestEnemy = enemy.transform;
                     }
@@ -37,7 +37,6 @@ public class CheckToHeal : Node
             }
             if (closestEnemy != null) {
                     parent.parent.SetData("target", closestEnemy);
-                    Debug.Log("CheckToHeal: SUCCESS");
                     state = NodeState.SUCCESS;
                     return state;
             }
