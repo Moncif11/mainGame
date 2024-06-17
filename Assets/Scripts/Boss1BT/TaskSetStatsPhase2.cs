@@ -1,6 +1,7 @@
 using BehaviorTree;
 using UnityEngine;
 
+namespace Boss1AI{
 public class TaskSetStatsPhase2 : Node{
 
     Transform _transform;
@@ -21,4 +22,5 @@ public class TaskSetStatsPhase2 : Node{
         return state;
     }
 
+    }
 }

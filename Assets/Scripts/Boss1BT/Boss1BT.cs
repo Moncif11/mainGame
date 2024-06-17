@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
+using Boss1AI; 
 
 public enum BossPhase{
     ONE, 
@@ -94,5 +95,5 @@ public class Boss1BT : BehaviorTree.Tree{
         
     public bool LeftLooking(){
         return isLeft;
-    }
+        }
 }

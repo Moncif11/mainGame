@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Boss1AI{
 public class CoolDownMangerB1 : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -33,5 +34,7 @@ public class CoolDownMangerB1 : MonoBehaviour
                Boss1BT.SP2Ready = true;  
             }   
         }
+    }
+    
     }
 }

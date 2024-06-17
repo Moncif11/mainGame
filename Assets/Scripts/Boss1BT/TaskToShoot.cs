@@ -1,6 +1,7 @@
 using UnityEngine;
 using BehaviorTree;
 
+namespace Boss1AI{
 public class TaskToShoot : Node
 {
     Transform _transform;
@@ -84,5 +85,6 @@ public class TaskToShoot : Node
         }
 
         return true;
+        }
     }
 }

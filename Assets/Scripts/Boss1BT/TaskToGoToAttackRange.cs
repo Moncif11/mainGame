@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
 
+namespace Boss1AI{
 public class TaskToGoToAttackRange : Node
 {
     Transform _transform; 
@@ -54,5 +55,6 @@ public class TaskToGoToAttackRange : Node
             return false;
         }  
         return true; 
+        }
     }
 }

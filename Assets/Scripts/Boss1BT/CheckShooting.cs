@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorTree;
 
+namespace Boss1AI{
 public class CheckShooting : Node
 {
     Transform _transform;
@@ -55,4 +56,5 @@ public class CheckShooting : Node
             }
             return targetPlayer;
     }
+}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+namespace Boss1AI{
 public class SP1Attack : MonoBehaviour
 {   
     public Transform target;
@@ -42,5 +43,6 @@ public class SP1Attack : MonoBehaviour
         //Vector2 direction = Vector2.MoveTowards(transform.position,newPosition, Boss1BT.speed*100*Time.deltaTime);
         //transform.position = new Vector2(direction.x,target.position.y);
         //rigidbody2D.velocity = originalVelocity; 
+        }
     }
 }

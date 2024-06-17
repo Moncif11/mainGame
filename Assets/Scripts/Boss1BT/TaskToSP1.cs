@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
 
+namespace Boss1AI{
 public class TaskToSP1 : Node 
 {
     Transform _transform;
@@ -56,5 +57,6 @@ public class TaskToSP1 : Node
             return false;
         }
         return true;
+        }
     }
 }

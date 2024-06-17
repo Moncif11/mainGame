@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorTree; 
 
+namespace Boss1AI{
 public class CheckMeleeAttack : Node
 {
     Transform _transform;
@@ -56,4 +57,5 @@ public class CheckMeleeAttack : Node
             return targetPlayer;
         }
         
+    }
 }

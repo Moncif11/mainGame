@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
 
+namespace Boss1AI{
 public class CheckSP2Ready : Node
 {   
     Transform _transform; 
@@ -45,4 +46,5 @@ public class CheckSP2Ready : Node
             }
             return targetPlayer;
         }
+    }
 }

@@ -2,6 +2,7 @@ using BehaviorTree;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+namespace Boss1AI{
 public class TaskToGoShootRange : Node
 {
     private Transform _transform;
@@ -80,4 +81,5 @@ public class TaskToGoShootRange : Node
             }
             return targetPlayer;
     }
+}
 }

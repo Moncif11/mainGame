@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BehaviorTree;
 
-
+namespace Boss1AI{
 public class TaskToMeleeAttack : Node
 {
     public Transform _transform;
@@ -27,4 +27,5 @@ public class TaskToMeleeAttack : Node
         return state; 
     }
 
+}
 }
