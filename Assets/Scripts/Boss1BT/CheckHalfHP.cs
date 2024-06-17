@@ -1,6 +1,7 @@
 using BehaviorTree;
 using UnityEngine;
 
+namespace Boss1AI{
 public class CheckHalfHP : Node{
 
     Transform _transform;
@@ -20,6 +21,6 @@ public class CheckHalfHP : Node{
         }
         state = NodeState.FAILURE;
         return state;
+        }
     }
-
 }

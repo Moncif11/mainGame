@@ -1,0 +1,618 @@
+fileFormatVersion: 2
+guid: abcb02b501b03ea4990746bd7f65004d
+importerOverride:
+  nativeImporterType: 2089858483
+  scriptedImporterType:
+    serializedVersion: 2
+    Hash: b10b55a1aa6a1aa32521bc0cab59632e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: L-Kanone
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 703
+      y: 303
+      width: 189
+      height: 144
+    spriteID: 7c32feae5317f9746b45519aebd6544b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 703, y: 303}
+    spritePosition: {x: 52, y: 162}
+  - name: L-Arm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 339
+      y: 4
+      width: 356
+      height: 218
+    spriteID: 30b4e118054ffbd46a63fa2e8fb61e36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 339, y: 4}
+    spritePosition: {x: 64, y: 152}
+  - name: L-Oberschenkel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 339
+      y: 799
+      width: 209
+      height: 175
+    spriteID: fa206aa0a70895c4a84211936bc86a7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 339, y: 799}
+    spritePosition: {x: 81, y: 29}
+  - name: "L-Fu\xDF"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 339
+      y: 230
+      width: 172
+      height: 364
+    spriteID: 3daab393f08c03b489cc892e366a1bac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 339, y: 230}
+    spritePosition: {x: 54, y: 7}
+  - name: L-Schienbein
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 898
+      width: 120
+      height: 120
+    spriteID: 4dfd2855b8fae0245a3791056d7adcb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 898}
+    spritePosition: {x: 85, y: 27}
+  - name: Schwanz
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 703
+      y: 136
+      width: 203
+      height: 159
+    spriteID: 58b3a91f4c8aaf0479a239387b730613
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 703, y: 136}
+    spritePosition: {x: 216, y: 114}
+  - name: "K\xF6rper"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 331
+      width: 212
+      height: 328
+    spriteID: db6183191de727543b30159817ad88d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 331}
+    spritePosition: {x: 102, y: 136}
+  - name: Oberkopf
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 667
+      width: 274
+      height: 223
+    spriteID: 07b4305c96f6c7445a28ef70e2f6ec9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 667}
+    spritePosition: {x: 3, y: 278}
+  - name: Unterkiefer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 703
+      y: 4
+      width: 273
+      height: 124
+    spriteID: d8489233eef195f41af5b8bff4369b7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 703, y: 4}
+    spritePosition: {x: 0, y: 361}
+  - name: "R-Fu\xDF"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 898
+      width: 168
+      height: 62
+    spriteID: b551c0291c6c4de4a9f90e6513f3ca1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 898}
+    spritePosition: {x: 55, y: 3}
+  - name: R-Oberschenkel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 339
+      y: 602
+      width: 261
+      height: 189
+    spriteID: bae546f91dee2e54bbbff7d4ff41f5de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 339, y: 602}
+    spritePosition: {x: 82, y: 12}
+  - name: R-Schienbein
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 556
+      y: 799
+      width: 117
+      height: 136
+    spriteID: c5daf7ea9ba16e746badfa3679ce093a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 556, y: 799}
+    spritePosition: {x: 83, y: 11}
+  - name: R-Unterarm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 327
+      height: 319
+    spriteID: e6e0c164990e2fd42824fbb1f3724b73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 5, y: 80}
+  - name: R-Oberarm
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 914
+      y: 136
+      width: 65
+      height: 134
+    spriteID: 7af90eb16d9401943b8e249d74f51ed1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 914, y: 136}
+    spritePosition: {x: 139, y: 241}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 0
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  padding: 4
+  spriteSizeExpand: 0
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: L-Kanone
+    spriteName: L-Kanone
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7c32feae5317f9746b45519aebd6544b
+    layerID: 0
+    mosaicPosition: {x: 703, y: 303}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L-Arm
+    spriteName: L-Arm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 30b4e118054ffbd46a63fa2e8fb61e36
+    layerID: 176267879
+    mosaicPosition: {x: 339, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L-Oberschenkel
+    spriteName: L-Oberschenkel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fa206aa0a70895c4a84211936bc86a7d
+    layerID: -127613904
+    mosaicPosition: {x: 339, y: 799}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "L-Fu\xDF"
+    spriteName: "L-Fu\xDF"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3daab393f08c03b489cc892e366a1bac
+    layerID: 2044880257
+    mosaicPosition: {x: 339, y: 230}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: L-Schienbein
+    spriteName: L-Schienbein
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4dfd2855b8fae0245a3791056d7adcb0
+    layerID: 1122737887
+    mosaicPosition: {x: 4, y: 898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Schwanz
+    spriteName: Schwanz
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 58b3a91f4c8aaf0479a239387b730613
+    layerID: 896149696
+    mosaicPosition: {x: 703, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "K\xF6rper"
+    spriteName: "K\xF6rper"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: db6183191de727543b30159817ad88d7
+    layerID: 938322286
+    mosaicPosition: {x: 4, y: 331}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Oberkopf
+    spriteName: Oberkopf
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 07b4305c96f6c7445a28ef70e2f6ec9f
+    layerID: 817071040
+    mosaicPosition: {x: 4, y: 667}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Unterkiefer
+    spriteName: Unterkiefer
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d8489233eef195f41af5b8bff4369b7b
+    layerID: 1034932100
+    mosaicPosition: {x: 703, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "R-Fu\xDF"
+    spriteName: "R-Fu\xDF"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b551c0291c6c4de4a9f90e6513f3ca1b
+    layerID: 2044890623
+    mosaicPosition: {x: 132, y: 898}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R-Oberschenkel
+    spriteName: R-Oberschenkel
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bae546f91dee2e54bbbff7d4ff41f5de
+    layerID: -1266860310
+    mosaicPosition: {x: 339, y: 602}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R-Schienbein
+    spriteName: R-Schienbein
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c5daf7ea9ba16e746badfa3679ce093a
+    layerID: -85721531
+    mosaicPosition: {x: 556, y: 799}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R-Unterarm
+    spriteName: R-Unterarm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e6e0c164990e2fd42824fbb1f3724b73
+    layerID: 2060087777
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: R-Oberarm
+    spriteName: R-Oberarm
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7af90eb16d9401943b8e249d74f51ed1
+    layerID: 1896699459
+    mosaicPosition: {x: 914, y: 136}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

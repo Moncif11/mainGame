@@ -1,6 +1,7 @@
 using BehaviorTree;
 using UnityEngine;
 
+namespace Boss1AI{
 public class CheckGoToAttackRange : Node{
     Transform _transform;
 
@@ -60,5 +61,6 @@ public class CheckGoToAttackRange : Node{
             }
             }
             return targetPlayer;
+        }
     }
 }
