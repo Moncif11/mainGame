@@ -6,7 +6,7 @@ public class LaserBeam : MonoBehaviour
 {
     private LineRenderer line;
     private RaycastHit2D hit;
-    [SerializeField] private float takeDamage = 15; 
+    [SerializeField] private float takeDamage = 5; 
     Transform m_transform; 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,12 @@ public class LaserBeam : MonoBehaviour
             hit = Physics2D.Raycast(m_transform.position, -transform.right);    
             line.SetPosition(0,m_transform.position);
             line.SetPosition(1,hit.point);
+            if(hit.collider.CompareTag("Player")){
+                Health playerHealth = hit.collider.GetComponent<Health>();
+                if(playerHealth != null){
+                    playerHealth.takeDamage(takeDamage);
+                }
+            }
         }   
     }
 }
