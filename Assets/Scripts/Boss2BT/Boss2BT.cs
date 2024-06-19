@@ -49,7 +49,11 @@ public class Boss2BT : BehaviorTree.Tree{
                 new Sequence(
                     new CheckPhase(transform),
                     new TaskToPhase2(transform)
-                ) 
+                ),
+                new Sequence(){
+                    new CheckToFireBeam(); 
+                    new TaskToFireBeam(transform); 
+                } 
                 */
          });        
         return root;
