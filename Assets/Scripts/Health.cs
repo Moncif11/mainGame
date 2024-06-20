@@ -25,11 +25,18 @@ public class Health : MonoBehaviour {
         health = health -(damage- damage*(damageReduction/100));
         if(gameObject.CompareTag("Enemy")){
              if(health<= 0){
-            Destroy(gameObject);
             if(dropItem!=null){
-                    Instantiate(dropItem, transform.position, Quaternion.identity);
-                } 
+                    StartCoroutine(itemDropped(transform));
+                }
         }
         }       
     }
+
+    IEnumerator itemDropped( Transform transform){
+        Debug.Log("Item Dropped");
+        yield return new WaitForSeconds(1);
+        Debug.Log("2");
+        Instantiate(dropItem, transform.position, Quaternion.identity);
+        Destroy(gameObject); 
+    } 
 }
