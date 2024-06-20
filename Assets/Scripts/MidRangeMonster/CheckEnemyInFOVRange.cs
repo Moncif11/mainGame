@@ -1,7 +1,7 @@
 using System.Runtime.Versioning;
 using BehaviorTree;
 using UnityEngine;
-
+namespace MidRangeMonsterAI{
 public class CheckEnemyInFOVRange : Node
 {
     public Transform _transform; 
@@ -39,5 +39,6 @@ public class CheckEnemyInFOVRange : Node
             Debug.Log("CheckEnemyInFOVRange : FAILURE");
             state= NodeState.FAILURE; 
             return state;
+        }
     }
 }
