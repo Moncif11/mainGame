@@ -6,6 +6,7 @@ using Boss1AI;
 public enum BossPhase{
     ONE, 
     TWO,
+    THREE,
 }
 public class Boss1BT : BehaviorTree.Tree{
 

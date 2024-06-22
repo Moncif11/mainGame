@@ -9,14 +9,12 @@ public class Boss2BT : BehaviorTree.Tree{
     [Header("Stats")] 
     public static float attack=10; 
 
-    public static float speed=2f;
+    public static float speed=3f;
 
     public GameObject normalBulletPrefab; 
 
     [Header("Direction")]
     public static bool isLeft = true;  
-
-    public static float meleeRange = 2f; 
 
     public static float shootRange = 5f;
 
@@ -35,40 +33,52 @@ public class Boss2BT : BehaviorTree.Tree{
 
     public static bool SP1Ready=true; 
     public static bool SP2Ready=true;
- 
+    
      protected override Node SetupTree(){
         Node root = 
           /* new Selector( 
             new List<Node> {
-             
                 new Sequence(new List<Node>{
-                CheckEnviroment(Transform); 
+                new CheckEnviroment(Transform),
+                new Selector(new List<Node>{
                 new Sequence(                    
                     new List<Node>{
                         new CheckDogede(transform), 
                         new TaskToDogde(transform); 
                     }), 
                 new Sequence(
-                    new CheckBeginPhase2(transform),
-                    new TaskToPhase2(transform)
+                    new CheckBeginPhase(transform,BossPhase.TWO),
+                    new TaskToNextPhase(transform,BossPhase.Three)
                 )
                 ,
-                new Sequence (new List<Node>{CheckToPhase2(transform),
+                new Sequence (new List<Node>{CheckCurrentPhase(transform,BossPhase.TWO),
+                            new Sequence(new List<Node>{
+                                      new CheckToShoot(transform),
+                                     new TaskToShoottransform,Rocket),
+                                    }); 
+                                    }),
+                new Sequence(
+                    new CheckBeginPhase(transform,BossPhase.ONE),
+                    new TaskToNextPhase(transform)
+                )
+                ,
+                new Sequence (new List<Node>{CheckToPhase2(transform,BossPhase.TWO),
                             */new Sequence(new List<Node>{
                                       new CheckToFireBeam(transform),
                                      new TaskToFireBeam(transform),
                                     });/* 
                                     }),
                 new Sequence(new List<Node>{
-                            new CheckToGoToShootRange(transform), 
-                            new TaskekToGo(transform,prefab)
+                            new CheckToShot(transform), 
+                            new TaskToShoot(transform,bullet)
                 })
                 new Sequence(new List<Node>{ 
                             new CheckToGoToShootRange(transform), 
                             new TaskekToGoToShootRange(transform)
 ä                })
                 })
-               
+                })
+                new TaskToGoBackToPoint(transform,speed)
          }); */        
         return root;
         }
