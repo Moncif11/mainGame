@@ -33,13 +33,15 @@ public class Boss2BT : BehaviorTree.Tree{
 
     public static bool SP1Ready=true; 
     public static bool SP2Ready=true;
+
+    public Transform[] shootpoints; 
     
      protected override Node SetupTree(){
         Node root = 
           /* new Selector( 
             new List<Node> {
                 new Sequence(new List<Node>{
-                new CheckEnviroment(Transform),
+                new CheckEnviroment(transform),
                 new Selector(new List<Node>{
                 new Sequence(                    
                     new List<Node>{
@@ -51,10 +53,10 @@ public class Boss2BT : BehaviorTree.Tree{
                     new TaskToNextPhase(transform,BossPhase.Three)
                 )
                 ,
-                new Sequence (new List<Node>{CheckCurrentPhase(transform,BossPhase.TWO),
+                new Sequence (new List<Node>{CheckCurrentPhase(transform,BossPhase.THREE),
                             new Sequence(new List<Node>{
                                       new CheckToShoot(transform),
-                                     new TaskToShoottransform,Rocket),
+                                     new TaskToShoottransform,rocket , shootpoints),
                                     }); 
                                     }),
                 new Sequence(
@@ -62,7 +64,7 @@ public class Boss2BT : BehaviorTree.Tree{
                     new TaskToNextPhase(transform)
                 )
                 ,
-                new Sequence (new List<Node>{CheckToPhase2(transform,BossPhase.TWO),
+                new Sequence (new List<Node>{CheckCurrentPhase2(transform,BossPhase.TWO),
                             */new Sequence(new List<Node>{
                                       new CheckToFireBeam(transform),
                                      new TaskToFireBeam(transform),
@@ -70,7 +72,7 @@ public class Boss2BT : BehaviorTree.Tree{
                                     }),
                 new Sequence(new List<Node>{
                             new CheckToShot(transform), 
-                            new TaskToShoot(transform,bullet)
+                            new TaskToShoot(transform,bullet, shootpoints)
                 })
                 new Sequence(new List<Node>{ 
                             new CheckToGoToShootRange(transform), 

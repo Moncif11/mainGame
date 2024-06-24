@@ -19,30 +19,43 @@ public class HomingMissile : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
+{
+    Transform target = FindTarget();
+    if (target == null)
     {
-        Transform target = FindTarget (); 
-        if(target == null){
-            return;
-        }
-        Vector2 direction = (Vector2) target.position - rb.position; 
-        direction.Normalize(); 
-        float rotateAmount= Vector3.Cross(-direction,transform.up).z;
-        rb.angularVelocity = rotateAmount * angularSpeed;
-        rb.velocity = transform.up*speed;
+        return;
     }
 
+    Vector2 direction = (Vector2)target.position - rb.position;
+    direction.Normalize();
+    int isRight = direction.x > 0 ? 1 : -1;
+    float angleDifference = Vector2.SignedAngle(rb.transform.up, direction);
+
+    float rotateAmount = Mathf.Clamp(angleDifference, -angularSpeed, angularSpeed);
+
+   
+    rb.angularVelocity = rotateAmount;
+
+    rb.velocity = isRight* transform.right * speed;
+}
+
     private Transform FindTarget(){
-         GameObject target = null; 
-         Collider2D[] targets= Physics2D.OverlapCircleAll(transform.position, 3.0f);  
-         for (int i = 0; i< targets.Length; i++) {
-                if(targets[i].gameObject.CompareTag("Player")) {
-                        target = targets[i].gameObject;
-                }  
+        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 3.0f);
+        GameObject nearestTarget = null;
+        float nearestDistance = float.MaxValue;
+        foreach (Collider2D targetCollider in targets)
+        {
+            if (targetCollider.gameObject.CompareTag("Player"))
+        {
+            float distance = Vector2.Distance(transform.position, targetCollider.transform.position);
+            if (distance < nearestDistance)
+            {
+                nearestDistance = distance;
+                nearestTarget = targetCollider.gameObject;
             }
-            if(target != null) {
-                return null;
-            }
-    return target.transform;  
+        }
+        }
+         return nearestTarget.transform;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -55,4 +68,5 @@ public class HomingMissile : MonoBehaviour
         // Zerstöre dieses GameObject
         Destroy(gameObject);
     }
+    
 }
