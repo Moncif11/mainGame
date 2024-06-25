@@ -23,16 +23,25 @@ public class TaskToBackToPoint : Node
     public override NodeState Evaluate()
     {  
             Boss2BT.isLeft=isLeft();
-            _animator.ResetTrigger("SP2");
+           /* _animator.ResetTrigger("SP2");
             _animator.ResetTrigger("Shoot");
             _animator.ResetTrigger("Melee");
             _animator.ResetTrigger("SP1"); 
             _animator.SetTrigger("Walking");  
+            */
+            float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
+            if(distance > 0.001 && Boss2BT.backToStart == true){
             Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss2BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
             _transform.GetComponent<Health>().health = maxHealth; 
             Boss2BT.speed = startSpeed; 
-             _transform.GetComponent<Health>().damageReduction = 100; 
+             _transform.GetComponent<Health>().damageReduction = 100;  
+             Boss2BT.bossPhase = BossPhase.ONE;   
+            }
+            else{
+                _transform.GetComponent<Health>().damageReduction = 0;
+                Boss2BT.backToStart = false; 
+            }
         state = NodeState.RUNNING; 
         return state; 
     }

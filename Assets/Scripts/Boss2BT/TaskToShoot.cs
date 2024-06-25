@@ -1,5 +1,6 @@
 using UnityEngine; 
 using BehaviorTree;
+using UnityEngine.UIElements;
 
 namespace Boss2AI{
 public class TaskToShoot : Node{
@@ -20,12 +21,13 @@ public class TaskToShoot : Node{
        this.bulletPrefab = bulletPrefab;
        this._transform = transform;
        animator = _transform.GetComponent<Animator>();
+       _shootpoints = shootpoints; 
     }
 
     public override NodeState Evaluate()
     {
         Transform target = (Transform)GetData("target");
-        Debug.Log("Attack");
+        Transform shootPosition = _shootpoints[_shootpointIndex];
         if(_lastTarger != target){
             _lastTarger = target;
             capePlayerHealth = target.GetComponent<Health>();
@@ -37,7 +39,7 @@ public class TaskToShoot : Node{
             animator.SetTrigger("Attack");
             animator.ResetTrigger("Running"); 
                 Debug.Log("Shoot left");
-                GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
+                GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPosition.position + -shootPosition.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;
                 //rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse
                 bullet.transform.rotation = rotation;
@@ -45,6 +47,7 @@ public class TaskToShoot : Node{
                 bulletRB.AddForce(-_transform.right*1000);
                 Debug.Log("Bullet : " + bullet.transform.position);
                 attackCounter= 0f; 
+                _shootpointIndex= (_shootpointIndex+1)%_shootpoints.Length;
         }
         state= NodeState.RUNNING; 
         return state; 

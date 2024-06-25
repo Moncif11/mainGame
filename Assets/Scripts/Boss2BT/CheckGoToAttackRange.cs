@@ -12,11 +12,11 @@ public class CheckGoToShootRange : Node{
     public override NodeState Evaluate()
     {  
         Transform target = nearestPlayer();
-        float distance = Vector2.Distance(_transform.position,target.position);    
         if(target==null){
             state= NodeState.FAILURE;
             return state;
         }
+        float distance = Vector2.Distance(_transform.position,target.position);    
         if(distance > Boss2BT.shootRange){
             parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 

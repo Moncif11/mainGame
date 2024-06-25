@@ -1,32 +1,26 @@
-using BehaviorTree;
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using BehaviorTree;
 
 namespace Boss2AI{
-public class CheckEnviroment : Node{
+public class CheckToShoot : Node
+{
     Transform _transform;
-    Vector3 _position; 
-
-    public CheckEnviroment(Transform transform){
+    public CheckToShoot(Transform transform){
         _transform = transform;
-        _position = transform.position;
     }
-
-    public override NodeState Evaluate()
-    {  
-         Transform target = nearestPlayer();
-        float distance = Vector2.Distance(_transform.position,_position);   
-        float playerEnviromentRadius = Vector2.Distance(target.position,_position); 
-        if(distance <10 && playerEnviromentRadius < 10){
-            state = NodeState.SUCCESS; 
-            return state; 
-        } 
-        Boss2BT.backToStart = true; 
-        state = NodeState.FAILURE; 
-        return state;
+   public override NodeState Evaluate(){
+    Transform t = nearestPlayer();
+    if(Vector2.Distance(_transform.position,t.position)<Boss2BT.shootRange){
+        parent.parent.parent.SetData("target",(Object)t);
+        state = NodeState.SUCCESS; 
+        return state;    
     }
-
-private bool isLeft(Transform target) {
+    state = NodeState.FAILURE; 
+    return state; 
+   }
+       private bool isLeft(Transform target){
     Vector2 direction = (_transform.position - target.position).normalized;
     if (direction.x > 0) {
         Boss2BT.isLeft = true;
@@ -37,19 +31,17 @@ private bool isLeft(Transform target) {
         _transform.Rotate(0, 180, 0);  // Rotate around the Y-axis by 180 degrees
         return true;
     }
-    return true;
-}
-    /*
-    }check the player in the Enviroment of the boss
-    */
+        return true;
+    }
+
     private Transform nearestPlayer(){
         float minDistance =0f; 
         Transform targetPlayer; 
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player"); 
-            minDistance = Vector2.Distance(_position,players[0].transform.position); 
+            minDistance = Vector2.Distance(_transform.position,players[0].transform.position); 
             targetPlayer = players[0].transform;
             for(int i = 1; i < players.Length; i++){
-            if(Vector2.Distance(_position,players[0].transform.position)<minDistance){
+            if(Vector2.Distance(_transform.position,players[0].transform.position)<minDistance){
                 minDistance = Vector2.Distance(_transform.position,players[0].transform.position); 
                 targetPlayer = players[i].transform;
             }

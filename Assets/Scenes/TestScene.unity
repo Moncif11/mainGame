@@ -3368,6 +3368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalBulletPrefab: {fileID: 0}
+  missilePrefab: {fileID: 0}
   shootpoints: []
 --- !u!1 &955795210 stripped
 GameObject:
@@ -4939,63 +4940,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 275809608}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1970770571
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.4137745
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06296277
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6307439586577126944, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7315785336683993725, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
-      propertyPath: m_Name
-      value: Missile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb28aaec7d1714845a9add0a433feda2, type: 3}
 --- !u!1 &2081367644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1650919047982120755, guid: abcb02b501b03ea4990746bd7f65004d, type: 3}
@@ -5341,4 +5285,3 @@ SceneRoots:
   - {fileID: 7489766945374667057}
   - {fileID: 6529589744021321309}
   - {fileID: 9198638478110665941}
-  - {fileID: 1970770571}

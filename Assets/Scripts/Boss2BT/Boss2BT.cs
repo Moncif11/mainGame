@@ -13,6 +13,7 @@ public class Boss2BT : BehaviorTree.Tree{
 
     public GameObject normalBulletPrefab; 
 
+    public GameObject missilePrefab; 
     [Header("Direction")]
     public static bool isLeft = true;  
 
@@ -35,6 +36,8 @@ public class Boss2BT : BehaviorTree.Tree{
     public static bool SP2Ready=true;
 
     public Transform[] shootpoints; 
+
+    public static bool backToStart = false; 
     
      protected override Node SetupTree(){
         Node root = 
