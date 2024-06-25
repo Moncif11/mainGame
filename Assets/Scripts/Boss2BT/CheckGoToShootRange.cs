@@ -2,10 +2,10 @@ using BehaviorTree;
 using UnityEngine;
 
 namespace Boss2AI{
-public class CheckGoToShootRange : Node{
+public class CheckToGoShootRange : Node{
     Transform _transform;
 
-    public CheckGoToShootRange(Transform transform){
+    public CheckToGoShootRange(Transform transform){
         _transform = transform;
     }
 

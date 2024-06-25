@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
-namespace Boss2AI{
+using Boss2AI;
 public class Boss2BT : BehaviorTree.Tree{
 
     [Header("")]
@@ -32,64 +32,69 @@ public class Boss2BT : BehaviorTree.Tree{
      public static float coolDownSP2Counter = 0f;
     public static float coolDownSP1Counter = 0f; 
 
+    public static bool dogdeReady; 
     public static bool SP1Ready=true; 
     public static bool SP2Ready=true;
 
     public Transform[] shootpoints; 
 
     public static bool backToStart = false; 
+
+    public GameObject groundCheck;  
+
+    public LayerMask groundLayer;
     
      protected override Node SetupTree(){
         Node root = 
-          /* new Selector( 
+           new Selector( 
             new List<Node> {
                 new Sequence(new List<Node>{
                 new CheckEnviroment(transform),
                 new Selector(new List<Node>{
                 new Sequence(                    
                     new List<Node>{
-                        new CheckDogede(transform), 
-                        new TaskToDogde(transform); 
+                        new CheckToDodge(transform), 
+                        new TaskToDogde(transform,groundCheck.transform,groundLayer) 
                     }), 
-                new Sequence(
-                    new CheckBeginPhase(transform,BossPhase.TWO),
-                    new TaskToNextPhase(transform,BossPhase.Three)
+                new Sequence( new List<Node>{
+                     new CheckBeginPhase(transform,BossPhase.TWO),
+                    new TaskToNextPhase(transform,BossPhase.THREE)
+                }
                 )
                 ,
-                new Sequence (new List<Node>{CheckCurrentPhase(transform,BossPhase.THREE),
+                new Sequence (new List<Node>{
+                   new CheckCurrentPhase(transform,BossPhase.THREE),
                             new Sequence(new List<Node>{
                                       new CheckToShoot(transform),
-                                     new TaskToShoottransform,rocket , shootpoints),
-                                    }); 
+                                     new TaskToShoot(transform,missilePrefab , shootpoints),
+                                    })
                                     }),
-                new Sequence(
-                    new CheckBeginPhase(transform,BossPhase.ONE),
-                    new TaskToNextPhase(transform)
-                )
-                ,
-                new Sequence (new List<Node>{CheckCurrentPhase2(transform,BossPhase.TWO),
-                            */new Sequence(new List<Node>{
+                new Sequence( new List<Node>{
+                     new CheckBeginPhase(transform,BossPhase.ONE),
+                    new TaskToNextPhase(transform,BossPhase.TWO)}
+                ),
+                new Sequence (new List<Node>{new CheckCurrentPhase(transform,BossPhase.TWO),
+                            new Sequence(new List<Node>{
                                       new CheckToFireBeam(transform),
                                      new TaskToFireBeam(transform),
-                                    });/* 
+                                    })
                                     }),
                 new Sequence(new List<Node>{
-                            new CheckToShot(transform), 
-                            new TaskToShoot(transform,bullet, shootpoints)
-                })
+                            new CheckToShoot(transform), 
+                            new TaskToShoot(transform, normalBulletPrefab, shootpoints)
+                }),
                 new Sequence(new List<Node>{ 
-                            new CheckToGoToShootRange(transform), 
-                            new TaskekToGoToShootRange(transform)
-ä                })
+                            new CheckToGoShootRange(transform), 
+                            new TaskToGoToShootRange(transform)
+                           })
                 })
-                })
-                new TaskToGoBackToPoint(transform,speed)
-         }); */        
+                }),
+                new TaskToBackToPoint(transform)
+         });       
         return root;
         }
         
     public bool LeftLooking(){
         return isLeft;
     }
-}
 }

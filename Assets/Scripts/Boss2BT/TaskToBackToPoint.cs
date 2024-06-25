@@ -11,13 +11,12 @@ public class TaskToBackToPoint : Node
 
     float maxHealth; 
 
-    float startSpeed; 
-    public TaskToBackToPoint(Transform transform, float speed){
+    float startSpeed = 3f; 
+    public TaskToBackToPoint(Transform transform){
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
         startposition = transform.position;
         maxHealth = transform.GetComponent<Health>().maxHealth;
-        startSpeed = speed;  
     }
 
     public override NodeState Evaluate()

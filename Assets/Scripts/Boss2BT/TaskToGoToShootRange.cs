@@ -3,12 +3,12 @@ using BehaviorTree;
 using UnityEngine;
 
 namespace Boss2AI{
-public class TaskToGoToAttackRange : Node
+public class TaskToGoToShootRange : Node
 {
     Transform _transform; 
     Animator _animator; 
 
-    public TaskToGoToAttackRange(Transform transform){
+    public TaskToGoToShootRange(Transform transform){
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
     }
@@ -22,11 +22,12 @@ public class TaskToGoToAttackRange : Node
             if(!Boss1BT.isLeft){
                 stopRange*=-1; 
             }
-            _animator.ResetTrigger("SP2");
+            /*_animator.ResetTrigger("SP2");
             _animator.ResetTrigger("Shoot");
             _animator.ResetTrigger("Melee");
             _animator.ResetTrigger("SP1"); 
             _animator.SetTrigger("Walking"); 
+            */
             Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y-stopRange); 
             Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
