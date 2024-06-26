@@ -39,14 +39,14 @@ public class TaskToGoToShootRange : Node
     Vector2 direction = (_transform.position - target.position).normalized;
     if (direction.x > 0) {
         Boss2BT.isLeft = true;
-        _transform.Rotate(0, 0, 0);  // Rotate around the Y-axis by 180 degrees
+        _transform.rotation = Quaternion.Euler(0, 0, 0);  // Rotate around the Y-axis by 180 degrees
         return true;
     } else if (direction.x < 0) {  // Change to "< 0" for the correct check
         Boss2BT.isLeft = true;
-        _transform.Rotate(0, 180, 0);  // Rotate around the Y-axis by 180 degrees
-        return true;
+        _transform.rotation = Quaternion.Euler(0, 180, 0); // Rotate around the Y-axis by 180 degrees
+        return false;
     }
     return true;
     }
-}
+    }
 }

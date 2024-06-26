@@ -12,6 +12,7 @@ namespace Boss2AI{
         }
 
         public override NodeState Evaluate(){
+            Debug.Log("Beam");
             animator.SetTrigger("Beam");
             //animator.ResetTrigger("");
             state = NodeState.RUNNING;

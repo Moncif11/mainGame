@@ -32,7 +32,7 @@ public class Boss2BT : BehaviorTree.Tree{
      public static float coolDownSP2Counter = 0f;
     public static float coolDownSP1Counter = 0f; 
 
-    public static bool dogdeReady; 
+    public static bool dogdeReady = true; 
     public static bool SP1Ready=true; 
     public static bool SP2Ready=true;
 
@@ -43,55 +43,56 @@ public class Boss2BT : BehaviorTree.Tree{
     public GameObject groundCheck;  
 
     public LayerMask groundLayer;
-    
+
+    public static bool isJumping = false; 
+    public static bool isFalling = false;
      protected override Node SetupTree(){
-        Node root = 
-           new Selector( 
-            new List<Node> {
-                new Sequence(new List<Node>{
+       Node root = 
+    new Selector(
+        new List<Node> {
+            new Sequence(new List<Node> {
                 new CheckEnviroment(transform),
-                new Selector(new List<Node>{
-                new Sequence(                    
-                    new List<Node>{
-                        new CheckToDodge(transform), 
-                        new TaskToDogde(transform,groundCheck.transform,groundLayer) 
+                new Selector(new List<Node> {
+                    new Sequence(new List<Node> {
+                        new CheckToDodge(transform),
+                        new TaskToDodge(transform, groundCheck.transform, groundLayer)
                     }), 
-                new Sequence( new List<Node>{
-                     new CheckBeginPhase(transform,BossPhase.TWO),
-                    new TaskToNextPhase(transform,BossPhase.THREE)
-                }
-                )
-                ,
-                new Sequence (new List<Node>{
-                   new CheckCurrentPhase(transform,BossPhase.THREE),
-                            new Sequence(new List<Node>{
-                                      new CheckToShoot(transform),
-                                     new TaskToShoot(transform,missilePrefab , shootpoints),
-                                    })
-                                    }),
-                new Sequence( new List<Node>{
-                     new CheckBeginPhase(transform,BossPhase.ONE),
-                    new TaskToNextPhase(transform,BossPhase.TWO)}
-                ),
-                new Sequence (new List<Node>{new CheckCurrentPhase(transform,BossPhase.TWO),
-                            new Sequence(new List<Node>{
-                                      new CheckToFireBeam(transform),
-                                     new TaskToFireBeam(transform),
-                                    })
-                                    }),
-                new Sequence(new List<Node>{
-                            new CheckToShoot(transform), 
-                            new TaskToShoot(transform, normalBulletPrefab, shootpoints)
-                }),
-                new Sequence(new List<Node>{ 
-                            new CheckToGoShootRange(transform), 
-                            new TaskToGoToShootRange(transform)
-                           })
+                   new Sequence(new List<Node> {
+                        new CheckCurrentPhase(transform, BossPhase.THREE),
+                        new Sequence(new List<Node> {
+                            new CheckToFireBeam(transform),
+                            new TaskToFireBeam(transform),
+                        }) 
+                    }),
+                     new Sequence(new List<Node> {
+                        new CheckBeginPhase(transform, BossPhase.TWO),
+                        new TaskToNextPhase(transform, BossPhase.THREE)
+                    }),
+                     new Sequence(new List<Node> {
+                        new CheckCurrentPhase(transform, BossPhase.TWO),
+                        new Sequence(new List<Node> {
+                            new CheckToShoot(transform),
+                            new TaskToShoot(transform, missilePrefab, shootpoints)
+                        })
+                    }),
+                    new Sequence(new List<Node> {
+                        new CheckBeginPhase(transform, BossPhase.ONE),
+                        new TaskToNextPhase(transform, BossPhase.TWO)
+                    }),
+                    new Sequence(new List<Node> {
+                        new CheckToShoot(transform),
+                        new TaskToShoot(transform, normalBulletPrefab, shootpoints)
+                    }),
+                    new Sequence(new List<Node> {
+                        new CheckToGoShootRange(transform),
+                        new TaskToGoToShootRange(transform)
+                    })
                 })
-                }),
-                new TaskToBackToPoint(transform)
-         });       
-        return root;
+            }),
+            new TaskToBackToPoint(transform)
+        }
+    );
+    return root;
         }
         
     public bool LeftLooking(){

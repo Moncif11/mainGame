@@ -19,7 +19,7 @@ public class HomingMissile : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-{
+    {
     Transform target = FindTarget();
     if (target == null)
     {
@@ -32,15 +32,14 @@ public class HomingMissile : MonoBehaviour
     float angleDifference = Vector2.SignedAngle(rb.transform.up, direction);
 
     float rotateAmount = Mathf.Clamp(angleDifference, -angularSpeed, angularSpeed);
-
-   
+    
     rb.angularVelocity = rotateAmount;
 
     rb.velocity = isRight* transform.right * speed;
 }
 
     private Transform FindTarget(){
-        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 3.0f);
+        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 5.0f);
         GameObject nearestTarget = null;
         float nearestDistance = float.MaxValue;
         foreach (Collider2D targetCollider in targets)

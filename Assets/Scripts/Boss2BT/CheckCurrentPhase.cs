@@ -19,12 +19,14 @@ public class CheckCurrentPhase : Node
         {   
             if(bossPhase == BossPhase.TWO){
                 if(Boss2BT.bossPhase == bossPhase ||Boss2BT.bossPhase == BossPhase.THREE ){
+                    Debug.Log("BossPhase Two");
                     state = NodeState.SUCCESS; 
                     return state; 
                 }
             }
             else if(bossPhase == BossPhase.THREE){
                     if(Boss2BT.bossPhase == bossPhase){
+                        Debug.Log("Phase 3");
                     state = NodeState.SUCCESS; 
                     return state; 
                 }

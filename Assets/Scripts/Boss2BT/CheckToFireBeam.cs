@@ -10,12 +10,12 @@ namespace Boss2AI{
         }
 
         public override NodeState Evaluate(){
-            Debug.Log("CheckLaser Success");
             bool inRange = playerInLaserRange(); 
             if(!Boss2BT.SP1Ready || !inRange){
                 state = NodeState.FAILURE;
                 return state; 
             }
+            Debug.Log("CheckLaser Success");
             state = NodeState.SUCCESS;
             return state; 
         }
@@ -24,7 +24,6 @@ namespace Boss2AI{
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
             foreach(GameObject player in players){
              float distance = Mathf.Abs(_transform.position.x-player.transform.position.x); 
-             Debug.Log("Distance to Player BT:" + distance);
             if(!inSight(player.transform)){
                 continue;
             }

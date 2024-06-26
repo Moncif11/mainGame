@@ -1,4 +1,5 @@
-using BehaviorTree; 
+using BehaviorTree;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 namespace Boss2AI{
@@ -18,11 +19,11 @@ public class CheckBeginPhase : Node
         public override NodeState Evaluate()
         {   
              float currentHP = health.health;  
-             float HPThreshhold = health.maxHealth/3 * 2; 
+             float HPThreshhold = (health.maxHealth/3)* 2; 
              if(bossPhase == BossPhase.TWO){
-                 HPThreshhold = health.maxHealth/3 * 1;
+                 HPThreshhold = health.maxHealth/3;
              }               
-            if( HPThreshhold >= currentHP){
+            if( HPThreshhold >= currentHP && bossPhase == Boss2BT.bossPhase){
                 state = NodeState.SUCCESS; 
                return state;  
             }

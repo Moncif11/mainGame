@@ -36,8 +36,9 @@ public class TaskToShoot : Node{
         if(attackCounter >= attackTime){           
             Debug.Log("Shoot: "+bulletPrefab.name);
             Boss2BT.isLeft = isLeft(target);
-            animator.SetTrigger("Attack");
+           /*animator.SetTrigger("Attack");
             animator.ResetTrigger("Running"); 
+            */
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPosition.position + -shootPosition.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;
@@ -54,17 +55,17 @@ public class TaskToShoot : Node{
     }
 
    private bool isLeft(Transform target) {
-    Vector2 direction = (_transform.position - target.position).normalized;
+   Vector2 direction = (_transform.position - target.position).normalized;
     if (direction.x > 0) {
         Boss2BT.isLeft = true;
-        _transform.Rotate(0, 0, 0);  // Rotate around the Y-axis by 180 degrees
+        _transform.rotation = Quaternion.Euler(0, 0, 0);  // Rotate around the Y-axis by 180 degrees
         return true;
     } else if (direction.x < 0) {  // Change to "< 0" for the correct check
         Boss2BT.isLeft = true;
-        _transform.Rotate(0, 180, 0);  // Rotate around the Y-axis by 180 degrees
+        _transform.rotation = Quaternion.Euler(0, 180, 0); // Rotate around the Y-axis by 180 degrees
+        return false;
+    }
         return true;
-    }
-    return true;
-    }
+        }
     }
 }

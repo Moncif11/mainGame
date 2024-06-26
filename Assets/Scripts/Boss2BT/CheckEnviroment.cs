@@ -17,11 +17,16 @@ public class CheckEnviroment : Node{
          Transform target = nearestPlayer();
         float distance = Vector2.Distance(_transform.position,_position);   
         float playerEnviromentRadius = Vector2.Distance(target.position,_position); 
-        if(distance <10 && playerEnviromentRadius < 10){
+        if(Boss2BT.backToStart == true){
+        state = NodeState.FAILURE;
+        return state; 
+        }
+        if(distance <10 && playerEnviromentRadius < 10 ){
             state = NodeState.SUCCESS; 
             return state; 
         } 
         Boss2BT.backToStart = true; 
+        Debug.Log("BackToStart");
         state = NodeState.FAILURE; 
         return state;
     }

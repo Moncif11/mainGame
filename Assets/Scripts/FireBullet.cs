@@ -1,11 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum User{
-    PLAYER, 
-    ENEMY,
-}
 public class FireBullet : MonoBehaviour
 {
    public User user;
