@@ -2,16 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DoorCollider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DoorCollider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/alt_prefabs/Prefabs/capeWater.psb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/alt_prefabs/Prefabs/capeWater.psb.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/2DRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/2DRenderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/myPlayer/wall-slide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/myPlayer/wall-slide.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbiltyActivater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbiltyActivater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boss2BT/CheckBeginPhase2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Boss2BT/CheckBeginPhase2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HomingMissile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HomingMissile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/3b/3e55f118/Component.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,6 +122,7 @@
       <workItem from="1717625121307" duration="4582000" />
       <workItem from="1717937015243" duration="1763000" />
       <workItem from="1717939164283" duration="1515000" />
+      <workItem from="1719418171328" duration="17144000" />
     </task>
     <servers />
   </component>

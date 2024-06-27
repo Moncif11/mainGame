@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -28,6 +29,11 @@ public class CapePlayerController : NetworkBehaviour
     bool jump;
     public bool dash;
     bool dashReady;
+    private bool multiplayer = false;
+    private GameObject CapeIdle;
+    private GameObject CapeRun;
+    private bool watchOther = false;
+    private GameObject otherPlayer;
 
     public LayerMask platform;
     public LayerMask enemy;
@@ -69,6 +75,7 @@ public class CapePlayerController : NetworkBehaviour
 
     void Start()
     {
+        
         isWallJumping = false;
         dash = false;
         dashReady = true;
@@ -78,11 +85,30 @@ public class CapePlayerController : NetworkBehaviour
         originGravity = rb.gravityScale;
         tr = GetComponent<TrailRenderer>();
         myCam = Camera.main.transform;
+        CapeIdle =transform.GetChild(10).gameObject;
+        CapeIdle.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(123, 0, 22, 255);
+        CapeRun =transform.GetChild(9).gameObject;
+        CapeRun.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(123, 0, 22, 255);
+        CapeRun.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().color = new Color32(123, 0, 22, 255);
+        if((SceneManager.GetActiveScene().name == "Lobby"  || SceneManager.GetActiveScene().name == "MultiLevel1"))
+        {
+            multiplayer = true;
+        }
+        if (!IsOwner && multiplayer) {
+            GameObject Head = transform.GetChild(3).gameObject;
+            Head.GetComponent<SpriteRenderer>().color = new Color32(0, 255, 0, 255);
+            GameObject LegLeft = transform.GetChild(5).gameObject;
+            LegLeft.GetComponent<SpriteRenderer>().color = new Color32(0, 255, 0, 255);
+            GameObject LegRight = transform.GetChild(6).gameObject;
+            LegRight.GetComponent<SpriteRenderer>().color = new Color32(0, 255, 0, 255);
+            GameObject Arm = transform.GetChild(13).gameObject;
+            Arm.GetComponent<SpriteRenderer>().color = new Color32(0, 255, 0, 255);
+        }
     }
 
     void FixedUpdate()
     {
-        if (!IsOwner && SceneManager.GetActiveScene().name == "Lobby") {
+        if (!IsOwner && (SceneManager.GetActiveScene().name == "Lobby"  || SceneManager.GetActiveScene().name == "MultiLevel1")) {
             return;
         }
         //moveInput = joystick.Horizontal;
@@ -152,47 +178,73 @@ public class CapePlayerController : NetworkBehaviour
                 }
             }
         }
+        try {
+            float okeee = myCam.transform.position.x;
+        }
+        catch (Exception e) {
+            print("no Cam!");
+            Start();
+        }
+        if (Input.GetKeyDown(KeyCode.F) && multiplayer) {
+            watchOther = true;
+            GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+            for (int i = 0; i < players.Length; i++) {
+                if (this.gameObject.GetInstanceID() != players[i].GetInstanceID()){
+                    otherPlayer = players[i];
+                }
+            }
+            Debug.Log(otherPlayer.transform.position.x);
+        }
+        if (Input.GetKeyUp(KeyCode.F) && multiplayer) {
+            watchOther = false;
+        }
 
-        if (transform.position.x - myCam.transform.position.x > movBorderX)
-        {
-            myCam.transform.position = new Vector3(transform.position.x - movBorderX, myCam.transform.position.y,
+        if (watchOther) {
+            myCam.transform.position = new Vector3(otherPlayer.transform.position.x, otherPlayer.transform.position.y,
                 myCam.transform.position.z);
         }
-        else if (transform.position.x - myCam.transform.position.x < -movBorderX)
-        {
-            myCam.transform.position = new Vector3(transform.position.x + movBorderX, myCam.transform.position.y,
-                myCam.transform.position.z);
-        }
+        else {
+            if (transform.position.x - myCam.transform.position.x > movBorderX)
+            {
+                myCam.transform.position = new Vector3(transform.position.x - movBorderX, myCam.transform.position.y,
+                    myCam.transform.position.z);
+            }
+            else if (transform.position.x - myCam.transform.position.x < -movBorderX)
+            {
+                myCam.transform.position = new Vector3(transform.position.x + movBorderX, myCam.transform.position.y,
+                    myCam.transform.position.z);
+            }
 
-        if (transform.position.y - myCam.transform.position.y > movBorderY)
-        {
-            myCam.transform.position = new Vector3(myCam.transform.position.x, transform.position.y - movBorderY,
-                myCam.transform.position.z);
-        }
-        else if (transform.position.y - myCam.transform.position.y < -movBorderY)
-        {
-            myCam.transform.position = new Vector3(myCam.transform.position.x, transform.position.y + movBorderY,
-                myCam.transform.position.z);
-        }
+            if (transform.position.y - myCam.transform.position.y > movBorderY)
+            {
+                myCam.transform.position = new Vector3(myCam.transform.position.x, transform.position.y - movBorderY,
+                    myCam.transform.position.z);
+            }
+            else if (transform.position.y - myCam.transform.position.y < -movBorderY)
+            {
+                myCam.transform.position = new Vector3(myCam.transform.position.x, transform.position.y + movBorderY,
+                    myCam.transform.position.z);
+            }
 
-        myCam.transform.position = Vector3.Lerp(myCam.transform.position,
-            new Vector3(transform.position.x, transform.position.y + cameraOffsetY, myCam.transform.position.z), 0.01f);
-        if (myCam.transform.position.y < worldEndMinY)
-        {
-            myCam.transform.position =
-                new Vector3(myCam.transform.position.x, worldEndMinY, myCam.transform.position.z);
-        }
+            myCam.transform.position = Vector3.Lerp(myCam.transform.position,
+                new Vector3(transform.position.x, transform.position.y + cameraOffsetY, myCam.transform.position.z), 0.01f);
+            if (myCam.transform.position.y < worldEndMinY)
+            {
+                myCam.transform.position =
+                    new Vector3(myCam.transform.position.x, worldEndMinY, myCam.transform.position.z);
+            }
 
-        if (myCam.transform.position.x < worldEndMinX)
-        {
-            myCam.transform.position =
-                new Vector3(worldEndMinX, myCam.transform.position.y, myCam.transform.position.z);
-        }
+            if (myCam.transform.position.x < worldEndMinX)
+            {
+                myCam.transform.position =
+                    new Vector3(worldEndMinX, myCam.transform.position.y, myCam.transform.position.z);
+            }
 
-        if (myCam.transform.position.x > worldEndMaxX)
-        {
-            myCam.transform.position =
-                new Vector3(worldEndMaxX, myCam.transform.position.y, myCam.transform.position.z);
+            if (myCam.transform.position.x > worldEndMaxX)
+            {
+                myCam.transform.position =
+                    new Vector3(worldEndMaxX, myCam.transform.position.y, myCam.transform.position.z);
+            }
         }
     }
 
@@ -250,6 +302,7 @@ public class CapePlayerController : NetworkBehaviour
         if (touchesWall&&!isGrounded&&moveInput!=0&&!isJumping)
         {
             changeAnimationState("wall-slide");
+            Debug.Log("Wall-slide");
             rb.gravityScale = 0f;
             rb.velocity = Vector2.down * slideSpeed;
         }
@@ -337,16 +390,9 @@ public class CapePlayerController : NetworkBehaviour
             isJumping = false;
         }
 
-        if (transform.position.y < deadEnd)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (transform.position.y < deadEnd) {
+            transform.position = GameObject.Find("RespawnPosition").transform.position;
         }
-        /*if(Input.GetKeyDown(KeyCode.E)){
-            GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
-                Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(transform.right*1000);
-        }
-        */
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -371,8 +417,9 @@ public class CapePlayerController : NetworkBehaviour
     IEnumerator dying()
     {
         movementFreezed = true;
-        yield return new WaitForSecondsRealtime(0.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSecondsRealtime(2f);
+        transform.position = GameObject.Find("RespawnPosition").transform.position;
+        movementFreezed = false;
     }
 
     IEnumerator dashing()
@@ -423,5 +470,11 @@ public class CapePlayerController : NetworkBehaviour
         if (currentCapeState == newState) return;
         animator.Play(newState);
         currentCapeState = newState;
+    }
+
+    public void changeCapeColor(byte red, byte green, byte blue) {
+        CapeIdle.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
+        CapeRun.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
+        CapeRun.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
     }
 }
