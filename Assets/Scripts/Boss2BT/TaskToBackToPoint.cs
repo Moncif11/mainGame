@@ -12,7 +12,9 @@ public class TaskToBackToPoint : Node
     float maxHealth; 
 
     float startSpeed = 3f; 
+    Animator animator; 
     public TaskToBackToPoint(Transform transform){
+        animator = transform.GetComponent<Animator>();  
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
         startposition = transform.position;
@@ -22,14 +24,10 @@ public class TaskToBackToPoint : Node
     public override NodeState Evaluate()
     {  
             Boss2BT.isLeft=isLeft();
-           /* _animator.ResetTrigger("SP2");
-            _animator.ResetTrigger("Shoot");
-            _animator.ResetTrigger("Melee");
-            _animator.ResetTrigger("SP1"); 
-            _animator.SetTrigger("Walking");  
-            */
             float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
             if(distance > 0.001 && Boss2BT.backToStart == true){
+            animator.SetTrigger("Walking"); 
+            animator.ResetTrigger("Idle"); 
             Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss2BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
             _transform.GetComponent<Health>().health = maxHealth; 
@@ -38,6 +36,8 @@ public class TaskToBackToPoint : Node
              Boss2BT.bossPhase = BossPhase.ONE;   
             }
             else{
+            animator.ResetTrigger("Walking"); 
+            animator.SetTrigger("Idle"); 
                 _transform.GetComponent<Health>().damageReduction = 0;
                 Boss2BT.backToStart = false; 
                 Boss2BT.coolDownDodgeCounter = 0;
@@ -47,6 +47,8 @@ public class TaskToBackToPoint : Node
                 Boss2BT.SP2Ready= true;
                 Boss2BT.dogdeReady = true; 
             }
+             animator.ResetTrigger("Shoot");
+            animator.ResetTrigger("Jump");
         state = NodeState.RUNNING; 
         return state; 
     }

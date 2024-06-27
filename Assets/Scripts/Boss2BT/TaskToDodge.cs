@@ -15,10 +15,12 @@ public class TaskToDodge : Node
         private float groundCheckRadius = 0.1f; // Radius des Bodenkreises
         private LayerMask groundLayer; // LayerMask für den Boden 
         float elapsedTime = 0; 
+        Animator animator; 
     public TaskToDodge(Transform transform, Transform groundCheck,LayerMask groundLayer){
         _transform = transform;
         _groundCheck = groundCheck;
         this.groundLayer = groundLayer;
+        animator = transform.GetComponent<Animator>();
     }
         public override NodeState Evaluate(){
              bool isGrounded = Physics2D.OverlapCircle(_groundCheck.position, groundCheckRadius, groundLayer);
@@ -54,6 +56,10 @@ public class TaskToDodge : Node
                 // Bewege das Transform schrittweise zur Zielposition
                 float moveStep = jumpHeight * Time.deltaTime; // Anpassen der Geschwindigkeit hier nach Bedarf
                 _transform.position = Vector2.MoveTowards(_transform.position, targetPosition, moveStep);
+            animator.ResetTrigger("Shoot");
+            animator.ResetTrigger("Walking"); 
+            animator.ResetTrigger("Idle"); 
+            animator.SetTrigger("Jump"); 
             }
             else{
                 Boss2BT.isJumping = false;

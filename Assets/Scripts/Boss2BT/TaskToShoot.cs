@@ -36,9 +36,10 @@ public class TaskToShoot : Node{
         if(attackCounter >= attackTime){           
             Debug.Log("Shoot: "+bulletPrefab.name);
             Boss2BT.isLeft = isLeft(target);
-           /*animator.SetTrigger("Attack");
-            animator.ResetTrigger("Running"); 
-            */
+            animator.SetTrigger("Shoot");
+            animator.ResetTrigger("Walking"); 
+            animator.ResetTrigger("Idle"); 
+            animator.ResetTrigger("Jump"); 
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPosition.position + -shootPosition.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;
@@ -49,6 +50,7 @@ public class TaskToShoot : Node{
                 Debug.Log("Bullet : " + bullet.transform.position);
                 attackCounter= 0f; 
                 _shootpointIndex= (_shootpointIndex+1)%_shootpoints.Length;
+                
         }
         state= NodeState.RUNNING; 
         return state; 
