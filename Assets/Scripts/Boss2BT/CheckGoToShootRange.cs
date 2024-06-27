@@ -18,7 +18,7 @@ public class CheckToGoShootRange : Node{
         }
         float distance = Vector2.Distance(_transform.position,target.position);    
         if(distance > Boss2BT.shootRange){
-            parent.parent.parent.SetData("target",(Object)target);
+            parent.parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 
             return state; 
         } 

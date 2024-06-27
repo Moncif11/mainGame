@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BehaviorTree;
+using Boss1AI;
 
 namespace Boss2AI{
-public class CheckToShoot : Node
+public class CheckToShootMissile : Node
 {
     Transform _transform;
-    public CheckToShoot(Transform transform){
+    public CheckToShootMissile(Transform transform){
         _transform = transform;
     }
    public override NodeState Evaluate(){
     Transform t = nearestPlayer();
-    if(Vector2.Distance(_transform.position,t.position)<Boss2BT.shootRange){
+    if(Vector2.Distance(_transform.position,t.position)<Boss2BT.shootRange && Boss2BT.SP1Ready){
         parent.parent.parent.parent.SetData("target",(Object)t);
         state = NodeState.SUCCESS; 
         return state;    

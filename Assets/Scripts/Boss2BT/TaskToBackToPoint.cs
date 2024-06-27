@@ -40,6 +40,12 @@ public class TaskToBackToPoint : Node
             else{
                 _transform.GetComponent<Health>().damageReduction = 0;
                 Boss2BT.backToStart = false; 
+                Boss2BT.coolDownDodgeCounter = 0;
+                Boss2BT.coolDownSP1Counter = 0;	
+                Boss2BT.coolDownSP1Counter = 0;	
+                Boss2BT.SP1Ready= true;
+                Boss2BT.SP2Ready= true;
+                Boss2BT.dogdeReady = true; 
             }
         state = NodeState.RUNNING; 
         return state; 

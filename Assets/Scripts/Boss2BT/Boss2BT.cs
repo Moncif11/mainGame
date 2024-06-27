@@ -21,14 +21,14 @@ public class Boss2BT : BehaviorTree.Tree{
 
     public static int amountShoot = 3;  
 
-    public static float coolDownSP1 = 10f; 
+    public static float coolDownSP1 = 5f; //Shoot Missile
     
-    public static float coolDownSP2 = 7.5f; 
+    public static float coolDownSP2 = 7.5f; //Laser
 
     public static float minDistanceLaser = 4;
     public static float maxDistanceLaser = 10.5f;
 
-    public static float coolDownSACounter = 0f;
+    public static float coolDownDodgeCounter = 0f;
      public static float coolDownSP2Counter = 0f;
     public static float coolDownSP1Counter = 0f; 
 
@@ -47,7 +47,7 @@ public class Boss2BT : BehaviorTree.Tree{
     public static bool isJumping = false; 
     public static bool isFalling = false;
      protected override Node SetupTree(){
-       Node root = 
+       Node root = new CoolDownDecorator(
     new Selector(
         new List<Node> {
             new Sequence(new List<Node> {
@@ -71,8 +71,8 @@ public class Boss2BT : BehaviorTree.Tree{
                      new Sequence(new List<Node> {
                         new CheckCurrentPhase(transform, BossPhase.TWO),
                         new Sequence(new List<Node> {
-                            new CheckToShoot(transform),
-                            new TaskToShoot(transform, missilePrefab, shootpoints)
+                            new CheckToShootMissile(transform),
+                            new TaskToShootMissile(transform, missilePrefab, shootpoints)
                         })
                     }),
                     new Sequence(new List<Node> {
@@ -91,6 +91,7 @@ public class Boss2BT : BehaviorTree.Tree{
             }),
             new TaskToBackToPoint(transform)
         }
+    )
     );
     return root;
         }

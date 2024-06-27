@@ -39,22 +39,15 @@ public class HomingMissile : MonoBehaviour
 }
 
     private Transform FindTarget(){
-        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 5.0f);
-        GameObject nearestTarget = null;
-        float nearestDistance = float.MaxValue;
+        Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 6.0f);
         foreach (Collider2D targetCollider in targets)
         {
             if (targetCollider.gameObject.CompareTag("Player"))
         {
-            float distance = Vector2.Distance(transform.position, targetCollider.transform.position);
-            if (distance < nearestDistance)
-            {
-                nearestDistance = distance;
-                nearestTarget = targetCollider.gameObject;
-            }
+            return targetCollider.gameObject.transform;
         }
         }
-         return nearestTarget.transform;
+        return null;
     }
 
     void OnTriggerEnter2D(Collider2D other)

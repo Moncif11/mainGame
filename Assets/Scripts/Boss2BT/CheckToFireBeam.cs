@@ -11,7 +11,7 @@ namespace Boss2AI{
 
         public override NodeState Evaluate(){
             bool inRange = playerInLaserRange(); 
-            if(!Boss2BT.SP1Ready || !inRange){
+            if(!Boss2BT.SP2Ready || !inRange){
                 state = NodeState.FAILURE;
                 return state; 
             }
