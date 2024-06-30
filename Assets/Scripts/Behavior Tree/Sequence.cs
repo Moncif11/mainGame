@@ -11,15 +11,15 @@ namespace BehaviorTree{
             foreach(Node node in children){
                 switch(node.Evaluate()){
                     case NodeState.SUCCESS:
-                        Debug.Log("Sequence success.");
+                        //Debug.Log("Sequence success.");
                         continue;
                     case NodeState.FAILURE:
                         state  = NodeState.FAILURE;
-                        Debug.Log("Sequence failed.");
+                        //Debug.Log("Sequence failed.");
                         return state; 
                     case NodeState.RUNNING:
                         anyChildIsRunning = true;
-                        Debug.Log("Sequence running.");
+                        //Debug.Log("Sequence running.");
                          continue;
                     }
                 }

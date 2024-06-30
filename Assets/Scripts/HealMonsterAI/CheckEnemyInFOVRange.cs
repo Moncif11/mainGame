@@ -33,11 +33,11 @@ public class CheckEnemyInFOVRange : Node
         //}
         if(minDistance <= HealMonsterBT.fovRange){
                 parent.parent.SetData("target",targetPlayer); 
-                Debug.Log("CheckEnemyInFOVRange : SUCCESS");
+                //Debug.Log("CheckEnemyInFOVRange : SUCCESS");
                 state= NodeState.SUCCESS; 
                 return state;
         }
-            Debug.Log("CheckEnemyInFOVRange : FAILURE");
+            //Debug.Log("CheckEnemyInFOVRange : FAILURE");
             state= NodeState.FAILURE; 
             return state;
     }

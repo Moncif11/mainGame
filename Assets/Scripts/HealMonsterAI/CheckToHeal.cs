@@ -13,7 +13,7 @@ public class CheckToHeal : Node
     {
          GameObject[] enemies= GameObject.FindGameObjectsWithTag("Enemy"); 
         //if(t==null){
-            Debug.Log(enemies.Length);
+            //Debug.Log(enemies.Length);
             if(enemies.Length == 0){
                 state=NodeState.FAILURE; 
                 return state; 

@@ -22,14 +22,14 @@ public class TaskAttack : Node{
     public override NodeState Evaluate()
     {
         Transform target = (Transform)GetData("target");
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
         if(_lastTarger != target){
             _lastTarger = target;
             capePlayerHealth = target.GetComponent<Health>();
         }  
         attackCounter+= Time.deltaTime;
         if(attackCounter >= attackTime){           
-            Debug.Log("Shoot: "+bulletPrefab.name);
+            //Debug.Log("Shoot: "+bulletPrefab.name);
             HealMonsterBT.isRight = isRight(target);
             animator.SetTrigger("Attack");
             animator.ResetTrigger("Running"); 
@@ -42,7 +42,7 @@ public class TaskAttack : Node{
                 bulletRB.AddForce(_transform.right*1000);
             }
             else{
-                Debug.Log("Shoot left");
+                //Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + -_transform.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;
                 rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse

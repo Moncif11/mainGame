@@ -31,7 +31,7 @@ public class TaskToGo : Node
         }
         animator.SetTrigger("Running");
         animator.ResetTrigger("Attack");
-        Debug.Log("TaskToGo: Running");
+        //Debug.Log("TaskToGo: Running");
         state = NodeState.RUNNING; 
         return state;         
     }

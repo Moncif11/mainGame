@@ -29,7 +29,7 @@ public class CapePlayerController : NetworkBehaviour
     bool jump;
     public bool dash;
     bool dashReady;
-    private bool multiplayer = false;
+    public bool multiplayer = false;
     private GameObject CapeIdle;
     private GameObject CapeRun;
     private bool watchOther = false;
@@ -108,7 +108,7 @@ public class CapePlayerController : NetworkBehaviour
 
     void FixedUpdate()
     {
-        if (!IsOwner && (SceneManager.GetActiveScene().name == "Lobby"  || SceneManager.GetActiveScene().name == "MultiLevel1")) {
+        if (!IsOwner && multiplayer) {
             return;
         }
         //moveInput = joystick.Horizontal;
@@ -250,7 +250,7 @@ public class CapePlayerController : NetworkBehaviour
 
     void Update()
     {
-        if (!IsOwner && SceneManager.GetActiveScene().name == "Lobby") {
+        if (!IsOwner && multiplayer) {
             return;
         }
         
@@ -454,8 +454,20 @@ public class CapePlayerController : NetworkBehaviour
     }
     
     void OnCollisionEnter2D(Collision2D other){
-        if(dash && other.gameObject.CompareTag("Enemy")){
-                other.gameObject.GetComponent<Health>().takeDamage(damage);   
+        if(dash && other.gameObject.CompareTag("Enemy")) {
+                if (multiplayer) {
+                    float enemyID = other.gameObject.GetComponent<Health>().myid;
+                    if (OwnerClientId == 0) {
+                        dashDamagaeClientRpc(enemyID);
+                    }
+                    else {
+                        dashDamagaeServerRpc(enemyID);
+                        other.gameObject.GetComponent<Health>().takeDamage(damage);
+                    }
+                }
+                else {
+                    other.gameObject.GetComponent<Health>().takeDamage(damage);
+                }
         }
     }
     void changeAnimationState(string newState)
@@ -476,5 +488,34 @@ public class CapePlayerController : NetworkBehaviour
         CapeIdle.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
         CapeRun.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
         CapeRun.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
+    }
+    
+    [ServerRpc]
+    private void dashDamagaeServerRpc(float enemyID) {
+        Debug.Log("RPC received from "+OwnerClientId);
+        GameObject[] enemies;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy.GetComponent<Health>().myid == enemyID) {
+                Debug.Log("Got them!");
+                enemy.GetComponent<Health>().takeDamage(damage);
+            }
+        }
+    }
+    [ClientRpc]
+    private void dashDamagaeClientRpc(float enemyID) {
+        Debug.Log("RPC received from "+OwnerClientId);
+        GameObject[] enemies;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            if (enemy.GetComponent<Health>().myid == enemyID) {
+                Debug.Log("Got them!");
+                enemy.GetComponent<Health>().takeDamage(damage);
+            }
+        }
     }
 }

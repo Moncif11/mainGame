@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Health : MonoBehaviour {
     public float maxHealth;
@@ -9,9 +11,11 @@ public class Health : MonoBehaviour {
     public float damageReduction = 0;
 
     public GameObject dropItem;
+    public float myid;
 
     private void Start(){
-         health = maxHealth; 
+         health = maxHealth;
+         myid = gameObject.transform.position.x * 1000 + gameObject.transform.position.y;
     }
     public void heal(float heal){
         if(health+heal >=maxHealth ){
@@ -21,10 +25,10 @@ public class Health : MonoBehaviour {
             health+=heal; 
         }
     }
-    public void takeDamage(float damage){
+    public void takeDamage(float damage) {
         health = health -(damage- damage*(damageReduction/100));
         if(gameObject.CompareTag("Enemy")){
-             if(health<= 0){
+            if(health<= 0){
             if(dropItem!=null){
                     StartCoroutine(itemDropped(transform));
                 }
@@ -38,5 +42,5 @@ public class Health : MonoBehaviour {
         Debug.Log("2");
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(gameObject); 
-    } 
+    }
 }
