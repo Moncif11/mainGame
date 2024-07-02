@@ -28,12 +28,13 @@ public class CapePlayerController : NetworkBehaviour
     bool movementFreezed;
     bool jump;
     public bool dash;
-    bool dashReady;
+    public bool dashReady;
     public bool multiplayer = false;
     private GameObject CapeIdle;
     private GameObject CapeRun;
     private bool watchOther = false;
     private GameObject otherPlayer;
+    public int dropOffset;
 
     public LayerMask platform;
     public LayerMask enemy;
@@ -193,7 +194,6 @@ public class CapePlayerController : NetworkBehaviour
                     otherPlayer = players[i];
                 }
             }
-            Debug.Log(otherPlayer.transform.position.x);
         }
         if (Input.GetKeyUp(KeyCode.F) && multiplayer) {
             watchOther = false;
@@ -260,10 +260,8 @@ public class CapePlayerController : NetworkBehaviour
         {
             Touch touch = Input.GetTouch(i);
             Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
-            Debug.Log(touchPosition);
             if (touchPosition.x > myCam.transform.position.x)
             {
-                Debug.Log("jump");
                 jump = true;
             }
         }
@@ -302,7 +300,6 @@ public class CapePlayerController : NetworkBehaviour
         if (touchesWall&&!isGrounded&&moveInput!=0&&!isJumping)
         {
             changeAnimationState("wall-slide");
-            Debug.Log("Wall-slide");
             rb.gravityScale = 0f;
             rb.velocity = Vector2.down * slideSpeed;
         }
@@ -348,8 +345,18 @@ public class CapePlayerController : NetworkBehaviour
         {
             jump = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashReady)
+        
+        if (Input.GetKey(KeyCode.Q))
+        {
+            if (direction == "right") {
+                GetComponent<Health>().itemDirektDroppedFromPlayer(dropOffset);
+            }
+            else {
+                GetComponent<Health>().itemDirektDroppedFromPlayer(-dropOffset);
+            }
+        }
+        
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.Z)) && dashReady)
         {
             StartCoroutine(dashing());
         }
@@ -414,7 +421,7 @@ public class CapePlayerController : NetworkBehaviour
         }
     }
 
-    IEnumerator dying()
+    public IEnumerator dying()
     {
         movementFreezed = true;
         yield return new WaitForSecondsRealtime(2f);
@@ -424,6 +431,7 @@ public class CapePlayerController : NetworkBehaviour
 
     IEnumerator dashing()
     {   dash = true;
+        dashReady = false;
         float originalGravity = rb.gravityScale ;  
         rb.gravityScale = 0f; 
         rb.velocity = new Vector2(transform.localScale.x * dashingPower,0f); 
@@ -469,6 +477,11 @@ public class CapePlayerController : NetworkBehaviour
                     other.gameObject.GetComponent<Health>().takeDamage(damage);
                 }
         }
+
+        if (other.gameObject.CompareTag("DamageObstacle")) {
+            GetComponent<Health>().takeDamage(damage);
+            Debug.Log("Spike-Damage");
+        }
     }
     void changeAnimationState(string newState)
     {
@@ -489,31 +502,31 @@ public class CapePlayerController : NetworkBehaviour
         CapeRun.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
         CapeRun.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().color = new Color32(red, green, blue, 255);
     }
+
+    public void changeCapeToOriginalColor() {
+        changeCapeColor(123,  0, 22);
+    }
     
     [ServerRpc]
     private void dashDamagaeServerRpc(float enemyID) {
-        Debug.Log("RPC received from "+OwnerClientId);
         GameObject[] enemies;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         foreach (GameObject enemy in enemies)
         {
             if (enemy.GetComponent<Health>().myid == enemyID) {
-                Debug.Log("Got them!");
                 enemy.GetComponent<Health>().takeDamage(damage);
             }
         }
     }
     [ClientRpc]
     private void dashDamagaeClientRpc(float enemyID) {
-        Debug.Log("RPC received from "+OwnerClientId);
         GameObject[] enemies;
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         foreach (GameObject enemy in enemies)
         {
             if (enemy.GetComponent<Health>().myid == enemyID) {
-                Debug.Log("Got them!");
                 enemy.GetComponent<Health>().takeDamage(damage);
             }
         }

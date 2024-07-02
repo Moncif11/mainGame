@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -9,7 +10,10 @@ public class Health : MonoBehaviour {
      public float health = 5;
 
     public float damageReduction = 0;
-
+    public GameObject waterItem;
+    public GameObject fireItem;
+    public GameObject iceItem;
+    public GameObject stoneItem;
     public GameObject dropItem;
     public float myid;
 
@@ -33,14 +37,73 @@ public class Health : MonoBehaviour {
                     StartCoroutine(itemDropped(transform));
                 }
         }
-        }       
+        }
+        if(gameObject.CompareTag("Player")){
+            if(health<= 90){
+            Debug.Log("player dies");
+                switch (GetComponent<AbilityManager>().ability) {
+                    case Abilty.FIRE:
+                        dropItem = fireItem;
+                        break;
+                    case Abilty.ICE:
+                        dropItem = iceItem;
+                        break;
+                    case Abilty.WATER:
+                        dropItem = waterItem;
+                        break;
+                    case Abilty.ROCK:
+                        dropItem = stoneItem;
+                        break;
+                    default:
+                        dropItem = null;
+                        break;
+                }
+                GetComponent<AbilityManager>().ability = Abilty.NONE;
+                GetComponent<CapePlayerController>().changeCapeToOriginalColor();
+                if(dropItem!=null){
+                    StartCoroutine(itemDroppedFromPlayer(transform));
+                }
+                StartCoroutine(GetComponent<CapePlayerController>().dying());
+            }
+        }
     }
 
     IEnumerator itemDropped( Transform transform){
         Debug.Log("Item Dropped");
         yield return new WaitForSeconds(1);
-        Debug.Log("2");
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(gameObject); 
+    }
+    IEnumerator itemDroppedFromPlayer( Transform transform){
+        Vector3 deathPos = transform.position;
+        yield return new WaitForSeconds(3);
+        Instantiate(dropItem, deathPos, Quaternion.identity);
+    }
+    public void itemDirektDroppedFromPlayer(int xOffset) {
+        Abilty ability = GetComponent<AbilityManager>().ability;
+        switch (ability) {
+            case Abilty.FIRE:
+                dropItem = fireItem;
+                break;
+            case Abilty.ICE:
+                dropItem = iceItem;
+                break;
+            case Abilty.WATER:
+                dropItem = waterItem;
+                break;
+            case Abilty.ROCK:
+                dropItem = stoneItem;
+                break;
+            default:
+                dropItem = null;
+                break;
+        }
+        GetComponent<AbilityManager>().ability = Abilty.NONE;
+        GetComponent<CapePlayerController>().changeCapeToOriginalColor();
+        if(dropItem!=null){
+            Vector3 spawnPos = transform.position;
+            spawnPos.x = transform.position.x + xOffset;
+            Instantiate(dropItem, spawnPos, Quaternion.identity);
+        }
     }
 }

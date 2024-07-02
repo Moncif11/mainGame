@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2272072573
+  GlobalObjectIdHash: 1730508731
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -1147,6 +1147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: 
   dash: 0
+  dashReady: 0
   multiplayer: 0
   platform:
     serializedVersion: 2
@@ -1162,8 +1163,8 @@ MonoBehaviour:
   tr: {fileID: 861585398111841372}
   dashingPower: 24
   dashSpeed: 40
-  dashTime: 0.2
-  dashCooldown: 0.5
+  dashTime: 0.1
+  dashCooldown: 0.2
   wallJumpCooldown: 0.4
   feetCheckRadius: 0.2
   handCheckRadius: 0.2
@@ -1220,12 +1221,12 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Time: 5
+  m_SortingOrder: 3
+  m_Time: 0.2
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1238,15 +1239,6 @@ TrailRenderer:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.4352792
-        value: 0.34284973
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
       - serializedVersion: 3
         time: 0.96555334
         value: 0
