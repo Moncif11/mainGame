@@ -70,13 +70,11 @@ public class CapePlayerController : NetworkBehaviour
     public float slideSpeed;
 
     [Header("Stats")]
-    [SerializeField] private float damage = 2;
+    [SerializeField] private float damage = 20;
     public GameObject bulletPrefab;
 
 
-    void Start()
-    {
-        
+    public void Start() {
         isWallJumping = false;
         dash = false;
         dashReady = true;
@@ -105,8 +103,11 @@ public class CapePlayerController : NetworkBehaviour
             GameObject Arm = transform.GetChild(13).gameObject;
             Arm.GetComponent<SpriteRenderer>().color = new Color32(0, 255, 0, 255);
         }
-    }
 
+        if (multiplayer && SceneManager.GetActiveScene().name != "Lobby") {
+            GetComponent<Health>().resetHealth();
+        }
+    }
     void FixedUpdate()
     {
         if (!IsOwner && multiplayer) {
@@ -424,9 +425,16 @@ public class CapePlayerController : NetworkBehaviour
     public IEnumerator dying()
     {
         movementFreezed = true;
-        yield return new WaitForSecondsRealtime(2f);
+        Quaternion rotation = transform.rotation;
+        rotation.z = 90;
+        transform.rotation = rotation;
+        yield return new WaitForSecondsRealtime(0f);
+        rotation = transform.rotation;
+        rotation.z = 0;
+        transform.rotation = rotation;
         transform.position = GameObject.Find("RespawnPosition").transform.position;
         movementFreezed = false;
+        Start();
     }
 
     IEnumerator dashing()
@@ -480,7 +488,6 @@ public class CapePlayerController : NetworkBehaviour
 
         if (other.gameObject.CompareTag("DamageObstacle")) {
             GetComponent<Health>().takeDamage(damage);
-            Debug.Log("Spike-Damage");
         }
     }
     void changeAnimationState(string newState)

@@ -33,6 +33,6 @@ public class EntranceManager : MonoBehaviour {
         if (door1Ready && door2Ready) {
             Debug.Log("Both Ready!");
         }
-            networkManager.SceneManager.LoadScene("MultiLevel1", LoadSceneMode.Single);   
+            networkManager.SceneManager.LoadScene("MultiLevel1", LoadSceneMode.Single);
     }
 }

@@ -208,8 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3883356710628739718}
+  - {fileID: 5806031770036447308}
   bulletPrefab: {fileID: 7315785336683993725, guid: 44d37af458e7d9242b0212d12da70594, type: 3}
 --- !u!114 &4928034593155496443
 MonoBehaviour:
@@ -225,6 +225,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   health: 5
+  damageReduction: 0
+  waterItem: {fileID: 0}
+  fireItem: {fileID: 0}
+  iceItem: {fileID: 0}
+  stoneItem: {fileID: 0}
+  dropItem: {fileID: 0}
+  myid: 0
 --- !u!114 &521958596789421361
 MonoBehaviour:
   m_ObjectHideFlags: 0

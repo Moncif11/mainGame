@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1-old.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1-old.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel2.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel2.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBarManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBarManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Square.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FireItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FireItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/IceItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/IceItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FireMonster/MonsterSkizze  1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FireMonster/MonsterSkizze  1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RockItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RockItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WaterItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WaterItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskPatrol.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +33,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/3b/3e55f118/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/57/370ed2a5/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/c8/9032ce06/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthBarManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Runtime/Core/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Runtime/Messaging/Messages/RpcMessages.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,6 +130,8 @@
       <workItem from="1719761091352" duration="13267000" />
       <workItem from="1719778655808" duration="708000" />
       <workItem from="1719941591124" duration="5338000" />
+      <workItem from="1720012112303" duration="4067000" />
+      <workItem from="1720037063946" duration="4279000" />
     </task>
     <servers />
   </component>

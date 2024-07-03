@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1730508731
+  GlobalObjectIdHash: 2272072573
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -1149,6 +1149,7 @@ MonoBehaviour:
   dash: 0
   dashReady: 0
   multiplayer: 0
+  dropOffset: 0
   platform:
     serializedVersion: 2
     m_Bits: 8
@@ -1178,7 +1179,7 @@ MonoBehaviour:
   worldEndMinY: 0
   coyoteTime: 0.1
   slideSpeed: 2
-  damage: 2
+  damage: 20
   bulletPrefab: {fileID: 7315785336683993725, guid: 75f1fad6212c84d4bb90b2bebc29c14c, type: 3}
 --- !u!96 &861585398111841372
 TrailRenderer:
@@ -1308,8 +1309,13 @@ MonoBehaviour:
   maxHealth: 100
   health: 5
   damageReduction: 0
+  waterItem: {fileID: 0}
+  fireItem: {fileID: 0}
+  iceItem: {fileID: 0}
+  stoneItem: {fileID: 0}
   dropItem: {fileID: 0}
   myid: 0
+  healthBar: {fileID: 0}
 --- !u!114 &8203382054086208168
 MonoBehaviour:
   m_ObjectHideFlags: 0

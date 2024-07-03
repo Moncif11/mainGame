@@ -20,7 +20,7 @@ public class TaskPatrol : Node
     }
 
     public override NodeState Evaluate()
-    {        Debug.Log("Patrolstate : "+ state); 
+    {        
 
         Transform wp =_waypoints[_currentWayPointIndex].transform;
         if(Vector2.Distance(wp.position,_transform.position)<0.01f){

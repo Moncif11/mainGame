@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+//using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
     public float maxHealth;
@@ -16,8 +18,9 @@ public class Health : MonoBehaviour {
     public GameObject stoneItem;
     public GameObject dropItem;
     public float myid;
+    public Image healthBar;
 
-    private void Start(){
+    public void Start(){
          health = maxHealth;
          myid = gameObject.transform.position.x * 1000 + gameObject.transform.position.y;
     }
@@ -39,8 +42,8 @@ public class Health : MonoBehaviour {
         }
         }
         if(gameObject.CompareTag("Player")){
-            if(health<= 90){
-            Debug.Log("player dies");
+            updateHealthBar();
+            if(health<= 0){
                 switch (GetComponent<AbilityManager>().ability) {
                     case Abilty.FIRE:
                         dropItem = fireItem;
@@ -69,14 +72,13 @@ public class Health : MonoBehaviour {
     }
 
     IEnumerator itemDropped( Transform transform){
-        Debug.Log("Item Dropped");
         yield return new WaitForSeconds(1);
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(gameObject); 
     }
     IEnumerator itemDroppedFromPlayer( Transform transform){
         Vector3 deathPos = transform.position;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Instantiate(dropItem, deathPos, Quaternion.identity);
     }
     public void itemDirektDroppedFromPlayer(int xOffset) {
@@ -105,5 +107,16 @@ public class Health : MonoBehaviour {
             spawnPos.x = transform.position.x + xOffset;
             Instantiate(dropItem, spawnPos, Quaternion.identity);
         }
+    }
+    public void updateHealthBar() {
+        healthBar.fillAmount = health / maxHealth;
+    }
+    public void setHealthBar(Image healthbar) {
+        healthBar = healthbar;
+    }
+
+    public void resetHealth() {
+        health = maxHealth;
+        updateHealthBar();
     }
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: 63634b9085494f8409404800dfea64f6
   - enabled: 1
-    path: Assets/Scenes/MultiLevel1.unity
+    path: Assets/Scenes/Multilevel1.unity
+    guid: afafc7b0c1330c54da628030ba7d0ae1
+  - enabled: 0
+    path: Assets/Scenes/MultiLevel1-old.unity
     guid: 5bb9969127516dd4aaf2966f5ffde83d
   m_configObjects: {}
