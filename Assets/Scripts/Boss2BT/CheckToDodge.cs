@@ -40,7 +40,10 @@ namespace Boss2AI{
 
                 CapePlayerController capePlayerController = collider.gameObject.GetComponent<CapePlayerController>();
                 if (capePlayerController != null && capePlayerController.dash)
-                {
+                {   
+                    if((capePlayerController.direction =="right" && !Boss2BT.isLeft)||(capePlayerController.direction =="left" && Boss2BT.isLeft)){
+                    continue; 
+                    }
                     Debug.Log("Found Player Dash to Dodge");
                     bullet = collider.gameObject;
                     break;
