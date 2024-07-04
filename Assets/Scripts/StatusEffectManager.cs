@@ -44,6 +44,7 @@ public class StatusEffectManager : MonoBehaviour
     IEnumerator Freeze(){
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+         rb.velocity = Vector2.zero; 
         yield return new WaitForSeconds(freezeTicktimer);  
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;   
     }

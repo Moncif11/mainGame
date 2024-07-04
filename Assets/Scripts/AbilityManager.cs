@@ -48,6 +48,11 @@ public class AbilityManager : NetworkBehaviour
         if(Input.GetKeyDown(KeyCode.E)){
             Shoot();
         } 
+        if(Input.GetKey(KeyCode.E)){
+            if(ability == Abilty.ROCK){
+                Shield(); 
+            }
+        }
         else{
             if(ability ==Abilty.ROCK){
                  DeactivateShield(); 
@@ -56,7 +61,7 @@ public class AbilityManager : NetworkBehaviour
         if(maxUltbar ==ultBar){
             ultReady= true; 
         }    
-        if(Input.GetKey(KeyCode.Q)){
+        if(Input.GetKeyDown(KeyCode.Q)){
             if(ultReady){
             switch(ability){
                 case Abilty.FIRE:
@@ -68,7 +73,6 @@ public class AbilityManager : NetworkBehaviour
                 case Abilty.ICE: 
                 FreezeAll(); 
                 return; 
-
             }
             ultReady = false; 
             ultBar = 0; 
@@ -99,9 +103,6 @@ public class AbilityManager : NetworkBehaviour
                 break;
             case Abilty.WATER:
                 bulletPrefab = waterShot;
-                break;
-            case Abilty.ROCK:
-                Shield(); 
                 break;
             default:
                 break; 

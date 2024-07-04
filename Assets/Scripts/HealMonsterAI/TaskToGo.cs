@@ -19,9 +19,9 @@ public class TaskToGo : Node
 //        Debug.Log("Runningstate: "+state);  
         if(Vector2.Distance(_transform.position, target.position)>0.01f){
            // Debug.Log("TaskToGo: Success");
-             float stopRange = -(RangeMonsterBT.attackRange-1);
-            RangeMonsterBT.isRight=isRight(target);
-            if(!RangeMonsterBT.isRight){
+             float stopRange = -(HealMonsterBT.attackRange-1);
+            HealMonsterBT.isRight=isRight(target);
+            if(!HealMonsterBT.isRight){
                 stopRange*=-1; 
             }
 //            Debug.Log("IsRight: " + RangeMonsterBT.isRight);
@@ -49,7 +49,7 @@ public class TaskToGo : Node
         }
         else if (direction.x <0)
         {
-            RangeMonsterBT.isRight = true; // Nach rechts schauen
+            HealMonsterBT.isRight = true; // Nach rechts schauen
               Vector3 Scaler = _transform.localScale;
             Scaler.x = Mathf.Abs(Scaler.x); 
             _transform.localScale = Scaler;

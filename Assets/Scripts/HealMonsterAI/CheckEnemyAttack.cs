@@ -27,8 +27,9 @@ public class CheckEnemyAttack : Node
         else{
             isFacing = false;
         }
-
+        Debug.Log("Isfacing"+isFacing);
         if(Vector2.Distance(_transform.position, target.position)<= HealMonsterBT.attackRange &&isFacing){            
+            Debug.Log("heal monster shoot");
             state= NodeState.SUCCESS;
             return state;
         } 

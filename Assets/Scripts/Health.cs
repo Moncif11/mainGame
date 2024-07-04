@@ -39,6 +39,9 @@ public class Health : MonoBehaviour {
             if(dropItem!=null){
                     StartCoroutine(itemDropped(transform));
                 }
+                else{
+                    Destroy(gameObject); 
+                }
         }
         }
         if(gameObject.CompareTag("Player")){
@@ -66,7 +69,9 @@ public class Health : MonoBehaviour {
                 if(dropItem!=null){
                     StartCoroutine(itemDroppedFromPlayer(transform));
                 }
-
+                else{
+                    Destroy(gameObject);
+                }
                 GetComponent<CapePlayerController>().dying();
             }
         }

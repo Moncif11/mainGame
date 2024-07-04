@@ -28,7 +28,6 @@ public class CheckEnemyAttack : Node
         else{
             isFacing = false;
         }
-
         if(Vector2.Distance(_transform.position, target.position)<= RangeMonsterBT.attackRange && isFacing){            
             state= NodeState.SUCCESS;
             return state;

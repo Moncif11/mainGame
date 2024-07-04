@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6307439586577126944}
   - component: {fileID: -9088794221617938359}
   - component: {fileID: -6422113528232985979}
-  - component: {fileID: 660143978171534214}
   - component: {fileID: -7588879415348910488}
   - component: {fileID: -2241099243422194120}
+  - component: {fileID: -2102853725530008902}
   m_Layer: 0
   m_Name: IceShot 1
   m_TagString: Bullet
@@ -115,8 +115,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &660143978171534214
-CircleCollider2D:
+--- !u!114 &-7588879415348910488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315785336683993725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa32c757650f92c4b90e942792706d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user: 0
+  damage: 2
+--- !u!114 &-2241099243422194120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315785336683993725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc0f7214f9457104687cdbd98c28867b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user: 0
+--- !u!60 &-2102853725530008902
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,32 +175,44 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &-7588879415348910488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7315785336683993725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa32c757650f92c4b90e942792706d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  user: 0
-  damage: 2
---- !u!114 &-2241099243422194120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7315785336683993725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc0f7214f9457104687cdbd98c28867b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  user: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.88, y: 1.61}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.32, y: -0.355}
+      - {x: 0.44, y: -0.114999995}
+      - {x: 0.44, y: -0.015}
+      - {x: 0.38, y: 0.33499998}
+      - {x: 0.35, y: 0.475}
+      - {x: 0.24, y: 0.575}
+      - {x: 0.19, y: 0.585}
+      - {x: -0.08, y: 0.79499996}
+      - {x: -0.14, y: 0.79499996}
+      - {x: -0.32, y: 0.53499997}
+      - {x: -0.38, y: 0.405}
+      - {x: -0.44, y: 0.295}
+      - {x: -0.44, y: 0.095}
+      - {x: -0.41, y: -0.005}
+      - {x: -0.31, y: -0.185}
+      - {x: -0.22999999, y: -0.285}
+      - {x: -0.21, y: -0.36499998}
+      - {x: -0.08, y: -0.685}
+      - {x: 0.02, y: -0.805}
+      - {x: 0.16, y: -0.805}
+      - {x: 0.17999999, y: -0.79499996}
+      - {x: 0.17999999, y: -0.685}
+      - {x: 0.22999999, y: -0.515}
+    - - {x: -0.28, y: -0.555}
+      - {x: -0.24, y: -0.60499996}
+      - {x: -0.21, y: -0.59499997}
+      - {x: -0.21, y: -0.575}
+      - {x: -0.25, y: -0.525}
+      - {x: -0.26999998, y: -0.525}
+  m_UseDelaunayMesh: 0
