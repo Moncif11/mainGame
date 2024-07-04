@@ -43,6 +43,7 @@ namespace Boss3AI{
             float offSet = Random.Range(-2, 2);
             Vector2 spawnPosition = new Vector2(position.position.x + offSet, 20);
             GameObject bullet = GameObject.Instantiate(_bulletPrefab, spawnPosition, Quaternion.identity);
+            bullet.transform.localScale = new Vector3(1,1,1); 
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
             // Überprüfen Sie, ob das Rigidbody2D korrekt ist
             if (bulletRB != null) {

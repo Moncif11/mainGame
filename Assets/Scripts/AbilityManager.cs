@@ -113,7 +113,7 @@ public class AbilityManager : NetworkBehaviour
         if(capePlayerController.direction == "left"){
             GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
             Quaternion rotation = bullet.transform.rotation;
-            rotation *= Quaternion.Euler(0, 0, 90); // Ändere die Rotation um -90 Grad um die Z-Achse
+            rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse
             bullet.transform.rotation = rotation;
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
             bulletRB.AddForce(transform.right*1000);
@@ -121,7 +121,7 @@ public class AbilityManager : NetworkBehaviour
         else if(capePlayerController.direction == "right"){
             GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
             Quaternion rotation = bullet.transform.rotation;
-            rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse
+            rotation *= Quaternion.Euler(0, 0, 90); // Ändere die Rotation um -90 Grad um die Z-Achse
             bullet.transform.rotation = rotation;
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
             bulletRB.AddForce(transform.right*1000);
