@@ -66,7 +66,8 @@ public class Health : MonoBehaviour {
                 if(dropItem!=null){
                     StartCoroutine(itemDroppedFromPlayer(transform));
                 }
-                StartCoroutine(GetComponent<CapePlayerController>().dying());
+
+                GetComponent<CapePlayerController>().dying();
             }
         }
     }

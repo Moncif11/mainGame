@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
@@ -89,7 +90,7 @@ public class CapePlayerController : NetworkBehaviour
         CapeRun =transform.GetChild(9).gameObject;
         CapeRun.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color32(123, 0, 22, 255);
         CapeRun.transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().color = new Color32(123, 0, 22, 255);
-        if((SceneManager.GetActiveScene().name == "Lobby"  || SceneManager.GetActiveScene().name == "MultiLevel1"))
+        if(SceneManager.GetActiveScene().name == "Lobby"  || SceneManager.GetActiveScene().name == "MultiLevel1" || SceneManager.GetActiveScene().name == "MultiLevel2")
         {
             multiplayer = true;
         }
@@ -104,7 +105,7 @@ public class CapePlayerController : NetworkBehaviour
             Arm.GetComponent<SpriteRenderer>().color = new Color32(0, 255, 0, 255);
         }
 
-        if (multiplayer && SceneManager.GetActiveScene().name != "Lobby") {
+        if (SceneManager.GetActiveScene().name != "Lobby" && SceneManager.GetActiveScene().name != "TestScene" && GetComponent<Health>().healthBar != null) {
             GetComponent<Health>().resetHealth();
         }
     }
@@ -399,7 +400,7 @@ public class CapePlayerController : NetworkBehaviour
         }
 
         if (transform.position.y < deadEnd) {
-            transform.position = GameObject.Find("RespawnPosition").transform.position;
+            dying();
         }
     }
 
@@ -408,7 +409,7 @@ public class CapePlayerController : NetworkBehaviour
         if (other.gameObject.tag == "crusher" && isGrounded)
         {
             jumpforce = jumpforce * 0.8f;
-            StartCoroutine(dying());
+            dying();
         }
     }
 
@@ -422,17 +423,25 @@ public class CapePlayerController : NetworkBehaviour
         }
     }
 
-    public IEnumerator dying()
+    public void dying()
     {
         movementFreezed = true;
         Quaternion rotation = transform.rotation;
         rotation.z = 90;
         transform.rotation = rotation;
-        yield return new WaitForSecondsRealtime(0f);
         rotation = transform.rotation;
         rotation.z = 0;
         transform.rotation = rotation;
-        transform.position = GameObject.Find("RespawnPosition").transform.position;
+        List<GameObject> checkpoints = GameObject.FindGameObjectsWithTag ("Checkpoint").ToList();
+        checkpoints = checkpoints.ToList().OrderBy(x => x.transform.position.x).ToList();
+        Debug.Log("checkpointslength: "+checkpoints.Count );
+        GameObject lastCheckpoint = checkpoints[0];
+        for (int i = 0; i < checkpoints.Count; i++) {
+            if (transform.position.x >= checkpoints[i].transform.position.x) {
+                lastCheckpoint = checkpoints[i];
+            }
+        }
+        transform.position = lastCheckpoint.transform.position;
         movementFreezed = false;
         Start();
     }
