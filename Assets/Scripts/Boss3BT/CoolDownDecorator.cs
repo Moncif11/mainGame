@@ -27,9 +27,9 @@ public class CoolDownDecorator: Node
             }
              if(!Boss3BT.teleportReady){
                  Boss3BT.coolDownDodgeCounter += Time.deltaTime; 
-                if(Boss2BT.coolDownDodgeCounter>3.0f){
-                     Boss2BT.coolDownDodgeCounter= 0;
-                    Boss2BT.dogdeReady= true;
+                if(Boss3BT.coolDownDodgeCounter>3.0f){
+                     Boss3BT.coolDownDodgeCounter= 0;
+                    Boss3BT.teleportReady= true;
                 }
 
             }

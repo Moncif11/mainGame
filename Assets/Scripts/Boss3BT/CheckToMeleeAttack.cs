@@ -12,7 +12,7 @@ public class CheckToMeleeAttack : Node
     }
    public override NodeState Evaluate(){
     Transform t = nearestPlayer();
-    if(Vector2.Distance(_transform.position,t.position)<Boss3BT.attackRange){
+    if(Mathf.Abs(_transform.position.x-t.position.x)<Boss3BT.attackRange){
         parent.parent.parent.parent.SetData("target",(Object)t);
         Debug.Log("Meelee Attack");
         state = NodeState.SUCCESS; 

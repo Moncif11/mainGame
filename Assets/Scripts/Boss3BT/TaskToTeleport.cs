@@ -15,6 +15,12 @@ public class TaskToTeleport : Node
         public override NodeState Evaluate(){
             Transform target = (Transform)GetData("target"); 
             float offSet = -2;
+            animator.ResetTrigger("Melee");
+            animator.ResetTrigger("Walking"); 
+            animator.ResetTrigger("Nothing"); 
+            animator.ResetTrigger("Burn"); 
+            animator.SetTrigger("Teleport"); 
+            animator.ResetTrigger("Ice Rain");      
             if(Vector2.Distance( position,new Vector2(target.position.x+offSet,target.position.y)) < 25){
                 _transform.position  = new Vector2(target.position.x+offSet,_transform.position.y); 
             }

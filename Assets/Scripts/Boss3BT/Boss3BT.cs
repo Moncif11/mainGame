@@ -18,7 +18,7 @@ public class Boss3BT : BehaviorTree.Tree{
     [Header("Direction")]
     public static bool isLeft = true;  
 
-    public static float attackRange = 6f;
+    public static float attackRange = 4.5f;
 
     public static float coolDownSP1 = 5f; //Shoot Missile
     
@@ -33,46 +33,46 @@ public class Boss3BT : BehaviorTree.Tree{
 
     public static bool backToStart = false; 
        protected override Node SetupTree(){
- Node root = new CoolDownDecorator(
-    new Selector(
-        new List<Node> {
-            new Sequence(new List<Node> {
-                new CheckEnviroment(transform),
-                new Selector(new List<Node> {
+         Node root = new CoolDownDecorator(
+            new Selector(
+                new List<Node> {
                     new Sequence(new List<Node> {
-                        new CheckToTeleport(transform),
-                        new TaskToTeleport(transform)
-                    }), 
-                    new Sequence(new List<Node> {
-                        new CheckCurrentPhase(transform, BossPhase.THREE),
-                        new Sequence(new List<Node> {
-                            new CheckToIceRain(transform),
-                            new TaskToIceRain(transform, normalBulletPrefab),
-                        }) 
-                    }),
-                    new Sequence(new List<Node> {
-                        new CheckBeginPhase(transform, BossPhase.TWO),
-                        new TaskToNextPhase(transform, BossPhase.THREE)
-                    }),
-                    new Sequence(new List<Node> {
-                        new CheckCurrentPhase(transform, BossPhase.TWO),
-                        new Sequence(new List<Node> {
-                            new CheckToBurn(transform),
-                            new TaskToBurn(transform, burnPrefab),
-                        })
-                    }),
-                    new Sequence(new List<Node> {
-                        new CheckBeginPhase(transform, BossPhase.ONE),
-                        new TaskToNextPhase(transform, BossPhase.TWO)
-                    }),
-                    new Sequence(new List<Node> {
-                        new CheckToMeleeAttack(transform),
-                        new TaskToMeleeAttack(transform)
-                    }),
-                    new Sequence(new List<Node> {
-                        new CheckToGoToAttackRange(transform),
-                        new TaskToGoToAttackRange(transform)
-                    })
+                        new CheckEnviroment(transform),
+                        new Selector(new List<Node> {
+                            new Sequence(new List<Node> {
+                                new CheckToTeleport(transform),
+                                new TaskToTeleport(transform)
+                                }), 
+                            new Sequence(new List<Node> {
+                                new CheckCurrentPhase(transform, BossPhase.THREE),
+                                new Sequence(new List<Node> {
+                                    new CheckToIceRain(transform),
+                                    new TaskToIceRain(transform, normalBulletPrefab),
+                                }) 
+                                }),
+                                new Sequence(new List<Node> {
+                                    new CheckBeginPhase(transform, BossPhase.TWO),
+                                    new TaskToNextPhase(transform, BossPhase.THREE)
+                                }),
+                                new Sequence(new List<Node> {
+                                    new CheckCurrentPhase(transform, BossPhase.TWO),
+                                    new Sequence(new List<Node> {
+                                        new CheckToBurn(transform),
+                                        new TaskToBurn(transform, burnPrefab),
+                                    })
+                                }),
+                                new Sequence(new List<Node> {
+                                    new CheckBeginPhase(transform, BossPhase.ONE),
+                                    new TaskToNextPhase(transform, BossPhase.TWO)
+                                }),
+                                new Sequence(new List<Node> {
+                                    new CheckToMeleeAttack(transform),
+                                    new TaskToMeleeAttack(transform)
+                                }),
+                                new Sequence(new List<Node> {
+                                    new CheckToGoToAttackRange(transform),
+                                    new TaskToGoToAttackRange(transform)
+                                })
                 })
             }),
             new TaskToBackToPoint(transform)

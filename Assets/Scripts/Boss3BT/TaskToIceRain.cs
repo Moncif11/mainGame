@@ -30,6 +30,14 @@ namespace Boss3AI{
     spawnCounter += Time.deltaTime;
 
     if (durationCounter < duration) {
+        if(durationCounter == 0){
+            _animator.ResetTrigger("Melee");
+            _animator.ResetTrigger("Walking"); 
+            _animator.ResetTrigger("Nothing"); 
+            _animator.SetTrigger("Burn"); 
+            _animator.ResetTrigger("Teleport"); 
+            _animator.ResetTrigger("Ice Rain");      
+        }
         if (spawnCounter >= spawnDuration) {
             Debug.Log("Ice Rain");
             float offSet = Random.Range(-2, 2);

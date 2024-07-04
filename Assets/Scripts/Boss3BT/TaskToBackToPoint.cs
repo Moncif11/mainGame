@@ -5,8 +5,6 @@ namespace Boss3AI{
 public class TaskToBackToPoint : Node
 {
     Transform _transform; 
-    Animator _animator; 
-
     Vector3 startposition; 
 
     float maxHealth; 
@@ -16,7 +14,7 @@ public class TaskToBackToPoint : Node
     public TaskToBackToPoint(Transform transform){
         animator = transform.GetComponent<Animator>();  
         _transform = transform;
-        _animator = transform.GetComponent<Animator>();
+        animator = transform.GetComponent<Animator>();
         startposition = transform.position;
         maxHealth = transform.GetComponent<Health>().maxHealth;
     }
@@ -47,10 +45,10 @@ public class TaskToBackToPoint : Node
                 Boss2BT.SP2Ready= true;
                 Boss2BT.dogdeReady = true; 
             }
-             animator.ResetTrigger("Melee");
+            animator.ResetTrigger("Melee");
             animator.ResetTrigger("Burn");
             animator.ResetTrigger("Teleport");
-            animator.ResetTrigger("Ice rain");
+            animator.ResetTrigger("Ice Rain");
         state = NodeState.RUNNING; 
         return state; 
     }

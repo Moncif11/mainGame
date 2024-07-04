@@ -16,7 +16,7 @@ public class CheckToGoToAttackRange : Node{
             state= NodeState.FAILURE;
             return state;
         }
-        float distance = Vector2.Distance(_transform.position,target.position);    
+        float distance = Mathf.Abs(_transform.position.x-target.position.x);    
         if(distance > Boss3BT.attackRange){
             parent.parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 

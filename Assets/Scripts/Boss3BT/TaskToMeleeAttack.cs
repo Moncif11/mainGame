@@ -25,12 +25,8 @@ public class TaskToMeleeAttack : Node
             _animator.ResetTrigger("Walking"); 
             _animator.ResetTrigger("Nothing"); 
             _animator.ResetTrigger("Burn"); 
-           _animator.ResetTrigger("Teleport"); 
+            _animator.ResetTrigger("Teleport"); 
             _animator.ResetTrigger("Ice Rain"); 
-           
-            Vector2 newPosition = new Vector2(target.position.x+stopRange,target.position.y-stopRange); 
-            Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
-            _transform.position = new Vector2(direction.x,_transform.position.y);
         } 
         state = NodeState.RUNNING; 
         return state; 

@@ -24,11 +24,11 @@ public class TaskToBurn : Node{
         attackCounter+= Time.deltaTime;
         Debug.Log("Burn");
         if(attackCounter >= attackTime){      
-      animator.ResetTrigger("Melee");
+            animator.ResetTrigger("Melee");
             animator.ResetTrigger("Walking"); 
             animator.ResetTrigger("Nothing"); 
             animator.SetTrigger("Burn"); 
-           animator.ResetTrigger("Teleport"); 
+            animator.ResetTrigger("Teleport"); 
             animator.ResetTrigger("Ice Rain");      
             Boss2BT.isLeft = isLeft(target);
                 Debug.Log("Shoot left");
