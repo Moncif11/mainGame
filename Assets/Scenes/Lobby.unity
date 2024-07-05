@@ -1571,7 +1571,7 @@ GameObject:
   - component: {fileID: 768040092}
   - component: {fileID: 768040091}
   m_Layer: 5
-  m_Name: ServerButton
+  m_Name: relayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1709,7 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6960e84d07fb87f47956e7a81d71c4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ProtocolType: 0
+  m_ProtocolType: 1
   m_MaxPacketQueueSize: 128
   m_MaxPayloadSize: 6144
   m_HeartbeatTimeoutMS: 500
@@ -2009,12 +2009,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e5d18371d19f344f80f295fc0a2a6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverButton: {fileID: 768040091}
   hostButton: {fileID: 389501481}
   clientButton: {fileID: 758811759}
   leaveButton: {fileID: 133513709}
-  IPAdressInput: {fileID: 309713901}
+  JoinCodeInput: {fileID: 0}
   networkManager: {fileID: 785611953}
+  transport: {fileID: 0}
 --- !u!1 &1123314657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2579,7 +2579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Server
+  m_text: Relay
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2838,10 +2838,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

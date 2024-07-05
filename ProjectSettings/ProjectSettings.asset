@@ -705,10 +705,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 949c545a-dc86-42a7-a329-f3cece21875b
+  cloudProjectId: 035c53de-f215-45cd-ac87-a902664bea59
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 2dMainGame
+  projectName: 2dMainGame (1)
   organizationId: moncif_11
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
