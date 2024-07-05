@@ -15,5 +15,6 @@ public class HealthBarManager : MonoBehaviour {
 
         player.GetComponent<Health>().setHealthBar(GetComponent<Image>());
         player.GetComponent<CapePlayerController>().Start();
+        player.GetComponent<CapePlayerController>().teleportToFirstCheckpoint();
     }
 }

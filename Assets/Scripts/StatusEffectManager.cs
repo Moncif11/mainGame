@@ -34,11 +34,20 @@ public class StatusEffectManager : MonoBehaviour
     }
 
     IEnumerator Burn(){
+        var myResource = Resources.Load("BurnParticles");
+        var myPrefab = myResource as GameObject;
+        var myGameObject = Instantiate(myPrefab, transform);
+        if (this.gameObject.tag == "Player") {
+            Vector3 changedPosition = transform.position;
+            changedPosition.y = transform.position.y - 0.4f;
+            myGameObject.transform.position = changedPosition;
+        }
         while(burnTickTimer>0){
             burnTickTimer--;
             healthScript.takeDamage(1);
-            yield return new WaitForSeconds(0.75f); 
+            yield return new WaitForSeconds(0.75f);
         }
+        Destroy(myGameObject);
     }
 
     IEnumerator Freeze(){

@@ -76,6 +76,10 @@ public class CapePlayerController : NetworkBehaviour
 
 
     public void Start() {
+        
+        //UnityEngine.Object pPrefab = Resources.Load("Assets/Prefab/BurnParticles"); // note: not .prefab!
+        //GameObject pNewObject = (GameObject)GameObject.Instantiate(pPrefab, Vector3.zero, Quaternion.identity);
+        
         isWallJumping = false;
         dash = false;
         dashReady = true;
@@ -521,6 +525,14 @@ public class CapePlayerController : NetworkBehaviour
 
     public void changeCapeToOriginalColor() {
         changeCapeColor(123,  0, 22);
+    }
+
+    public void teleportToFirstCheckpoint() {
+        List<GameObject> checkpoints = GameObject.FindGameObjectsWithTag ("Checkpoint").ToList();
+        checkpoints = checkpoints.ToList().OrderBy(x => x.transform.position.x).ToList();
+        GameObject checkpoint = checkpoints[0];
+        transform.position = checkpoint.transform.position;
+        Start();
     }
     
     [ServerRpc]
