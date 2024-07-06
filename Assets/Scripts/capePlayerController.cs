@@ -35,7 +35,7 @@ public class CapePlayerController : NetworkBehaviour
     private GameObject CapeRun;
     private bool watchOther = false;
     private GameObject otherPlayer;
-    public int dropOffset;
+    public float dropOffset;
 
     public LayerMask platform;
     public LayerMask enemy;

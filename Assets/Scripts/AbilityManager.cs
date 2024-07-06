@@ -29,7 +29,8 @@ public class AbilityManager : NetworkBehaviour
     private bool ultReady;  
 
     private bool ultRunning; 
-    private bool ShieldActive = false ; 
+    private bool ShieldActive = false ;
+    private GameObject ShieldRock;
  
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,7 @@ public class AbilityManager : NetworkBehaviour
         }
         else{
             if(ability ==Abilty.ROCK){
-                 DeactivateShield(); 
+                 DeactivateShield();
             }
         }
         if(maxUltbar ==ultBar){
@@ -174,6 +175,13 @@ public class AbilityManager : NetworkBehaviour
     }
 
     private void Shield(){
+
+        if (ShieldRock == null) {
+            var myResource = Resources.Load("ShieldRock");
+            var myPrefab = myResource as GameObject;
+            ShieldRock = Instantiate(myPrefab, transform);   
+        }
+
         if(ultRunning == true)return; 
         Health health = GetComponent<Health>();
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
@@ -198,7 +206,10 @@ public class AbilityManager : NetworkBehaviour
         Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         health.damageReduction = 0;
         ShieldActive = false; 
-        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;  
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+        if (ShieldRock != null) {
+            Destroy(ShieldRock);
+        }
         return; 
     }
     private void FreezeAll(){

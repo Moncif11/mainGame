@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRelay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TestRelay.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/FreezeCrystal.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/FreezeCrystal.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/IceShot 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/IceShot 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbilityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbilityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/CheckEnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/CheckEnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StatusEffectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StatusEffectManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,8 @@
       <workItem from="1720177523415" duration="47000" />
       <workItem from="1720178271854" duration="4563000" />
       <workItem from="1720184903479" duration="3617000" />
-      <workItem from="1720192526048" duration="3327000" />
+      <workItem from="1720192526048" duration="4766000" />
+      <workItem from="1720254839702" duration="3177000" />
     </task>
     <servers />
   </component>

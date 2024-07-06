@@ -2012,7 +2012,7 @@ MonoBehaviour:
   hostButton: {fileID: 389501481}
   clientButton: {fileID: 758811759}
   leaveButton: {fileID: 133513709}
-  JoinCodeInput: {fileID: 0}
+  JoinCodeInput: {fileID: 309713901}
   networkManager: {fileID: 785611953}
   transport: {fileID: 0}
 --- !u!1 &1123314657

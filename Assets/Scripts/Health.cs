@@ -69,9 +69,6 @@ public class Health : MonoBehaviour {
                 if(dropItem!=null){
                     StartCoroutine(itemDroppedFromPlayer(transform));
                 }
-                else{
-                    Destroy(gameObject);
-                }
                 GetComponent<CapePlayerController>().dying();
             }
         }
@@ -87,7 +84,7 @@ public class Health : MonoBehaviour {
         yield return new WaitForSeconds(1);
         Instantiate(dropItem, deathPos, Quaternion.identity);
     }
-    public void itemDirektDroppedFromPlayer(int xOffset) {
+    public void itemDirektDroppedFromPlayer(float xOffset) {
         Abilty ability = GetComponent<AbilityManager>().ability;
         switch (ability) {
             case Abilty.FIRE:

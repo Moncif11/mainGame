@@ -1149,7 +1149,7 @@ MonoBehaviour:
   dash: 0
   dashReady: 0
   multiplayer: 0
-  dropOffset: 0
+  dropOffset: 1.5
   platform:
     serializedVersion: 2
     m_Bits: 8
@@ -1309,10 +1309,10 @@ MonoBehaviour:
   maxHealth: 100
   health: 5
   damageReduction: 0
-  waterItem: {fileID: 0}
-  fireItem: {fileID: 0}
-  iceItem: {fileID: 0}
-  stoneItem: {fileID: 0}
+  waterItem: {fileID: 175668089732633245, guid: 756d22804321ec244b40555393b97131, type: 3}
+  fireItem: {fileID: 175668089732633245, guid: 522dd94cee2ee6640bcec2ce7497b7f4, type: 3}
+  iceItem: {fileID: 175668089732633245, guid: c98c75ac33ad1864894280cfca175c1a, type: 3}
+  stoneItem: {fileID: 175668089732633245, guid: a8dff91814cde98429cea09b54ec5031, type: 3}
   dropItem: {fileID: 0}
   myid: 0
   healthBar: {fileID: 0}
@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: 0
-  fireShot: {fileID: 7315785336683993725, guid: 2c8b2a56748fd42498e825a2ba737052, type: 3}
+  fireShot: {fileID: 7315785336683993725, guid: 5d0da4247dd86224ca6e663f9cc036de, type: 3}
   fireUlt: {fileID: 0}
   iceShot: {fileID: 7315785336683993725, guid: 125e8cfd6acf8a04897e4e27cc9b3d15, type: 3}
   waterShot: {fileID: 7315785336683993725, guid: ad29d9577e6a8c14ba2b9fcf4c1925d4, type: 3}

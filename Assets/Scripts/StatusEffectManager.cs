@@ -51,10 +51,25 @@ public class StatusEffectManager : MonoBehaviour
     }
 
     IEnumerator Freeze(){
+        var myResource = Resources.Load("FreezeCrystal");
+        var myPrefab = myResource as GameObject;
+        var myGameObject = Instantiate(myPrefab, transform);
+        
+        if (this.gameObject.tag == "Enemy") {
+            Vector3 changedSize = myGameObject.transform.localScale;
+            changedSize = myGameObject.transform.localScale * 0.5f;
+            myGameObject.transform.localScale = changedSize;
+        }
+        else {
+            
+        }
+        
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
          rb.velocity = Vector2.zero; 
         yield return new WaitForSeconds(freezeTicktimer);  
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;   
+        
+        Destroy(myGameObject);
     }
 }
