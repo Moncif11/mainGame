@@ -43,10 +43,10 @@ public class AbilityManager : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!IsOwner && GetComponent<CapePlayerController>().multiplayer) {
+        if ((!GetComponent<CapePlayerController>().IsOwner && GetComponent<CapePlayerController>().multiplayer) || ability == Abilty.NONE) {
             return;
         }
-        if(Input.GetKeyDown(KeyCode.E)){
+        if(Input.GetKeyDown(KeyCode.E) && ability != Abilty.ROCK){
             Shoot();
         } 
         if(Input.GetKey(KeyCode.E)){
@@ -145,7 +145,9 @@ public class AbilityManager : NetworkBehaviour
                 bulletPrefab = waterShot;
                 break;
             case Abilty.ROCK:
-                Shield(); 
+                if (GetComponent<CapePlayerController>().multiplayer) {
+                    Shield(); 
+                }
                 break;
             default:
                 break; 
@@ -257,19 +259,30 @@ public class AbilityManager : NetworkBehaviour
         players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
-            if (!IsOwner) {
+            GameObject Head = player.transform.GetChild(3).gameObject;
+            var playerColor = Head.GetComponent<SpriteRenderer>().color;
+            
+            if (playerColor == new Color32(0, 255, 0, 255)) {
+                Debug.Log("server received, not owner shoots player x: "+player.transform.position.x);
                 player.GetComponent<AbilityManager>().ShootLocal();
             }
         }
     }
     [ClientRpc]
     private void shootClientRpc() {
+        if (IsServer) {
+            return;
+        }
         Debug.Log("clientrpc");
         GameObject[] players;
         players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
-            if (!IsOwner) {
+            GameObject Head = player.transform.GetChild(3).gameObject;
+            var playerColor = Head.GetComponent<SpriteRenderer>().color;
+            
+            if (playerColor == new Color32(0, 255, 0, 255)) {
+                Debug.Log("client received, not owner shoots player x: "+player.transform.position.x);
                 player.GetComponent<AbilityManager>().ShootLocal();
             }
         }

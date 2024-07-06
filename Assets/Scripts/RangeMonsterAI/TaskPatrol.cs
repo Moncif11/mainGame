@@ -33,8 +33,8 @@ public class TaskPatrol : Node
         }   
          isRight();
          Flip();
-        animator.SetTrigger("Running");
-        animator.ResetTrigger("Attack");
+        //animator.SetTrigger("Running");
+        //animator.ResetTrigger("Attack");
         state = NodeState.RUNNING;
         return state;
     }

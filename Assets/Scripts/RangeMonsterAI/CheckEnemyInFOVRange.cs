@@ -33,11 +33,9 @@ public class CheckEnemyInFOVRange : Node
         //}
         if(minDistance <= RangeMonsterBT.fovRange){
                 parent.parent.SetData("target",targetPlayer); 
-                Debug.Log("CheckEnemyInFOVRange : SUCCESS");
                 state= NodeState.SUCCESS; 
                 return state;
         }
-            Debug.Log("CheckEnemyInFOVRange : FAILURE");
             state= NodeState.FAILURE; 
             return state;
     }

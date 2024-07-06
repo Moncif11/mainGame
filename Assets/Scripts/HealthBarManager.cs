@@ -8,13 +8,13 @@ public class HealthBarManager : MonoBehaviour {
         GameObject player = null;
         GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
         for (int i = 0; i < players.Length; i++) {
+            players[i].GetComponent<CapePlayerController>().Start();
             if (players[i].gameObject.GetComponent<CapePlayerController>().IsOwner || !players[i].gameObject.GetComponent<CapePlayerController>().multiplayer){
                 player = players[i];
             }
         }
 
         player.GetComponent<Health>().setHealthBar(GetComponent<Image>());
-        player.GetComponent<CapePlayerController>().Start();
         player.GetComponent<CapePlayerController>().teleportToFirstCheckpoint();
     }
 }

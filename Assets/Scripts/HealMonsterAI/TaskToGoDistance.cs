@@ -13,7 +13,7 @@ public class TaskToGoDistance : Node
     }
 
     public override NodeState Evaluate()
-    {  Debug.Log("Distance");
+    {  
         Transform target = (Transform)GetData("distance");
 //        Debug.Log("Target:" + target.name);
 //        Debug.Log("Target Position: "+ target.position);
@@ -34,7 +34,6 @@ public class TaskToGoDistance : Node
         }
         animator.SetTrigger("Running");
         animator.ResetTrigger("Attack");
-        Debug.Log("TaskToGoDistance: Running");
         state = NodeState.RUNNING; 
         return state;         
     }

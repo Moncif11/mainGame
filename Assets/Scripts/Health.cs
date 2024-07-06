@@ -112,7 +112,10 @@ public class Health : MonoBehaviour {
         }
     }
     public void updateHealthBar() {
-        healthBar.fillAmount = health / maxHealth;
+        if (!GetComponent<CapePlayerController>().multiplayer || (GetComponent<CapePlayerController>().multiplayer &&
+                                                                  GetComponent<CapePlayerController>().IsOwner)) {
+            healthBar.fillAmount = health / maxHealth;
+        }
     }
     public void setHealthBar(Image healthbar) {
         healthBar = healthbar;

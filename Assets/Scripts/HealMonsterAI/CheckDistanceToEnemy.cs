@@ -31,11 +31,9 @@ public class CheckDistanceToEnemy : Node
 
         
         if(Vector2.Distance(_transform.position, target.position)< HealMonsterBT.attackRange-3 && isFacing){
-        Debug.Log("isFacing: " + isFacing);
         parent.parent.SetData("distance",(Object)target);
         state= NodeState.SUCCESS;
-         Debug.Log("CheckDistance");
-            return state;
+                return state;
         } 
         state = NodeState.FAILURE;
         return state;

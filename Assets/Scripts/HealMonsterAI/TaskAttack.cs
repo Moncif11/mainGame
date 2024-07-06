@@ -49,7 +49,6 @@ public class TaskAttack : Node{
                 bullet.transform.rotation = rotation;
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
                 bulletRB.AddForce(-_transform.right*1000);
-                Debug.Log("Bullet : " + bullet.transform.position);
             }
                 attackCounter= 0f; 
         }

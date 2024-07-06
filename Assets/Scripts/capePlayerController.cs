@@ -112,6 +112,8 @@ public class CapePlayerController : NetworkBehaviour
         if (SceneManager.GetActiveScene().name != "Lobby" && SceneManager.GetActiveScene().name != "TestScene" && GetComponent<Health>().healthBar != null) {
             GetComponent<Health>().resetHealth();
         }
+
+        GetComponent<AbilityManager>().ability = Abilty.NONE;
     }
     void FixedUpdate()
     {
@@ -352,13 +354,31 @@ public class CapePlayerController : NetworkBehaviour
             jump = true;
         }
         
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (direction == "right") {
-                GetComponent<Health>().itemDirektDroppedFromPlayer(dropOffset);
+                    dropItemLocal(dropOffset);
+                if (GetComponent<CapePlayerController>().multiplayer) {
+                    if (OwnerClientId == 0) {
+                        dropItemClientRpc(dropOffset);
+                    }
+                    else {
+                        dropItemServerRpc(dropOffset);
+                    }
+                    return;
+                }
             }
             else {
-                GetComponent<Health>().itemDirektDroppedFromPlayer(-dropOffset);
+                    dropItemLocal(-dropOffset);
+                if (GetComponent<CapePlayerController>().multiplayer) {
+                    if (OwnerClientId == 0) {
+                        dropItemClientRpc(-dropOffset);
+                    }
+                    else {
+                        dropItemServerRpc(-dropOffset);
+                    }
+                    return;
+                }
             }
         }
         
@@ -448,6 +468,15 @@ public class CapePlayerController : NetworkBehaviour
         transform.position = lastCheckpoint.transform.position;
         movementFreezed = false;
         Start();
+        if (GetComponent<CapePlayerController>().multiplayer) {
+            if (OwnerClientId == 0) {
+                dyingClientRpc();
+            }
+            else {
+                dyingServerRpc();
+            }
+            return;
+        }
     }
 
     IEnumerator dashing()
@@ -527,6 +556,10 @@ public class CapePlayerController : NetworkBehaviour
         changeCapeColor(123,  0, 22);
     }
 
+    private void dropItemLocal(float dropOffset) {
+        GetComponent<Health>().itemDirektDroppedFromPlayer(dropOffset);
+    }
+
     public void teleportToFirstCheckpoint() {
         List<GameObject> checkpoints = GameObject.FindGameObjectsWithTag ("Checkpoint").ToList();
         checkpoints = checkpoints.ToList().OrderBy(x => x.transform.position.x).ToList();
@@ -556,6 +589,51 @@ public class CapePlayerController : NetworkBehaviour
         {
             if (enemy.GetComponent<Health>().myid == enemyID) {
                 enemy.GetComponent<Health>().takeDamage(damage);
+            }
+        }
+    }
+    [ServerRpc]
+    private void dropItemServerRpc(float offset) {
+        GameObject[] players;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            if (!IsOwner) {
+                dropItemLocal(offset);
+            }
+        }
+    }
+    [ClientRpc]
+    private void dropItemClientRpc(float offset) {
+        Debug.Log("clientrpc");
+        GameObject[] players;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            if (!IsOwner) {
+                dropItemLocal(offset);
+            }
+        }
+    }
+    [ServerRpc]
+    private void dyingServerRpc() {
+        GameObject[] players;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            if (!IsOwner) {
+                Start();
+            }
+        }
+    }
+    [ClientRpc]
+    private void dyingClientRpc() {
+        GameObject[] players;
+        players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            if (!IsOwner) {
+                Start();
             }
         }
     }
