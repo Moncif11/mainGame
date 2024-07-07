@@ -21,12 +21,12 @@ public class TaskToBackToPoint : Node
 
     public override NodeState Evaluate()
     {  
-            Boss2BT.isLeft=isLeft();
+            Boss3BT.isLeft=isLeft();
             float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
             if(distance > 0.001 && Boss3BT.backToStart == true){
             animator.SetTrigger("Walking"); 
             animator.ResetTrigger("Nothing"); 
-            Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss2BT.speed*Time.deltaTime);
+            Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss3BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
             _transform.GetComponent<Health>().health = maxHealth; 
             Boss3BT.speed = startSpeed; 
@@ -37,13 +37,13 @@ public class TaskToBackToPoint : Node
             animator.ResetTrigger("Walking"); 
             animator.SetTrigger("Nothing"); 
                 _transform.GetComponent<Health>().damageReduction = 0;
-                Boss2BT.backToStart = false; 
-                Boss2BT.coolDownDodgeCounter = 0;
-                Boss2BT.coolDownSP1Counter = 0;	
-                Boss2BT.coolDownSP1Counter = 0;	
-                Boss2BT.SP1Ready= true;
-                Boss2BT.SP2Ready= true;
-                Boss2BT.dogdeReady = true; 
+                Boss3BT.backToStart = false; 
+                Boss3BT.coolDownDodgeCounter = 0;
+                Boss3BT.coolDownSP1Counter = 0;	
+                Boss3BT.coolDownSP1Counter = 0;	
+                Boss3BT.SP1Ready= true;
+                Boss3BT.SP2Ready= true;
+                Boss3BT.teleportReady = true; 
             }
             animator.ResetTrigger("Melee");
             animator.ResetTrigger("Burn");

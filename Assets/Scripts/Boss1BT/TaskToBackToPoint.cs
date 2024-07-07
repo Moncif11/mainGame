@@ -11,7 +11,7 @@ public class TaskToBackToPoint : Node
 
     float maxHealth; 
 
-    float startSpeed = 3f; 
+    float startSpeed = 2f; 
     Animator animator; 
     public TaskToBackToPoint(Transform transform){
         animator = transform.GetComponent<Animator>();  
@@ -25,30 +25,31 @@ public class TaskToBackToPoint : Node
     {  
             Boss2BT.isLeft=isLeft();
             float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
-            if(distance > 0.001 && Boss2BT.backToStart == true){
+            if(distance > 0.001 && Boss1BT.backToStart == true){
             animator.SetTrigger("Walking"); 
             animator.ResetTrigger("Idle"); 
-            Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss2BT.speed*Time.deltaTime);
+            Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss1BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
             _transform.GetComponent<Health>().health = maxHealth; 
-            Boss2BT.speed = startSpeed; 
+            Boss1BT.speed = startSpeed; 
              _transform.GetComponent<Health>().damageReduction = 100;  
-             Boss2BT.bossPhase = BossPhase.ONE;   
+             Boss1BT.bossPhase = BossPhase.ONE;   
             }
             else{
             animator.ResetTrigger("Walking"); 
-            animator.SetTrigger("Idle"); 
                 _transform.GetComponent<Health>().damageReduction = 0;
-                Boss2BT.backToStart = false; 
-                Boss2BT.coolDownDodgeCounter = 0;
-                Boss2BT.coolDownSP1Counter = 0;	
-                Boss2BT.coolDownSP1Counter = 0;	
-                Boss2BT.SP1Ready= true;
-                Boss2BT.SP2Ready= true;
-                Boss2BT.dogdeReady = true; 
+                Boss1BT.backToStart = false; 
+                Boss1BT.coolDownSACounter = 0;
+                Boss1BT.coolDownSP1Counter = 0;	
+                Boss1BT.coolDownSP1Counter = 0;	
+                Boss1BT.SP1Ready= true;
+                Boss1BT.SP2Ready= true;
+                Boss1BT.amountShoot = 3; 
             }
-             animator.ResetTrigger("Shoot");
-            animator.ResetTrigger("Jump");
+            animator.ResetTrigger("Shoot");
+            animator.ResetTrigger("SP1");
+            animator.ResetTrigger("SP2");
+            animator.ResetTrigger("Melee");
         state = NodeState.RUNNING; 
         return state; 
     }

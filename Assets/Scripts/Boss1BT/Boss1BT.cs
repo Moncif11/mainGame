@@ -41,6 +41,8 @@ public class Boss1BT : BehaviorTree.Tree{
 
     public static bool SP1Ready=true; 
     public static bool SP2Ready=true;
+
+    public static bool backToStart = false; 
  
      protected override Node SetupTree(){
         Node root = 

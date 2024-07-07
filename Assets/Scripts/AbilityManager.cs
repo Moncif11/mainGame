@@ -177,7 +177,6 @@ public class AbilityManager : NetworkBehaviour
     }
 
     private void Shield(){
-
         if (ShieldRock == null) {
             var myResource = Resources.Load("ShieldRock");
             var myPrefab = myResource as GameObject;
