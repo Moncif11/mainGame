@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using BehaviorTree;
 using UnityEngine;
-using Boss1AI; 
+using Boss1AI;
 
 public enum BossPhase{
     ONE, 
@@ -44,9 +44,13 @@ public class Boss1BT : BehaviorTree.Tree{
  
      protected override Node SetupTree(){
         Node root = 
+        new CoolDownDecorator(
         new Selector( 
             new List<Node> {
-             new Sequence( new List<Node>{
+             new Sequence(new List<Node> {
+                new CheckEnviroment(transform),
+                new Selector(new List<Node> {
+                     new Sequence( new List<Node>{
                 new InverterDecorator( 
                     new Sequence( new List<Node>{
                             new CheckFreezed(transform),  
@@ -100,7 +104,11 @@ public class Boss1BT : BehaviorTree.Tree{
             ) //going to AttackRange
             }) ,
             new TaskToGoShootRange(transform),      //Going to the enemy;
-         });        
+         }),
+        new TaskToBackToPoint(transform)
+       }
+    )}
+    ));        
         return root;
         }
         
