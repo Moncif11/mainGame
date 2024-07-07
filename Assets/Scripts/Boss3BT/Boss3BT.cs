@@ -48,22 +48,22 @@ public class Boss3BT : BehaviorTree.Tree{
                                 new CheckUnfreezed(transform),
                                 new TaskToUnfreezed(transform), 
                             }) ,
-                            new Sequence(new List<Node> {
+                        new Sequence(new List<Node> {
                                 new CheckToTeleport(transform),
                                 new TaskToTeleport(transform)
                                 }), 
-                            new Sequence(new List<Node> {
+                        new Sequence(new List<Node> {
                                 new CheckCurrentPhase(transform, BossPhase.THREE),
                                 new Sequence(new List<Node> {
                                     new CheckToIceRain(transform),
                                     new TaskToIceRain(transform, normalBulletPrefab),
                                 }) 
                                 }),
-                                new Sequence(new List<Node> {
+                            new Sequence(new List<Node> {
                                     new CheckBeginPhase(transform, BossPhase.TWO),
                                     new TaskToNextPhase(transform, BossPhase.THREE)
                                 }),
-                                new Sequence(new List<Node> {
+                            new Sequence(new List<Node> {
                                     new CheckCurrentPhase(transform, BossPhase.TWO),
                                     new Sequence(new List<Node> {
                                         new CheckToBurn(transform),

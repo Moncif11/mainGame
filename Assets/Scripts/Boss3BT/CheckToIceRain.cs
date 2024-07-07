@@ -14,9 +14,9 @@ namespace Boss3AI{
                 state = NodeState.SUCCESS; 
                 return state; 
             }
-            if(Boss3BT.SP2Ready){
-                Debug.Log("Start");
-                Transform playerTransform = nearestPlayer();  
+            Transform playerTransform = nearestPlayer(); 
+            if(Boss3BT.SP2Ready && Mathf.Abs(playerTransform.position.x - _transform.position.x) >= 5){
+                Debug.Log("Start"); 
                 parent.parent.parent.parent.SetData("Ice Rain",(Object)playerTransform);
             }
             state = NodeState.FAILURE; 
