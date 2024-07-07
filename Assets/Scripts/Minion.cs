@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -23,7 +24,12 @@ public class Minion : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        if(AreAllConstraintsFrozen()){
+            rb.GetComponent<Animator>().speed =0; 
+
+        }
+        rb.GetComponent<Animator>().speed =2;
         Vector2 point = currentPoint.position - transform.position;
         if(currentPoint== PointB.transform){
             rb.velocity = new Vector2(speed,0);
@@ -62,5 +68,16 @@ public class Minion : MonoBehaviour
             Debug.Log("Damage: " + damage);
             }
         }
+    }
+
+    bool AreAllConstraintsFrozen()
+    {
+        // Definiere die erwarteten Constraints, wenn alle gefreezed sind
+        RigidbodyConstraints2D allFrozen = RigidbodyConstraints2D.FreezePositionX |
+                                           RigidbodyConstraints2D.FreezePositionY |
+                                           RigidbodyConstraints2D.FreezeRotation;
+
+        // Überprüfe, ob die aktuellen Constraints alle erwarteten Constraints enthalten
+        return (rb.constraints & allFrozen) == allFrozen;
     }
 }

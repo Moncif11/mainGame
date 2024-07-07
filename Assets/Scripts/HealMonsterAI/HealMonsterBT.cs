@@ -16,9 +16,19 @@ public class HealMonsterBT : Tree {
     public static bool isRight = true; 
 
     protected override Node SetupTree(){
-        Node root = new Selector(
-            new List<Node>{
-                new Sequence( new List<Node>{
+        Node root = new Selector(new List<Node>{
+           new Sequence( new List<Node>{
+                new InverterDecorator( 
+                    new Sequence( new List<Node>{
+                            new CheckFreezed(transform),  
+                            new TaskToFreezed(transform),
+                       })),
+                new CheckUnfreezed(transform),
+                new TaskToUnfreezed(transform), 
+                })
+                ,
+                new Sequence(
+                     new List<Node>{
                             new CheckToHeal(transform),
                             new Selector(new List<Node>{
                                 new Sequence(new List<Node>{
@@ -37,9 +47,8 @@ public class HealMonsterBT : Tree {
                             new CheckEnemyInFOVRange(transform),  
                             new TaskToGo(transform),
                         }),
-                    new TaskPatrol(transform, waypoints)
-
-            });
+                    new TaskPatrol(transform, waypoints)}
+        );
             return root;
         }
 }

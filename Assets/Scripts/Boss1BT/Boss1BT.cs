@@ -45,7 +45,17 @@ public class Boss1BT : BehaviorTree.Tree{
      protected override Node SetupTree(){
         Node root = 
         new Selector( 
-            new List<Node> {new Selector(new List<Node>{ //Phase2 addition to special move
+            new List<Node> {
+             new Sequence( new List<Node>{
+                new InverterDecorator( 
+                    new Sequence( new List<Node>{
+                            new CheckFreezed(transform),  
+                            new TaskToFreezed(transform),
+                       })),
+                new CheckUnfreezed(transform),
+                new TaskToUnfreezed(transform), 
+                }),
+            new Selector(new List<Node>{ //Phase2 addition to special move
             new Sequence(new List<Node>{
                 new CheckHalfHP(transform), 
                 new TaskSetStatsPhase2(transform),

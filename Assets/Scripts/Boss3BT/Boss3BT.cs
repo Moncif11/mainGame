@@ -39,6 +39,15 @@ public class Boss3BT : BehaviorTree.Tree{
                     new Sequence(new List<Node> {
                         new CheckEnviroment(transform),
                         new Selector(new List<Node> {
+                             new Sequence( new List<Node>{
+                             new InverterDecorator( 
+                        new Sequence( new List<Node>{
+                            new CheckFreezed(transform),  
+                            new TaskToFreezed(transform),
+                                })),
+                                new CheckUnfreezed(transform),
+                                new TaskToUnfreezed(transform), 
+                            }) ,
                             new Sequence(new List<Node> {
                                 new CheckToTeleport(transform),
                                 new TaskToTeleport(transform)

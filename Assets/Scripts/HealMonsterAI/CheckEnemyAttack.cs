@@ -46,7 +46,6 @@ namespace HealMonsterAI {
                 state = NodeState.FAILURE;
                 return state;
             }
-
         }
     }
 }

@@ -16,6 +16,15 @@ public class MidRangeMonsterBT : Tree {
     protected override Node SetupTree(){
         Node root = new Selector(
             new List<Node>{
+             new Sequence( new List<Node>{
+                new InverterDecorator( 
+                    new Sequence( new List<Node>{
+                            new CheckFreezed(transform),  
+                            new TaskToFreezed(transform),
+                       })),
+                new CheckUnfreezed(transform),
+                new TaskToUnfreezed(transform), 
+                }),
                 new Sequence( new List<Node>{
                             new CheckGuard(transform),  
                             new TaskToGuard(transform),
