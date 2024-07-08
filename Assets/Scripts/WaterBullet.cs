@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class WaterBullet : MonoBehaviour
 {
@@ -11,8 +12,9 @@ public class WaterBullet : MonoBehaviour
         if(other.CompareTag("Enemy")){
         other.GetComponent<Health>()?.takeDamage(damage);
         }
-        if(other.CompareTag("Player")){
-            other.GetComponent<Health>().health+=2;
+        if(other.CompareTag("Player")) {
+            Debug.Log("player hit with players water");
+            other.GetComponent<Health>().heal(2);
         }
     }
     else if( user== User.ENEMY ){

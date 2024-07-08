@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbilityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbilityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FinishHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/CheckDistanceToEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/CheckDistanceToEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/CheckEnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/CheckEnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/TaskAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/TaskAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/TaskPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/TaskPatrol.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/TaskToGoDistance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealMonsterAI/TaskToGoDistance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DoorCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DoorCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthBarManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBarManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/CheckEnemyInFOVRange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/CheckEnemyInFOVRange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskPatrol.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/RangeMonsterBT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/RangeMonsterBT.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WaterBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WaterBullet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/capePlayerController.cs" afterDir="false" />
     </list>
@@ -26,9 +24,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/3b/3e55f118/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/57/370ed2a5/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/66/c531380e/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c5ed782439084ef1bc2ad85eec89e9fe175a00/c8/9032ce06/Transform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Runtime/Core/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.8.1/Runtime/Transports/UTP/UnityTransport.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -129,7 +126,10 @@
       <workItem from="1720178271854" duration="4563000" />
       <workItem from="1720184903479" duration="3617000" />
       <workItem from="1720192526048" duration="4766000" />
-      <workItem from="1720254839702" duration="16713000" />
+      <workItem from="1720254839702" duration="17340000" />
+      <workItem from="1720353374456" duration="3549000" />
+      <workItem from="1720377915873" duration="1565000" />
+      <workItem from="1720380238075" duration="2283000" />
     </task>
     <servers />
   </component>
