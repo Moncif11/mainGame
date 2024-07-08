@@ -31,7 +31,8 @@ public class AbilityManager : NetworkBehaviour
     private bool ultRunning; 
     private bool ShieldActive = false ;
     private GameObject ShieldRock;
- 
+    
+    private Coroutine shieldCoroutine;
     // Start is called before the first frame update
     void Start()
     {
@@ -175,43 +176,56 @@ public class AbilityManager : NetworkBehaviour
             bulletRB.AddForce(transform.right*1000);
         }
     }
-
-    private void Shield(){
-        if (ShieldRock == null) {
-            var myResource = Resources.Load("ShieldRock");
-            var myPrefab = myResource as GameObject;
-            ShieldRock = Instantiate(myPrefab, transform);   
-        }
-
-        if(ultRunning == true)return; 
-        Health health = GetComponent<Health>();
-        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
-        health.damageReduction = 100;
-        float tickTimer = Time.deltaTime;  
-        int tickCounter = 0; 
-        ShieldActive =true; 
-        while(tickCounter >10 && ShieldActive){
-            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
-            tickTimer+=Time.deltaTime;
-            if(tickTimer >= 1){
-             health.damageReduction-= 10;   
-            }
-        }
-        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;  
-        return; 
+private void Shield(){
+    if (ShieldRock == null) {
+        var myPrefab = Resources.Load<GameObject>("ShieldRock");
+        ShieldRock = Instantiate(myPrefab, transform);   
     }
 
-        private void DeactivateShield(){
-            if(ultRunning)return; 
-        Health health = GetComponent<Health>();
-        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+    if(ultRunning == true) return;
+
+    Health health = GetComponent<Health>();
+    Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+
+    health.damageReduction = 100;
+    ShieldActive = true;
+
+    if (shieldCoroutine != null) {
+        StopCoroutine(shieldCoroutine);
+    }
+    shieldCoroutine = StartCoroutine(ShieldCoroutine(health, rigidbody2D));
+}
+
+private IEnumerator ShieldCoroutine(Health health, Rigidbody2D rigidbody2D){
+    rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+
+    while (ShieldActive && health.damageReduction > 0) {
+    yield return new WaitForSeconds(1);
+    health.damageReduction -= 10;
+    Debug.Log("Losing DamageReduction");
+    if (health.damageReduction <= 0) {
         health.damageReduction = 0;
-        ShieldActive = false; 
-        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-        if (ShieldRock != null) {
-            Destroy(ShieldRock);
-        }
-        return; 
+        ShieldActive = false;
+    }
+}
+    ResetShield(health, rigidbody2D);
+} 
+private void ResetShield(Health health, Rigidbody2D rigidbody2D) {
+    health.damageReduction = 0;
+    rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+    ShieldActive = false;
+    }
+    private void DeactivateShield(){
+    if (shieldCoroutine != null) {
+        StopCoroutine(shieldCoroutine);
+        shieldCoroutine = null;
+    }
+    if(ShieldRock!=null){
+        Destroy(ShieldRock);
+    }
+    Health health = GetComponent<Health>();
+    Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+    ResetShield(health, rigidbody2D);
     }
     private void FreezeAll(){
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, 11.2f);

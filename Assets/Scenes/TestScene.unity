@@ -1617,6 +1617,81 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 8505187864018329030, guid: 0a649a1ef85c72a4289924214de5c68b, type: 3}
   m_PrefabInstance: {fileID: 1065008804302726396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &936418780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936418782}
+  - component: {fileID: 936418781}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &936418781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936418780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1314c419ec2ef64bbed2103906ba2bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Boss2 Laser
+    audioClip: {fileID: 8300000, guid: 08ee066724bf31d479d967950cb0a012, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Melee
+    audioClip: {fileID: 8300000, guid: e86cc7ae7ba8e75449390a0a43527bfb, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss3 Teleport
+    audioClip: {fileID: 8300000, guid: fbe87e61353a4d1419c69a560d477756, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Dash
+    audioClip: {fileID: 8300000, guid: 4c8811654b61d2743b1356f9f0db26cb, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Background
+    audioClip: {fileID: 8300000, guid: c2e9634d3f08e5f40a87e9dec80061fc, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &936418782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936418780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09336424, y: -0.228, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966096539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2914873797047574261, guid: a5e84bd0be405534eb07457ea906e816, type: 3}
@@ -12989,3 +13064,4 @@ SceneRoots:
   - {fileID: 6529589744021321309}
   - {fileID: 9198638478110665941}
   - {fileID: 400372542}
+  - {fileID: 936418782}
