@@ -605,7 +605,6 @@ public class CapePlayerController : NetworkBehaviour
     }
     [ClientRpc]
     private void dropItemClientRpc(float offset) {
-        Debug.Log("clientrpc");
         GameObject[] players;
         players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)

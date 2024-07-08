@@ -31,6 +31,10 @@ public class Health : MonoBehaviour {
         else{
             health+=heal; 
         }
+
+        if (gameObject.tag == "Player") {
+            updateHealthBar();
+        }
     }
     public void takeDamage(float damage) {
         health = health -(damage- damage*(damageReduction/100));
@@ -66,9 +70,9 @@ public class Health : MonoBehaviour {
                 }
                 GetComponent<AbilityManager>().ability = Abilty.NONE;
                 GetComponent<CapePlayerController>().changeCapeToOriginalColor();
-                if(dropItem!=null){
-                    StartCoroutine(itemDroppedFromPlayer(transform));
-                }
+                //if(dropItem!=null){
+                //    StartCoroutine(itemDroppedFromPlayer(transform));
+                //}
                 GetComponent<CapePlayerController>().dying();
             }
         }
