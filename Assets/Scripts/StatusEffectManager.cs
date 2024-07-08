@@ -27,7 +27,7 @@ public class StatusEffectManager : MonoBehaviour
 
     public void ApplyFreeze(int ticks , bool isUlt=false)
     {   
-        if(!isUlt!|| freezeTicktimer == 0){
+        if(!isUlt || freezeTicktimer == 0){
         freezeTicktimer = ticks;
         }
          StartCoroutine(Freeze());
@@ -60,10 +60,6 @@ public class StatusEffectManager : MonoBehaviour
             changedSize = myGameObject.transform.localScale * 0.5f;
             myGameObject.transform.localScale = changedSize;
         }
-        else {
-            
-        }
-        
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
          rb.velocity = Vector2.zero; 

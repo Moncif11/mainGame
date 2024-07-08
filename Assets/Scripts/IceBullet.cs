@@ -16,7 +16,7 @@ public class IceBullet : MonoBehaviour
     else if( user== User.ENEMY ){
          if(other.CompareTag("Player")){
             other.GetComponent<Health>()?.takeDamage(damage); 
-            other.GetComponent<StatusEffectManager>().ApplyFreeze(3);
+            other.GetComponent<StatusEffectManager>().ApplyFreeze(3,false);
             }
     }   
     Destroy(gameObject);

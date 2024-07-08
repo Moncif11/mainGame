@@ -19,16 +19,15 @@ public class RangeMonsterBT : Tree {
     protected override Node SetupTree(){
         Node root = new Selector(
             new List<Node>{
-             new Sequence( new List<Node>{
-                new InverterDecorator( 
+             new Selector( new List<Node>{
                     new Sequence( new List<Node>{
                             new CheckFreezed(transform),  
                             new TaskToFreezed(transform),
-                       })),
+                       }),
+                       new Sequence( new List<Node>{
                 new CheckUnfreezed(transform),
                 new TaskToUnfreezed(transform), 
-                })
-                ,
+                })}),
                new Sequence( new List<Node>{
                             new CheckEnemyAttack(transform),  
                             new TaskAttack(bulletPrefab,transform),

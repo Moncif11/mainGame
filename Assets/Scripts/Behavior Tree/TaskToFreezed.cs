@@ -10,10 +10,12 @@ namespace BehaviorTree{
                 _transform = transform; 
         }
         public override NodeState Evaluate()
-        {
-
-            _transform.position = Vector2.MoveTowards(_transform.position,_transform.position,0); 
+        { 
+            float stayPositionx = _transform.position.x; 
+            float stayPositiony = _transform.position.y;
+            _transform.position = Vector3.MoveTowards(_transform.position,_transform.position,0);
             animator.speed = 0; 
+            Debug.Log("TaskFreezed"); 
             state = NodeState.RUNNING; 
             return state;
             } 

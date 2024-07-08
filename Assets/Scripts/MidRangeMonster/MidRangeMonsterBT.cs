@@ -14,32 +14,33 @@ public class MidRangeMonsterBT : Tree {
     public static bool isRight = true; 
 
     protected override Node SetupTree(){
-        Node root = new Selector(
+      Node root = new Selector(
             new List<Node>{
-             new Sequence( new List<Node>{
-                new InverterDecorator( 
-                    new Sequence( new List<Node>{
+                new Sequence(new List<Node>{
+                    new Selector(new List<Node>{
+                        new Sequence(new List<Node>{
                             new CheckFreezed(transform),  
                             new TaskToFreezed(transform),
-                       })),
-                new CheckUnfreezed(transform),
-                new TaskToUnfreezed(transform), 
-                }),
-                new Sequence( new List<Node>{
-                            new CheckGuard(transform),  
-                            new TaskToGuard(transform),
-                       }),
-               new Sequence( new List<Node>{
-                            new CheckEnemyAttack(transform),  
-                            new TaskAttack(transform),
-                       }),
-                    new Sequence(
-                        new List<Node>{
-                            new CheckEnemyInFOVRange(transform),  
-                            new TaskToGo(transform),
                         }),
-                    new TaskPatrol(transform, waypoints)
-
+                        new Sequence(new List<Node>{
+                            new CheckUnfreezed(transform),
+                            new TaskToUnfreezed(transform),
+                        })
+                    }),
+                }),
+                new Sequence(new List<Node>{
+                    new CheckGuard(transform),  
+                    new TaskToGuard(transform),
+                }),
+                new Sequence(new List<Node>{
+                    new CheckEnemyAttack(transform),  
+                    new TaskAttack(transform),
+                }),
+                new Sequence(new List<Node>{
+                    new CheckEnemyInFOVRange(transform),  
+                    new TaskToGo(transform),
+                }),
+                new TaskPatrol(transform, waypoints)
             });
             return root;
         }

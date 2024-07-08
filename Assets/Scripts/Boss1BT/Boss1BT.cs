@@ -52,15 +52,15 @@ public class Boss1BT : BehaviorTree.Tree{
              new Sequence(new List<Node> {
                 new CheckEnviroment(transform),
                 new Selector(new List<Node> {
-                     new Sequence( new List<Node>{
-                new InverterDecorator( 
+               new Selector( new List<Node>{
                     new Sequence( new List<Node>{
                             new CheckFreezed(transform),  
                             new TaskToFreezed(transform),
-                       })),
+                       }),
+                       new Sequence( new List<Node>{
                 new CheckUnfreezed(transform),
                 new TaskToUnfreezed(transform), 
-                }),
+                })}),
             new Selector(new List<Node>{ //Phase2 addition to special move
             new Sequence(new List<Node>{
                 new CheckHalfHP(transform), 
