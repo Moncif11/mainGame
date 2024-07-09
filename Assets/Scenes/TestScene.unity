@@ -1666,15 +1666,39 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Dash
-    audioClip: {fileID: 8300000, guid: 4c8811654b61d2743b1356f9f0db26cb, type: 3}
+    audioClip: {fileID: 8300000, guid: 7176ba1bc7196374a85000380f5bff0f, type: 3}
     volume: 0
     pitch: 0
     loop: 0
     source: {fileID: 0}
-  - name: Background
-    audioClip: {fileID: 8300000, guid: c2e9634d3f08e5f40a87e9dec80061fc, type: 3}
+  - name: Shoot
+    audioClip: {fileID: 8300000, guid: a32f8e4a93e511246b9d80b83b713a36, type: 3}
     volume: 0
     pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss2 Roar
+    audioClip: {fileID: 8300000, guid: 507f9fa5539f34c4fbd811b53ead1793, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss3 Burn
+    audioClip: {fileID: 8300000, guid: 507f9fa5539f34c4fbd811b53ead1793, type: 3}
+    volume: 0
+    pitch: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: Shoot
+    audioClip: {fileID: 8300000, guid: 507f9fa5539f34c4fbd811b53ead1793, type: 3}
+    volume: 0
+    pitch: 0.1
+    loop: 0
+    source: {fileID: 0}
+  - name: ItemDrop
+    audioClip: {fileID: 8300000, guid: 2fcde972caf640f469f173f482f8fe85, type: 3}
+    volume: 0
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &936418782
