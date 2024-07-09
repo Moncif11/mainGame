@@ -182,7 +182,7 @@ private void Shield(){
         ShieldRock = Instantiate(myPrefab, transform);   
     }
 
-    if(ultRunning == true) return;
+    if(ultRunning == true || ShieldActive) return;
 
     Health health = GetComponent<Health>();
     Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
