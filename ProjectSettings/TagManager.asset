@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - DamageObstacle
   - Checkpoint
+  - Boss
+  - Gate
   layers:
   - Default
   - TransparentFX

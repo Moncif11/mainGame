@@ -565,7 +565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2319870397714660673, guid: 7d4ea9998bcca3c43b376d64d83b44fd, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -1594819846898357696, guid: 7d4ea9998bcca3c43b376d64d83b44fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -981,9 +981,9 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3226129451745472829}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: ccb5f1168d5f8fc40be12a54dd367896, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1006,7 +1006,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23830527, y: -1.3935766}
+  m_Offset: {x: 8.06019, y: 2.379109}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1017,7 +1017,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.819068, y: 9.797144}
+  m_Size: {x: 5.1385536, y: 0.39331985}
   m_EdgeRadius: 0
 --- !u!4 &7037078822173502109 stripped
 Transform:
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2272072573
+  GlobalObjectIdHash: 1730508731
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

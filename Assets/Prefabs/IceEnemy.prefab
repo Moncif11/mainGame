@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IceEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -219,7 +223,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   health: 10
+  damageReduction: 0
+  waterItem: {fileID: 0}
+  fireItem: {fileID: 0}
+  iceItem: {fileID: 0}
+  stoneItem: {fileID: 0}
   dropItem: {fileID: 175668089732633245, guid: c98c75ac33ad1864894280cfca175c1a, type: 3}
+  myid: 0
+  healthBar: {fileID: 0}
 --- !u!50 &4931198237088755386
 Rigidbody2D:
   serializedVersion: 4

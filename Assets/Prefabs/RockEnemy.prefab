@@ -109,6 +109,10 @@ PrefabInstance:
       value: RockEnemy
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -376,7 +380,13 @@ MonoBehaviour:
   maxHealth: 10
   health: 10
   damageReduction: 0
+  waterItem: {fileID: 0}
+  fireItem: {fileID: 0}
+  iceItem: {fileID: 0}
+  stoneItem: {fileID: 0}
   dropItem: {fileID: 175668089732633245, guid: a8dff91814cde98429cea09b54ec5031, type: 3}
+  myid: 0
+  healthBar: {fileID: 0}
 --- !u!114 &6325195447530391725
 MonoBehaviour:
   m_ObjectHideFlags: 0

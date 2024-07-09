@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
+using System.Linq;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -48,6 +49,11 @@ public class Health : MonoBehaviour {
                 }
         }
         }
+        if(gameObject.CompareTag("Boss")){
+            if(health<= 0) {
+                openBossGate();
+            }
+        }
         if(gameObject.CompareTag("Player")){
             updateHealthBar();
             if(health<= 0){
@@ -82,11 +88,6 @@ public class Health : MonoBehaviour {
         yield return new WaitForSeconds(1);
         Instantiate(dropItem, transform.position, Quaternion.identity);
         Destroy(gameObject); 
-    }
-    IEnumerator itemDroppedFromPlayer( Transform transform){
-        Vector3 deathPos = transform.position;
-        yield return new WaitForSeconds(1);
-        Instantiate(dropItem, deathPos, Quaternion.identity);
     }
     public void itemDirektDroppedFromPlayer(float xOffset) {
         Abilty ability = GetComponent<AbilityManager>().ability;
@@ -128,5 +129,16 @@ public class Health : MonoBehaviour {
     public void resetHealth() {
         health = maxHealth;
         updateHealthBar();
+    }
+    private void openBossGate() {
+        List<GameObject> gates = GameObject.FindGameObjectsWithTag ("Gate").ToList();
+        gates = gates.ToList().OrderBy(x => x.transform.position.x).ToList();
+        GameObject gate = gates[0];
+        for (int i = 0; i < gates.Count; i++) {
+            if (transform.position.x >= gates[i].transform.position.x) {
+                gate = gates[i+1];
+            }
+        }
+        gate.gameObject.GetComponent<GateManager>().openGate();
     }
 }

@@ -10,7 +10,6 @@ namespace BehaviorTree{
         {   int counter = 0;
             foreach(Node node in children){
                 counter++; 
-                Debug.Log("Counter: " + counter);
                 switch(node.Evaluate()){
                     case NodeState.SUCCESS:
                         state = NodeState.SUCCESS;

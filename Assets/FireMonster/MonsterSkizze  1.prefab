@@ -75,6 +75,10 @@ PrefabInstance:
       value: 'MonsterSkizze '
       objectReference: {fileID: 0}
     - target: {fileID: -8653719598885068355, guid: c83ee29559e54e24bace59e3448cbf99, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: c83ee29559e54e24bace59e3448cbf99, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -232,6 +236,7 @@ MonoBehaviour:
   stoneItem: {fileID: 0}
   dropItem: {fileID: 0}
   myid: 0
+  healthBar: {fileID: 0}
 --- !u!114 &521958596789421361
 MonoBehaviour:
   m_ObjectHideFlags: 0
