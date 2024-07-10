@@ -63,17 +63,22 @@ public class AbilityManager : NetworkBehaviour
         if(maxUltbar ==ultBar){
             ultReady= true; 
         }    
-        if(Input.GetKeyDown(KeyCode.Q)){
+        if(Input.GetKeyDown(KeyCode.R)){
             if(ultReady){
             switch(ability){
                 case Abilty.FIRE:
+                ultRunning = true; 
                 Shoot();
+                ultRunning = false; 
                 return; 
                 case Abilty.WATER:
                 GetComponent<Health>().heal(50);
                 return; 
                 case Abilty.ICE: 
                 FreezeAll(); 
+                return; 
+                case Abilty.ROCK: 
+                Instructable();
                 return; 
             }
             ultReady = false; 
@@ -96,9 +101,13 @@ public class AbilityManager : NetworkBehaviour
             return;
         }
         GameObject bulletPrefab = null;
+        if(ultBar<maxUltbar){
+        ultBar++;
+        }
         switch(ability){
             case Abilty.FIRE:
                 bulletPrefab = fireShot;
+                if(ultRunning) bulletPrefab = fireUlt;
                 break;
             case Abilty.ICE:
                 bulletPrefab = iceShot;
@@ -138,6 +147,7 @@ public class AbilityManager : NetworkBehaviour
         switch(ability){
             case Abilty.FIRE:
                 bulletPrefab = fireShot;
+                 if(ultRunning) bulletPrefab = fireUlt;                
                 break;
             case Abilty.ICE:
                 bulletPrefab = iceShot;
@@ -251,10 +261,14 @@ private void ResetShield(Health health, Rigidbody2D rigidbody2D) {
 
     private IEnumerator UltRoutine()
     {
+         if (ShieldRock == null) {
+        var myPrefab = Resources.Load<GameObject>("ShieldRock");
+        ShieldRock = Instantiate(myPrefab, transform);   
+        }
         Health health= GetComponent<Health>();
         health.damageReduction = 100;
         ultRunning = true;
-
+        Debug.Log("Instructable");
         yield return new WaitForSeconds(10);
 
         health.damageReduction = 0; // oder setze den Schaden wieder auf den ursprünglichen Wert zurück
