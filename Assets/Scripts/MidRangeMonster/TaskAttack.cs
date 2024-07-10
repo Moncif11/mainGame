@@ -28,6 +28,7 @@ public class TaskAttack : Node{
         }  
         attackCounter+= Time.deltaTime;
         if(attackCounter >=attackTime){
+             GameObject.FindObjectOfType<AudioManager>().Play("Dash");
             Melee attack = _transform.GetComponent<Melee>();
             MidRangeMonsterBT.isRight = isRight(target);
             animator.SetTrigger("Attack");

@@ -653,6 +653,75 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1962393387423373993, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
   m_PrefabInstance: {fileID: 1042325414}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &469980772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.0337896
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.948
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7557
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307439586577126944, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315785336683993725, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+      propertyPath: m_Name
+      value: BossSP2Shot
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
 --- !u!60 &487750202 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 4705509363708003702, guid: 7f49a292abc304e4288d9e3ec18b1a37, type: 3}
@@ -17358,3 +17427,4 @@ SceneRoots:
   - {fileID: 6529589744021321309}
   - {fileID: 9198638478110665941}
   - {fileID: 4683811416190310057}
+  - {fileID: 469980772}

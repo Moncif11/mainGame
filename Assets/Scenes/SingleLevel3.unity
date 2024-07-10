@@ -2303,6 +2303,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &246679373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4651371888217526300, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+  m_PrefabInstance: {fileID: 1508565472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &246679377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246679373}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c1013f6ff9466478c9078909063923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &246826035
 GameObject:
   m_ObjectHideFlags: 0
@@ -19193,6 +19211,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1023158106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+  m_PrefabInstance: {fileID: 1508565472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1023158112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023158106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6825fae92989584795aa22f0ed25cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SP2ShotPrefab: {fileID: 7315785336683993725, guid: 76068fbc4405cf3499d57f032b6b0924, type: 3}
+  bulletPrefab: {fileID: 7315785336683993725, guid: eb973db5eab93df4b9597b100f857ad8, type: 3}
+  shootPoint: {fileID: 0}
+  boss1BT: {fileID: 0}
+--- !u!114 &1023158113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023158106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42697ae840159c54e871c3d3eccce94a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalBulletPrefab: {fileID: 0}
 --- !u!1 &1031110531
 GameObject:
   m_ObjectHideFlags: 0
@@ -25648,6 +25700,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 3670771518140645387, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670771518140645387, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 54c20685f270f264db4d5e1f8583f502, type: 2}
     - target: {fileID: 3811130703569212636, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.14
@@ -25662,7 +25722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5937106980983686369, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.3
+      value: -5.86
       objectReference: {fileID: 0}
     - target: {fileID: 5937106980983686369, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25703,7 +25763,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1023158113}
+    - targetCorrespondingSourceObject: {fileID: 2606391188736478399, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1023158112}
+    - targetCorrespondingSourceObject: {fileID: 4651371888217526300, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246679377}
   m_SourcePrefab: {fileID: 100100000, guid: a493a1f3d2f9aa549ba5d1ac3a2e0466, type: 3}
 --- !u!1 &1532937758
 GameObject:
@@ -34680,9 +34749,9 @@ SceneRoots:
   - {fileID: 1182786132}
   - {fileID: 783115388}
   - {fileID: 866791096}
+  - {fileID: 547191444}
   - {fileID: 1308417730}
   - {fileID: 965325941}
-  - {fileID: 547191444}
   - {fileID: 862032570}
   - {fileID: 1508565472}
   - {fileID: 2077536752}
