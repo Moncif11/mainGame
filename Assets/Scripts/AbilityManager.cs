@@ -159,6 +159,7 @@ public class AbilityManager : NetworkBehaviour
         }
         
         Debug.Log("Initiate BULLET "+bulletPrefab.gameObject.name+" at "+this.transform.position.x);
+         FindObjectOfType<AudioManager>().Play("Shoot"); 
         if(transform.eulerAngles == new Vector3(0, 0, 0)){
             GameObject bullet = GameObject.Instantiate(bulletPrefab, transform.position + transform.right, Quaternion.identity);
             Quaternion rotation = bullet.transform.rotation;

@@ -32,6 +32,7 @@ public class TaskToBurn : Node{
             animator.ResetTrigger("Ice Rain");      
             Boss2BT.isLeft = isLeft(target);
                 Debug.Log("Shoot left");
+                GameObject.FindObjectOfType<AudioManager>().Play("Boss3 Burn"); 
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, target.position, Quaternion.identity);
                 Boss3BT.SP1Ready = false; 
         }

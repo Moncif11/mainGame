@@ -47,70 +47,80 @@ public class Boss1BT : BehaviorTree.Tree{
      protected override Node SetupTree(){
         Node root = 
         new CoolDownDecorator(
-        new Selector( 
-            new List<Node> {
-             new Sequence(new List<Node> {
-                new CheckEnviroment(transform),
-                new Selector(new List<Node> {
-               new Selector( new List<Node>{
-                    new Sequence( new List<Node>{
-                            new CheckFreezed(transform),  
-                            new TaskToFreezed(transform),
-                       }),
-                       new Sequence( new List<Node>{
-                new CheckUnfreezed(transform),
-                new TaskToUnfreezed(transform), 
-                })}),
-            new Selector(new List<Node>{ //Phase2 addition to special move
-            new Sequence(new List<Node>{
-                new CheckHalfHP(transform), 
-                new TaskSetStatsPhase2(transform),
-            }),
-            new Sequence(new List<Node>{
-                new CheckBossPhase2(),
+        new Selector(
+            new List<Node>{
+                new Sequence(
+                    new List<Node>{
+                new CheckEnviroment(transform), 
                 new Selector(
                     new List<Node>{
-                        new Sequence(
+                     new Sequence(
+                        new List<Node>{
+                        new CheckFreezed(transform),
+                        new TaskToFreezed(transform)
+                        }
+                     ),
+                      new Sequence(
+                        new List<Node>{
+                        new CheckUnfreezed(transform),
+                        new TaskToUnfreezed(transform)
+                        }
+                     ),
+                     new Sequence(
+                        new List<Node>{
+                            new CheckHalfHP(transform),
+                            new TaskSetStatsPhase2(transform)
+                        }    
+                     ),
+                     new Sequence(new List<Node>{
+                        new CheckBossPhase2(),
+                        new Selector(
                             new List<Node>{
-                            new CheckSP1Ready(transform),
-                            new TaskToSP1(transform),
+                                new Sequence(
+                                    new List<Node>{
+                                        new CheckSP1Ready(transform),
+                                        new TaskToSP1(transform), 
+                                    }
+                                ), 
+                                new Sequence(
+                                    new List<Node>{
+                                        new CheckSP2Ready(transform),
+                                        new TaskToSP2(transform), 
+                                    }
+                                )
                             }
-                        ), //Move SP1 an Dash attack with amount of speed
-                        new Sequence(
-                            new List<Node>{
-                            new CheckSP2Ready(transform),
-                            new TaskToSP2(transform),     
-                    }//Move SP2 an Shoot Attack with a bigger ball
-                    ), 
+                    )}),
+                    new Sequence(
+                        new List<Node>{
+                            new CheckMeleeAttack(transform),
+                            new TaskToMeleeAttack(transform),
+                        }
+                    ),
+                       new Selector(
+                        new List<Node>{
+                            new Sequence(
+                                new List<Node>{
+                                    new CheckShooting(transform),
+                                    new TaskToShoot(transform), 
+                                }
+                            ), 
+                            new Sequence(
+                                new List<Node>{
+                                    new CheckGoToAttackRange(transform),
+                                    new TaskToGoToAttackRange(transform), 
+                                }
+                            )
+                        }
+                     ),
+                     new TaskToGoShootRange(transform),   
                     }
-                )
+                    )
+                    }
+                ),
+                 new TaskToBackToPoint(transform)
             }
-            )
-        }),
-        new Sequence(new List<Node>{
-             new CheckMeleeAttack(transform), 
-            new TaskToMeleeAttack(transform)
-            }
-        ),// Normal Attacks
-        new Selector (new List<Node>{
-            new Sequence(new List<Node>{
-                new CheckShooting(transform),  
-                new TaskToShoot(transform),
-                } 
-            ),//Shooting
-            new Sequence(
-                new List<Node>{
-                new CheckGoToAttackRange(transform),
-                new TaskToGoToAttackRange(transform),
-                }
-            ) //going to AttackRange
-            }) ,
-            new TaskToGoShootRange(transform),      //Going to the enemy;
-         }),
-        new TaskToBackToPoint(transform)
-       }
-    )}
-    ));        
+        )
+        );       
         return root;
         }
         

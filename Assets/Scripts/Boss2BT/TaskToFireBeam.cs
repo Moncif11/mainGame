@@ -13,6 +13,7 @@ namespace Boss2AI{
 
         public override NodeState Evaluate(){
             Debug.Log("Beam");
+            GameObject.FindObjectOfType<AudioManager>().Play("Boss2 Laser"); 
             animator.SetTrigger("Beam");
             Boss2BT.SP2Ready = false; 
             //animator.ResetTrigger("");

@@ -13,10 +13,13 @@ public class TaskAttack : Node{
 
     Animator animator;
 
+    AudioManager audioManager;
+
     public TaskAttack(GameObject bulletPrefab , Transform transform){
        this.bulletPrefab = bulletPrefab;
        this._transform = transform;
        animator = _transform.GetComponent<Animator>();
+       audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     public override NodeState Evaluate()
@@ -33,6 +36,9 @@ public class TaskAttack : Node{
             Debug.Log("Shoot: "+bulletPrefab.name);
             animator.SetTrigger("Attack");
             animator.ResetTrigger("Running"); 
+            if(audioManager!=null){
+                audioManager.Play("Shoot");
+            }  
             if(RangeMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;

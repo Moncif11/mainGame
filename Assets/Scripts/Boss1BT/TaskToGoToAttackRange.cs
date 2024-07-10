@@ -32,6 +32,7 @@ public class TaskToGoToAttackRange : Node
             Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, Boss1BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
         } 
+        Debug.Log("GoToAttackRange");
         state = NodeState.RUNNING; 
         return state; 
     }

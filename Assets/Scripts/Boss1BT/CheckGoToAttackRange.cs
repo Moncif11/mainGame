@@ -18,7 +18,7 @@ public class CheckGoToAttackRange : Node{
             return state;
         }
         if(distance > Boss1BT.meleeRange){
-            parent.parent.parent.SetData("target",(Object)target);
+            parent.parent.parent.parent.SetData("target",(Object)target);
             state = NodeState.SUCCESS; 
             return state; 
         } 

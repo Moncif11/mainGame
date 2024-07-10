@@ -40,6 +40,7 @@ public class TaskToShootMissile : Node{
             animator.ResetTrigger("Walking"); 
             animator.ResetTrigger("Idle"); 
             animator.ResetTrigger("Jump"); 
+            GameObject.FindObjectOfType<AudioManager>().Play("Shoot"); 
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPosition.position + -shootPosition.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;

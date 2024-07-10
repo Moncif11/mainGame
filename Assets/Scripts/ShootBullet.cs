@@ -19,6 +19,7 @@ public class ShootBullet : MonoBehaviour
     {   
         Debug.Log("Boss ?" +boss1BT);
         bool isLeft = boss1BT.LeftLooking();
+        FindObjectOfType<AudioManager>().Play("Shoot"); 
         if(!isLeft){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, shootPoint.position + Vector3.right, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
@@ -49,7 +50,7 @@ public class ShootBullet : MonoBehaviour
                 Debug.Log("Shoot left");
                 GameObject bullet = GameObject.Instantiate(SP2ShotPrefab, shootPoint.position + Vector3.left, Quaternion.identity);
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bullet.GetComponent<FireBullet>().damage =Boss1BT.attack;  
+                bullet.GetComponent<Burn>().damage =(int)Boss1BT.attack;  
                 bulletRB.AddForce(-Vector2.right*1000);
                 Debug.Log("Bullet : " + bullet.transform.position);
             }   

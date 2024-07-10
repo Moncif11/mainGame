@@ -17,15 +17,15 @@ public class CheckEnviroment : Node{
          Transform target = nearestPlayer();
         float distance = Vector2.Distance(_transform.position,_position);   
         float playerEnviromentRadius = Vector2.Distance(target.position,_position); 
-        if(Boss2BT.backToStart == true){
+        if(Boss1BT.backToStart == true){
         state = NodeState.FAILURE;
         return state; 
         }
-        if(distance <25 && playerEnviromentRadius < 25 ){
+        if(distance <50 && playerEnviromentRadius < 50 ){
             state = NodeState.SUCCESS; 
             return state; 
         } 
-        Boss2BT.backToStart = true; 
+        Boss1BT.backToStart = true; 
         Debug.Log("BackToStart");
         state = NodeState.FAILURE; 
         return state;
@@ -34,11 +34,11 @@ public class CheckEnviroment : Node{
 private bool isLeft(Transform target) {
     Vector2 direction = (_transform.position - target.position).normalized;
     if (direction.x > 0) {
-        Boss2BT.isLeft = true;
+        Boss1BT.isLeft = true;
         _transform.Rotate(0, 0, 0);  // Rotate around the Y-axis by 180 degrees
         return true;
     } else if (direction.x < 0) {  // Change to "< 0" for the correct check
-        Boss2BT.isLeft = true;
+        Boss1BT.isLeft = true;
         _transform.Rotate(0, 180, 0);  // Rotate around the Y-axis by 180 degrees
         return true;
     }

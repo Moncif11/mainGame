@@ -545,7 +545,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Melee
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2268266156800232000}
   m_Solo: 0
@@ -957,7 +960,7 @@ AnimatorStateMachine:
     m_Position: {x: -40, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2268266156800232000}
-    m_Position: {x: 410, y: 340, z: 0}
+    m_Position: {x: 420, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1173544931118569279}
     m_Position: {x: 260, y: 10, z: 0}

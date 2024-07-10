@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class CapePlayerController : NetworkBehaviour
 {
@@ -562,6 +563,9 @@ public class CapePlayerController : NetworkBehaviour
 
     public void teleportToFirstCheckpoint() {
         List<GameObject> checkpoints = GameObject.FindGameObjectsWithTag ("Checkpoint").ToList();
+        if(checkpoints.Count ==0){
+            return; 
+        }
         checkpoints = checkpoints.ToList().OrderBy(x => x.transform.position.x).ToList();
         GameObject checkpoint = checkpoints[0];
         transform.position = checkpoint.transform.position;

@@ -33,6 +33,7 @@ public class TaskAttack : Node{
             HealMonsterBT.isRight = isRight(target);
             animator.SetTrigger("Attack");
             animator.ResetTrigger("Running"); 
+            AudioManager.instance?.Play("Shoot"); 
             if(HealMonsterBT.isRight){
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, _transform.position + _transform.right, Quaternion.identity);
                 Quaternion rotation = bullet.transform.rotation;

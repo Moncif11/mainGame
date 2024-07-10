@@ -321,7 +321,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 3.3177042, y: -0.18347931, z: 0}
+        value: {x: 4.1, y: 5.7, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -330,16 +330,16 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.16666667
-        value: {x: -8.297483, y: 5.07774, z: 0}
-        inSlope: {x: -0.5846109, y: 0.46808606, z: 0}
-        outSlope: {x: -0.5846109, y: 0.46808606, z: 0}
+        value: {x: -2.4, y: 8.5, z: 0}
+        inSlope: {x: -15.999999, y: 4.8000035, z: 0}
+        outSlope: {x: -15.999999, y: 4.8000035, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.25
-        value: {x: -8.334022, y: 5.1069956, z: 0}
+        value: {x: -3.4, y: 8.8, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -348,7 +348,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.5
-        value: {x: 3.3177042, y: -0.18347931, z: 0}
+        value: {x: 4.6, y: 5.1, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1529,7 +1529,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 3.3177042
+        value: 4.1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1538,16 +1538,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: -8.297483
-        inSlope: -0.5846109
-        outSlope: -0.5846109
+        value: -2.4
+        inSlope: -15.999999
+        outSlope: -15.999999
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: -8.334022
+        value: -3.4
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1556,7 +1556,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: 3.3177042
+        value: 4.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1577,7 +1577,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.18347931
+        value: 5.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1586,16 +1586,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.16666667
-        value: 5.07774
-        inSlope: 0.46808606
-        outSlope: 0.46808606
+        value: 8.5
+        inSlope: 4.8000035
+        outSlope: 4.8000035
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.25
-        value: 5.1069956
+        value: 8.8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1604,7 +1604,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5
-        value: -0.18347931
+        value: 5.1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1820,7 +1820,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: 'L Unterarm '
+    path: 'Stab '
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1832,7 +1832,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: 'L Unterarm '
+    path: 'Stab '
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1844,7 +1844,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: 'L Unterarm '
+    path: 'Stab '
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1928,7 +1928,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: 'Stab '
+    path: 'L Unterarm '
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1940,7 +1940,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: 'Stab '
+    path: 'L Unterarm '
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1952,7 +1952,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: 'Stab '
+    path: 'L Unterarm '
     classID: 4
     script: {fileID: 0}
     flags: 0

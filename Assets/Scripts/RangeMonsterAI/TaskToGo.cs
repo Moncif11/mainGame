@@ -30,8 +30,8 @@ public class TaskToGo : Node
             Vector2 direction = Vector2.MoveTowards(_transform.position,newPosition, RangeMonsterBT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
         }
-        //animator.SetTrigger("Running");
-        //animator.ResetTrigger("Attack");
+        animator.SetTrigger("Running");
+        animator.ResetTrigger("Attack");
         state = NodeState.RUNNING; 
         return state;         
     }

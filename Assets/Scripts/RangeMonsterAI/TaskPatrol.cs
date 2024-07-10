@@ -23,6 +23,8 @@ public class TaskPatrol : Node
     {        
 
         Transform wp =_waypoints[_currentWayPointIndex].transform;
+        animator.SetTrigger("Running");
+        animator.ResetTrigger("Attack");
         if(Vector2.Distance(wp.position,_transform.position)<0.01f){
             _transform.position = wp.position;   
             _currentWayPointIndex = (_currentWayPointIndex+1) % _waypoints.Length;

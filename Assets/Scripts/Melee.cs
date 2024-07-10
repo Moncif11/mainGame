@@ -14,7 +14,8 @@ public class Melee : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Player") )
-        {
+        {   
+            FindObjectOfType<AudioManager>().Play("Melee"); 
             other.GetComponent<Health>().takeDamage(damage); 
         }
     }

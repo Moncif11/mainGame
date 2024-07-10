@@ -20,7 +20,8 @@ public class TaskToTeleport : Node
             animator.ResetTrigger("Nothing"); 
             animator.ResetTrigger("Burn"); 
             animator.SetTrigger("Teleport"); 
-            animator.ResetTrigger("Ice Rain");      
+            animator.ResetTrigger("Ice Rain"); 
+            GameObject.FindObjectOfType<AudioManager>().Play("Boss3 Teleport");     
             if(Vector2.Distance( position,new Vector2(target.position.x+offSet,target.position.y)) < 25){
                 _transform.position  = new Vector2(target.position.x+offSet,_transform.position.y); 
             }

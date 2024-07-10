@@ -36,6 +36,7 @@ public class TaskToBackToPoint : Node
              Boss2BT.bossPhase = BossPhase.ONE;   
             }
             else{
+            GameObject.FindObjectOfType<AudioManager>().Play("Boss2 Roar"); 
             animator.ResetTrigger("Walking"); 
             animator.SetTrigger("Idle"); 
                 _transform.GetComponent<Health>().damageReduction = 0;

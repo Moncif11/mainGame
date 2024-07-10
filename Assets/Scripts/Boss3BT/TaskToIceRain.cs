@@ -12,6 +12,7 @@ namespace Boss3AI{
         float duration = 7.0f; 
         float spawnDuration = 0.5f ;
 
+
         public TaskToIceRain(Transform transform ,GameObject bulletPrefab){
             _transform = transform;
             _animator = transform.GetComponent<Animator>();
@@ -45,8 +46,8 @@ namespace Boss3AI{
             GameObject bullet = GameObject.Instantiate(_bulletPrefab, spawnPosition, Quaternion.identity);
             bullet.transform.localScale = new Vector3(1,1,1); 
             Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>();
-            // Überprüfen Sie, ob das Rigidbody2D korrekt ist
             if (bulletRB != null) {
+                GameObject.FindObjectOfType<AudioManager>().Play("IceRain"); 
                 bulletRB.AddForce(Vector2.down * 1000);
                 Debug.Log("Bullet : " + bullet.transform.position);
             } else {

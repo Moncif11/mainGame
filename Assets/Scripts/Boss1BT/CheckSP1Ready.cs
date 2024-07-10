@@ -13,11 +13,7 @@ public class CheckSP1Ready : Node
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
     }
-    public override NodeState Evaluate()
-    {   if(_animator.GetCurrentAnimatorStateInfo(0).IsName("Attack1")){
-           state = NodeState.FAILURE; 
-            return state; 
-        }
+    public override NodeState Evaluate(){ 
         Transform target = nearestPlayer();
         if(Boss1BT.SP1Ready && BossPhase.TWO == Boss1BT.bossPhase){
              parent.parent.parent.SetData("target",(Object)target);

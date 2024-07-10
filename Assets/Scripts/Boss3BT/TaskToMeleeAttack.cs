@@ -21,6 +21,7 @@ public class TaskToMeleeAttack : Node
             if(!Boss3BT.isLeft){
                 stopRange*=-1; 
             }
+            GameObject.FindObjectOfType<AudioManager>().Play("Melee"); 
             _animator.SetTrigger("Melee");
             _animator.ResetTrigger("Walking"); 
             _animator.ResetTrigger("Nothing"); 

@@ -22,7 +22,6 @@ public class TaskToSP1 : Node
         Debug.Log("Target ? " + target);
         Boss1BT.isLeft = IsLeft(target);
         //_SP1Attack.target = target;
-
         Debug.Log("SP1 activated");
         _animator.SetTrigger("SP1");
         _animator.ResetTrigger("SP2");

@@ -11,12 +11,15 @@ public class TaskToBackToPoint : Node
 
     float startSpeed = 3f; 
     Animator animator; 
+
+    AudioManager audioManager; 
     public TaskToBackToPoint(Transform transform){
         animator = transform.GetComponent<Animator>();  
         _transform = transform;
         animator = transform.GetComponent<Animator>();
         startposition = transform.position;
         maxHealth = transform.GetComponent<Health>().maxHealth;
+        audioManager = GameObject.FindObjectOfType<AudioManager>();
     }
 
     public override NodeState Evaluate()
@@ -25,7 +28,7 @@ public class TaskToBackToPoint : Node
             float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
             if(distance > 0.001 && Boss3BT.backToStart == true){
             animator.SetTrigger("Walking"); 
-            animator.ResetTrigger("Nothing"); 
+            animator.ResetTrigger("Nothing");
             Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss3BT.speed*Time.deltaTime);
             _transform.position = new Vector2(direction.x,_transform.position.y);
             _transform.GetComponent<Health>().health = maxHealth; 

@@ -13,7 +13,7 @@ public class CheckShooting : Node
    public override NodeState Evaluate(){
     Transform t = nearestPlayer();
     if(Vector2.Distance(_transform.position,t.position)<Boss1BT.shootRange && Boss1BT.amountShoot>0){
-        parent.parent.parent.SetData("target",(Object)t);
+        parent.parent.parent.parent.SetData("target",(Object)t);
         state = NodeState.SUCCESS; 
         return state;    
     }
