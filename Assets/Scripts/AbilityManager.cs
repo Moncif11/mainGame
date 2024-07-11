@@ -67,7 +67,7 @@ public class AbilityManager : NetworkBehaviour
         if(maxUltbar ==ultBar){
             ultReady= true; 
         }    
-        if(Input.GetKeyDown(KeyCode.R)){
+        if(Input.GetKeyDown(KeyCode.Q)){
             if(ultReady){
             switch(ability){
                 case Abilty.FIRE:

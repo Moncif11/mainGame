@@ -195,7 +195,7 @@ public class CapePlayerController : NetworkBehaviour
             print("no Cam!");
             Start();
         }
-        if (Input.GetKeyDown(KeyCode.F) && multiplayer) {
+        if (Input.GetKeyDown(KeyCode.R) && multiplayer) {
             watchOther = true;
             GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
             for (int i = 0; i < players.Length; i++) {
@@ -355,7 +355,7 @@ public class CapePlayerController : NetworkBehaviour
             jump = true;
         }
         
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (direction == "right") {
                     dropItemLocal(dropOffset);
