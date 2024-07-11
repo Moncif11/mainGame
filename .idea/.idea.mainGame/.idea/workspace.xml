@@ -2,35 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gate.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Gate.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SquareBlock.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/SquareBlock.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel3.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel3.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel3.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel3.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GateManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GateManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/myPlayer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Backgrounds/myPlayer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/HowToPlay.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/HowToPlay.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FireMonster/MonsterSkizze  1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FireMonster/MonsterSkizze  1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/IceEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/IceEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MonsterSkizze .prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MonsterSkizze .prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RockEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RockEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Smasher.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Smasher.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WaterEnemy 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WaterEnemy 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MultiLevel1.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SingleLevel2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SingleLevel2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behavior Tree/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behavior Tree/Selector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EntranceManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FinishHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskToGo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskToGo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +135,9 @@
       <workItem from="1720377915873" duration="1565000" />
       <workItem from="1720380238075" duration="2283000" />
       <workItem from="1720539227773" duration="2440000" />
-      <workItem from="1720543415489" duration="5125000" />
+      <workItem from="1720543415489" duration="5726000" />
+      <workItem from="1720638861348" duration="2221000" />
+      <workItem from="1720689005931" duration="1523000" />
     </task>
     <servers />
   </component>

@@ -61,6 +61,7 @@ public class PauseMenu : MonoBehaviour {
     public void menu() {
         if (singlePlayer) {
             SceneManager.LoadScene("Main Menu");
+            resume();
         }
         else {
             NetworkManager.Singleton.Shutdown();

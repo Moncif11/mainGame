@@ -14,12 +14,14 @@ using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NetworkManagerUI : MonoBehaviour {
     [SerializeField] private Button hostButton;
     [SerializeField] private Button clientButton;
     [SerializeField] private Button leaveButton;
+    [SerializeField] private Button menuButton;
     [SerializeField] private TMP_InputField JoinCodeInput;
     [SerializeField] private NetworkManager networkManager;
     [SerializeField] UnityTransport transport;
@@ -51,6 +53,12 @@ public class NetworkManagerUI : MonoBehaviour {
         });
         leaveButton.onClick.AddListener(() => {
             NetworkManager.Singleton.Shutdown();
+        });
+        menuButton.onClick.AddListener(() => {
+            NetworkManager.Singleton.Shutdown();
+            GameObject myNetworkManager = GameObject.Find("NetworkManager");
+            Destroy(myNetworkManager);
+            SceneManager.LoadScene("Main Menu");
         });
     }
    

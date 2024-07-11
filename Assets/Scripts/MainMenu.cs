@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void Play(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        SceneManager.LoadScene("Lobby"); 
+    }
+    public void PlaySingle(){
+        SceneManager.LoadScene("SingleLevel1"); 
     }
     public void HowToPlay(){
         SceneManager.LoadScene("HowToPlay");
     }
     public void Menu(){
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
 
     }
     public void Quit(){ 
