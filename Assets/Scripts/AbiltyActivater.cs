@@ -12,8 +12,9 @@ public class AbiltyActivater : MonoBehaviour
         AbilityManager abilityManager = other.GetComponent<AbilityManager>();
         if(abilityManager!= null ){
             abilityManager.ability = abilty;
+            abilityManager.ultBar =0; 
             switch(abilty) 
-            {
+            {   
                 case Abilty.WATER:
                     other.GetComponent<CapePlayerController>().changeCapeColor(22, 7, 110);
                     break;

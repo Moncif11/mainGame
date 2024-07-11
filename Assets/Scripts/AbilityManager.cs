@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum Abilty{
     NONE,
@@ -33,6 +34,8 @@ public class AbilityManager : NetworkBehaviour
     private GameObject ShieldRock;
     
     private Coroutine shieldCoroutine;
+
+      public Image ultBarImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +46,8 @@ public class AbilityManager : NetworkBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        updateUltBar();
         if ((!GetComponent<CapePlayerController>().IsOwner && GetComponent<CapePlayerController>().multiplayer) || ability == Abilty.NONE) {
             return;
         }
@@ -70,16 +74,16 @@ public class AbilityManager : NetworkBehaviour
                 ultRunning = true; 
                 Shoot();
                 ultRunning = false; 
-                return; 
+                break; 
                 case Abilty.WATER:
                 GetComponent<Health>().heal(50);
-                return; 
+                break; 
                 case Abilty.ICE: 
                 FreezeAll(); 
-                return; 
+                break; 
                 case Abilty.ROCK: 
                 Instructable();
-                return; 
+                break; 
             }
             ultReady = false; 
             ultBar = 0; 
@@ -213,6 +217,7 @@ private IEnumerator ShieldCoroutine(Health health, Rigidbody2D rigidbody2D){
     while (ShieldActive && health.damageReduction > 0) {
     yield return new WaitForSeconds(1);
     health.damageReduction -= 10;
+    ultBar++;
     Debug.Log("Losing DamageReduction");
     if (health.damageReduction <= 0) {
         health.damageReduction = 0;
@@ -314,5 +319,20 @@ private void ResetShield(Health health, Rigidbody2D rigidbody2D) {
                 player.GetComponent<AbilityManager>().ShootLocal();
             }
         }
+    }
+
+    public void updateUltBar() {
+        if (!GetComponent<CapePlayerController>().multiplayer || (GetComponent<CapePlayerController>().multiplayer &&
+                                                                  GetComponent<CapePlayerController>().IsOwner)) {
+            ultBarImage.fillAmount = ultBar /maxUltbar ;
+        }
+    }
+    public void setUltBar(Image ultBar) {
+        ultBarImage = ultBar;
+    }
+
+    public void resetUlt() {
+        ultBar = 0;
+        updateUltBar();
     }
 }

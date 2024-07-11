@@ -110,6 +110,7 @@ public class Health : MonoBehaviour {
         }
         GetComponent<AbilityManager>().ability = Abilty.NONE;
         GetComponent<CapePlayerController>().changeCapeToOriginalColor();
+         GetComponent<AbilityManager>().ultBar = 0;
         if(dropItem!=null){
             Vector3 spawnPos = transform.position;
             spawnPos.x = transform.position.x + xOffset;
