@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum Abilty{
@@ -324,7 +325,7 @@ private void ResetShield(Health health, Rigidbody2D rigidbody2D) {
 
     public void updateUltBar() {
         if (!GetComponent<CapePlayerController>().multiplayer || (GetComponent<CapePlayerController>().multiplayer &&
-                                                                  GetComponent<CapePlayerController>().IsOwner)) {
+                                                                  GetComponent<CapePlayerController>().IsOwner) && SceneManager.GetActiveScene().name != "Lobby") {
             ultBarImage.fillAmount = ultBar /maxUltbar ;
         }
     }

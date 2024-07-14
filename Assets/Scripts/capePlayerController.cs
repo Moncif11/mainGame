@@ -188,25 +188,6 @@ public class CapePlayerController : NetworkBehaviour
                 }
             }
         }
-        try {
-            float okeee = myCam.transform.position.x;
-        }
-        catch (Exception e) {
-            print("no Cam!");
-            Start();
-        }
-        if (Input.GetKeyDown(KeyCode.R) && multiplayer) {
-            watchOther = true;
-            GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
-            for (int i = 0; i < players.Length; i++) {
-                if (this.gameObject.GetInstanceID() != players[i].GetInstanceID()){
-                    otherPlayer = players[i];
-                }
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.F) && multiplayer) {
-            watchOther = false;
-        }
 
         if (watchOther) {
             myCam.transform.position = new Vector3(otherPlayer.transform.position.x, otherPlayer.transform.position.y,
@@ -274,7 +255,27 @@ public class CapePlayerController : NetworkBehaviour
                 jump = true;
             }
         }
-
+        try {
+            float okeee = myCam.transform.position.x;
+        }
+        catch (Exception e) {
+            print("no Cam!");
+            Start();
+        }
+        if (Input.GetKeyDown(KeyCode.R) && multiplayer) {
+            watchOther = true;
+            Debug.Log("watchother is on");
+            GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+            for (int i = 0; i < players.Length; i++) {
+                if (this.gameObject.GetInstanceID() != players[i].GetInstanceID()){
+                    otherPlayer = players[i];
+                }
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.R) && multiplayer) {
+            Debug.Log("watchother is off");
+            watchOther = false;
+        }
         if (Input.touchCount == 2)
         {
             Touch touch = Input.GetTouch(1);
