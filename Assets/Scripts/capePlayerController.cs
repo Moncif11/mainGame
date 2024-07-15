@@ -514,7 +514,7 @@ public class CapePlayerController : NetworkBehaviour
     }
     
     void OnCollisionEnter2D(Collision2D other){
-        if(dash && other.gameObject.CompareTag("Enemy")) {
+        if(dash && (other.gameObject.CompareTag("Enemy")||other.gameObject.CompareTag("Boss"))) {
                 if (multiplayer) {
                     float enemyID = other.gameObject.GetComponent<Health>().myid;
                     if (OwnerClientId == 0) {

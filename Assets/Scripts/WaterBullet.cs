@@ -9,7 +9,7 @@ public class WaterBullet : MonoBehaviour
    public float damage = 2;
   private void OnTriggerEnter2D(Collider2D other){
     if(user== User.PLAYER){
-        if(other.CompareTag("Enemy")){
+        if(other.CompareTag("Enemy")||other.CompareTag("Boss")){
         other.GetComponent<Health>()?.takeDamage(damage);
         }
         if(other.CompareTag("Player")) {

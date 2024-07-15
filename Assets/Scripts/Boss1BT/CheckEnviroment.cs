@@ -21,7 +21,7 @@ public class CheckEnviroment : Node{
         state = NodeState.FAILURE;
         return state; 
         }
-        if(distance <25 && playerEnviromentRadius < 25 ){
+        if(distance <17.5 && playerEnviromentRadius < 17.5 ){
             state = NodeState.SUCCESS; 
             return state; 
         } 

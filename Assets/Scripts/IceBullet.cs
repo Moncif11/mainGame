@@ -8,7 +8,7 @@ public class IceBullet : MonoBehaviour
   private void OnTriggerEnter2D(Collider2D other){
     Debug.Log("Hit : " + other.gameObject.name);
     if(user== User.PLAYER){
-        if(other.CompareTag("Enemy")){
+        if(other.CompareTag("Enemy")|| other.CompareTag("Boss")){
         other.GetComponent<Health>()?.takeDamage(damage);
         other.GetComponent<StatusEffectManager>().ApplyFreeze(2); 
         }
