@@ -43,6 +43,8 @@ public class Boss1BT : BehaviorTree.Tree{
     public static bool SP2Ready=true;
 
     public static bool backToStart = false; 
+
+    public GameObject healthbar; 
  
      protected override Node SetupTree(){
         Node root = 
@@ -51,7 +53,7 @@ public class Boss1BT : BehaviorTree.Tree{
             new List<Node>{
                 new Sequence(
                     new List<Node>{
-                new CheckEnviroment(transform), 
+                new CheckEnviroment(transform , healthbar ), 
                 new Selector(
                     new List<Node>{
                      new Sequence(
@@ -117,7 +119,7 @@ public class Boss1BT : BehaviorTree.Tree{
                     )
                     }
                 ),
-                 new TaskToBackToPoint(transform)
+                 new TaskToBackToPoint(transform,healthbar)
             }
         )
         );       

@@ -6,10 +6,12 @@ namespace Boss2AI{
 public class CheckEnviroment : Node{
     Transform _transform;
     Vector3 _position; 
+    GameObject _healthbar; 
 
-    public CheckEnviroment(Transform transform){
+    public CheckEnviroment(Transform transform, GameObject healthbar){
         _transform = transform;
         _position = transform.position;
+        _healthbar = healthbar;
     }
 
     public override NodeState Evaluate()
@@ -21,7 +23,8 @@ public class CheckEnviroment : Node{
         state = NodeState.FAILURE;
         return state; 
         }
-        if(distance <25 && playerEnviromentRadius < 25 ){
+        if(distance <17.5 && playerEnviromentRadius < 17.5 ){
+            _healthbar.SetActive(true);
             state = NodeState.SUCCESS; 
             return state; 
         } 

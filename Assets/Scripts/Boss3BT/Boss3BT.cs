@@ -32,12 +32,14 @@ public class Boss3BT : BehaviorTree.Tree{
     public static bool SP2Ready=true;
 
     public static bool backToStart = false; 
+
+    public GameObject healthbar; 
        protected override Node SetupTree(){
          Node root = new CoolDownDecorator(
             new Selector(
                 new List<Node> {
                     new Sequence(new List<Node> {
-                        new CheckEnviroment(transform),
+                        new CheckEnviroment(transform, healthbar),
                         new Selector(new List<Node> {
                             new Selector( new List<Node>{
                     new Sequence( new List<Node>{
@@ -84,7 +86,7 @@ public class Boss3BT : BehaviorTree.Tree{
                                 })
                 })
             }),
-            new TaskToBackToPoint(transform)
+            new TaskToBackToPoint(transform, healthbar)
         }
         )
     );

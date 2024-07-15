@@ -13,7 +13,9 @@ public class TaskToBackToPoint : Node
     Animator animator; 
 
     AudioManager audioManager; 
-    public TaskToBackToPoint(Transform transform){
+
+    GameObject _healthbar; 
+    public TaskToBackToPoint(Transform transform, GameObject healthbar){
         animator = transform.GetComponent<Animator>();  
         _transform = transform;
         animator = transform.GetComponent<Animator>();
@@ -23,7 +25,7 @@ public class TaskToBackToPoint : Node
     }
 
     public override NodeState Evaluate()
-    {  
+    {       _healthbar.SetActive(false);
             Boss3BT.isLeft=isLeft();
             float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
             if(distance > 0.001 && Boss3BT.backToStart == true){

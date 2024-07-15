@@ -12,18 +12,22 @@ public class TaskToBackToPoint : Node
     float maxHealth; 
 
     float startSpeed = 2f; 
-    Animator animator; 
-    public TaskToBackToPoint(Transform transform){
+    Animator animator;
+
+    GameObject _healthbar;   
+    public TaskToBackToPoint(Transform transform, GameObject healthbar){
         animator = transform.GetComponent<Animator>();  
         _transform = transform;
         _animator = transform.GetComponent<Animator>();
         startposition = transform.position;
         maxHealth = transform.GetComponent<Health>().maxHealth;
+        _healthbar = healthbar; 
     }
 
     public override NodeState Evaluate()
     {  
             Boss1BT.isLeft=isLeft();
+            _healthbar.SetActive(false);
             float distance  = Vector2.Distance((Vector2)startposition,_transform.position); 
             if(distance > 0.001 && Boss1BT.backToStart == true){ 
             Vector2 direction = Vector2.MoveTowards(_transform.position,startposition, Boss1BT.speed*Time.deltaTime);

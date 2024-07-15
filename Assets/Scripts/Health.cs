@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using System.Linq;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //using UnityEngine.UIElements;
@@ -20,7 +21,7 @@ public class Health : MonoBehaviour {
     public GameObject dropItem;
     public float myid;
     public Image healthBar;
-
+    public GameObject healthBarObject;
     public void Start(){
          health = maxHealth;
          myid = gameObject.transform.position.x * 1000 + gameObject.transform.position.y;
@@ -50,7 +51,12 @@ public class Health : MonoBehaviour {
         }
         }
         if(gameObject.CompareTag("Boss")){
+            if(healthBar.enabled){
+                updateHealthBar();
+                }
             if(health<= 0) {
+                Destroy(healthBarObject); 
+                Destroy(gameObject);
                 openBossGate();
             }
         }
@@ -118,8 +124,13 @@ public class Health : MonoBehaviour {
         }
     }
     public void updateHealthBar() {
+        if(gameObject.CompareTag("Player")) {
         if (!GetComponent<CapePlayerController>().multiplayer || (GetComponent<CapePlayerController>().multiplayer &&
                                                                   GetComponent<CapePlayerController>().IsOwner)) {
+            healthBar.fillAmount = health / maxHealth;
+            }
+        }
+        else{
             healthBar.fillAmount = health / maxHealth;
         }
     }

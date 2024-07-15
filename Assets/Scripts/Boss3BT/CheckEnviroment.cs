@@ -7,9 +7,12 @@ public class CheckEnviroment : Node{
     Transform _transform;
     Vector3 _position; 
 
-    public CheckEnviroment(Transform transform){
+    GameObject _healthbar; 
+
+    public CheckEnviroment(Transform transform ,GameObject healthbar){
         _transform = transform;
         _position = transform.position;
+        _healthbar = healthbar;
     }
 
     public override NodeState Evaluate()
@@ -17,16 +20,17 @@ public class CheckEnviroment : Node{
          Transform target = nearestPlayer();
         float distance = Vector2.Distance(_transform.position,_position);   
         float playerEnviromentRadius = Vector2.Distance(target.position,_position); 
-        if(Boss2BT.backToStart == true){
+        if(Boss3BT.backToStart == true){
         state = NodeState.FAILURE;
         return state; 
         }
         if(distance <25 && playerEnviromentRadius < 25 ){
+            _healthbar.SetActive(true);
             state = NodeState.SUCCESS; 
             return state; 
         } 
         Boss2BT.backToStart = true; 
-        Debug.Log("BackToStart");
+        Debug.Log("Boss 3 BackToStart");
         state = NodeState.FAILURE; 
         return state;
     }

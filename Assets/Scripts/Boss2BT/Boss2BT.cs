@@ -46,12 +46,14 @@ public class Boss2BT : BehaviorTree.Tree{
 
     public static bool isJumping = false; 
     public static bool isFalling = false;
+
+    public GameObject healthbar; 
      protected override Node SetupTree(){
        Node root = new CoolDownDecorator(
     new Selector(
         new List<Node> {
             new Sequence(new List<Node> {
-                new CheckEnviroment(transform),
+                new CheckEnviroment(transform,healthbar),
                 new Selector(new List<Node> {
              new Selector( new List<Node>{
                     new Sequence( new List<Node>{
