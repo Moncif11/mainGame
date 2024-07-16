@@ -29,7 +29,7 @@ public class CheckEnviroment : Node{
             state = NodeState.SUCCESS; 
             return state; 
         } 
-        Boss2BT.backToStart = true; 
+        Boss3BT.backToStart = true; 
         Debug.Log("Boss 3 BackToStart");
         state = NodeState.FAILURE; 
         return state;

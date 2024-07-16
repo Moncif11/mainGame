@@ -22,6 +22,7 @@ public class TaskToBackToPoint : Node
         startposition = transform.position;
         maxHealth = transform.GetComponent<Health>().maxHealth;
         audioManager = GameObject.FindObjectOfType<AudioManager>();
+        _healthbar = healthbar;
     }
 
     public override NodeState Evaluate()
