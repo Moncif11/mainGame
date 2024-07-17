@@ -47,7 +47,7 @@ public class TaskToShoot : Node{
                 //rotation *= Quaternion.Euler(0, 0, -90); // Ändere die Rotation um -90 Grad um die Z-Achse
                 bullet.transform.rotation = rotation;
                 Rigidbody2D bulletRB = bullet.GetComponent<Rigidbody2D>(); 
-                bulletRB.AddForce(-_transform.right*1000);
+                bulletRB.AddForce(-_transform.right*500);
                 Debug.Log("Bullet : " + bullet.transform.position);
                 attackCounter= 0f; 
                 _shootpointIndex= (_shootpointIndex+1)%_shootpoints.Length;

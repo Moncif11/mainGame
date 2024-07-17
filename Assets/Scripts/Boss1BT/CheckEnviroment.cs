@@ -26,6 +26,7 @@ public class CheckEnviroment : Node{
         }
         if(distance <17.5 && playerEnviromentRadius < 17.5 ){
             _healthbar.SetActive(true);
+            _transform.GetComponent<Health>().updateHealthBar();
             state = NodeState.SUCCESS; 
             return state; 
         } 
@@ -37,16 +38,24 @@ public class CheckEnviroment : Node{
 
 private bool isLeft(Transform target) {
     Vector2 direction = (_transform.position - target.position).normalized;
-    if (direction.x > 0) {
-        Boss1BT.isLeft = true;
-        _transform.Rotate(0, 0, 0);  // Rotate around the Y-axis by 180 degrees
-        return true;
-    } else if (direction.x < 0) {  // Change to "< 0" for the correct check
-        Boss1BT.isLeft = true;
-        _transform.Rotate(0, 180, 0);  // Rotate around the Y-axis by 180 degrees
-        return true;
-    }
-    return true;
+       if (direction.x > 0)
+        {
+             Vector3 Scaler = _transform.localScale;
+             if(Scaler.x <0){
+                 Scaler.x = -Scaler.x;
+             } 
+            _transform.localScale = Scaler;
+            return true; 
+        }
+        else if (direction.x >0)
+        {
+            Boss1BT.isLeft = false; // Nach rechts schauen
+              Vector3 Scaler = _transform.localScale;
+            Scaler.x = Mathf.Abs(Scaler.x); 
+            _transform.localScale = Scaler;
+            return false;
+        }  
+        return true; 
 }
     /*
     }check the player in the Enviroment of the boss

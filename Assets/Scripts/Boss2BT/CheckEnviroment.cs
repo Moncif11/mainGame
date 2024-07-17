@@ -25,6 +25,7 @@ public class CheckEnviroment : Node{
         }
         if(distance <17.5 && playerEnviromentRadius < 17.5 ){
             _healthbar.SetActive(true);
+             _transform.GetComponent<Health>().updateHealthBar();
             state = NodeState.SUCCESS; 
             return state; 
         } 

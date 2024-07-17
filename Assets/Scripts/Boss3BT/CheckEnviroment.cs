@@ -24,8 +24,9 @@ public class CheckEnviroment : Node{
         state = NodeState.FAILURE;
         return state; 
         }
-        if(distance <25 && playerEnviromentRadius < 25 ){
+        if(distance <17 && playerEnviromentRadius < 17){
             _healthbar.SetActive(true);
+            _transform.GetComponent<Health>().updateHealthBar();
             state = NodeState.SUCCESS; 
             return state; 
         } 

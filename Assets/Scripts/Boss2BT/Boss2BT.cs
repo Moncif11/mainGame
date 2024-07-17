@@ -17,7 +17,7 @@ public class Boss2BT : BehaviorTree.Tree{
     [Header("Direction")]
     public static bool isLeft = true;  
 
-    public static float shootRange = 5f;
+    public static float shootRange = 8f;
 
     public static int amountShoot = 3;  
 

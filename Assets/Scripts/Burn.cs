@@ -29,7 +29,7 @@ public class Burn : MonoBehaviour
         }
     }  
     if(user == User.PLAYER){
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy")|| other.CompareTag("Boss"))
         {   
             // Gegner-Skript sollte eine Funktion haben, um Schaden zu erhalten
             StatusEffectManager playerburn = other.GetComponent<StatusEffectManager>();

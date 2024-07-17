@@ -209,6 +209,7 @@ private void Shield(){
 
     if (shieldCoroutine != null) {
         StopCoroutine(shieldCoroutine);
+        ResetShield(health, rigidbody2D);
     }
     shieldCoroutine = StartCoroutine(ShieldCoroutine(health, rigidbody2D));
 }
