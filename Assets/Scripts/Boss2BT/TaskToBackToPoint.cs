@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using BehaviorTree;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ public class TaskToBackToPoint : Node
 
     float startSpeed = 3f; 
     Animator animator; 
+
+    float soundCounter = 0; 
+    float soundCooldown = 1.0f;
     public TaskToBackToPoint(Transform transform){
         animator = transform.GetComponent<Animator>();  
         _transform = transform;
@@ -36,7 +40,11 @@ public class TaskToBackToPoint : Node
              Boss2BT.bossPhase = BossPhase.ONE;   
             }
             else{
-            GameObject.FindObjectOfType<AudioManager>().Play("Boss2 Roar"); 
+            soundCounter+=Time.deltaTime; 
+            if(soundCounter >= soundCooldown){ 
+                soundCounter =0; 
+                GameObject.FindObjectOfType<AudioManager>().Play("Boss2 Roar"); 
+            }
             animator.ResetTrigger("Walking"); 
             animator.SetTrigger("Idle"); 
                 _transform.GetComponent<Health>().damageReduction = 0;
