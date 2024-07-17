@@ -26,7 +26,7 @@ public class FinishHandler : MonoBehaviour
         }
         if (col.gameObject.tag == "Player" && SceneManager.GetActiveScene().name == "SingleLevel3") {
             Debug.Log("Load finish screen");
-            //SceneManager.LoadScene("FinishScreen"); //TO-DO
+            SceneManager.LoadScene("Winning");
         }
         if (networkManager != null) {
             Debug.Log("this scene: "+SceneManager.GetActiveScene().name);
@@ -42,9 +42,11 @@ public class FinishHandler : MonoBehaviour
                 networkManager.SceneManager.LoadScene("MultiLevel3", LoadSceneMode.Single);   
             } 
             if (col.gameObject.tag == "Player" && SceneManager.GetActiveScene().name == "MultiLevel3") {
-                Debug.Log("Load next level");
-                networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
-                //networkManager.SceneManager.LoadScene("MultiFinishScreen", LoadSceneMode.Single); //TO-DO
+                Debug.Log("Load finish screen");
+                NetworkManager.Singleton.Shutdown();
+                GameObject networkManager = GameObject.Find("NetworkManager");
+                Destroy(networkManager);
+                SceneManager.LoadScene("Winning");
             } 
         }
     }

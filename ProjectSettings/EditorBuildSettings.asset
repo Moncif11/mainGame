@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HowToPlay.unity
     guid: 32fa9a186c02c3c4d867021cc77cf63f
+  - enabled: 1
+    path: Assets/Scenes/Winning.unity
+    guid: d46568be64da70045abf7d18c0ecce30
   m_configObjects: {}
