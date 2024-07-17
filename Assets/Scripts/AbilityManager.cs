@@ -251,7 +251,7 @@ private void ResetShield(Health health, Rigidbody2D rigidbody2D) {
 
         foreach (Collider2D collider in colliders)
         {
-            if (collider.CompareTag("Enemy"))
+            if (collider.CompareTag("Enemy") || collider.CompareTag("Boss"))
             {
                 StatusEffectManager statusEffectManager = collider.GetComponent<StatusEffectManager>();
                 if (statusEffectManager != null)
