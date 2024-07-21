@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03206c88-615a-42ee-9698-9b460e9d2d6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Winning.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Winning.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mainGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FinishHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FinishHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskPatrol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RangeMonsterAI/TaskPatrol.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +128,7 @@
       <workItem from="1720638861348" duration="2221000" />
       <workItem from="1720689005931" duration="1523000" />
       <workItem from="1720954152271" duration="4489000" />
+      <workItem from="1721226211060" duration="499000" />
     </task>
     <servers />
   </component>
