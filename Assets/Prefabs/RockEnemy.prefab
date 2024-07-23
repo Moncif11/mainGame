@@ -172,6 +172,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4832473488700750010, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 536552708791795473, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -183,6 +187,22 @@ PrefabInstance:
     - target: {fileID: 536552708791795473, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915848293599836935, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443775417113426014, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3529528745689590829, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508760619576832394, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5545071652614059368, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
       propertyPath: m_LocalScale.x
@@ -223,6 +243,18 @@ PrefabInstance:
     - target: {fileID: 5545071652614059368, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023563079918901761, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7303803513461456457, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614652441468767485, guid: 6edbedc138bf9fb479e0547af450bd0f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -387,6 +419,7 @@ MonoBehaviour:
   dropItem: {fileID: 175668089732633245, guid: a8dff91814cde98429cea09b54ec5031, type: 3}
   myid: 0
   healthBar: {fileID: 0}
+  healthBarObject: {fileID: 0}
 --- !u!114 &6325195447530391725
 MonoBehaviour:
   m_ObjectHideFlags: 0

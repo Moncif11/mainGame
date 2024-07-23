@@ -176,9 +176,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3443775417113426014, guid: 7f0e3af21c8ce5649b6555daf6e3ecea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508760619576832394, guid: 7f0e3af21c8ce5649b6555daf6e3ecea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5678321399965018734, guid: 7f0e3af21c8ce5649b6555daf6e3ecea, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023563079918901761, guid: 7f0e3af21c8ce5649b6555daf6e3ecea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8376323678232939981, guid: 7f0e3af21c8ce5649b6555daf6e3ecea, type: 3}
       propertyPath: m_Layer
@@ -362,3 +374,4 @@ MonoBehaviour:
   dropItem: {fileID: 175668089732633245, guid: 756d22804321ec244b40555393b97131, type: 3}
   myid: 0
   healthBar: {fileID: 0}
+  healthBarObject: {fileID: 0}

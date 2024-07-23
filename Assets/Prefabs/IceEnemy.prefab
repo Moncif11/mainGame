@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -168,6 +172,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3443775417113426014, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5508760619576832394, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023563079918901761, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -187,6 +203,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1355913372419100697}
+    - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9005840896226600767}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
 --- !u!1 &824711913052757386 stripped
 GameObject:
@@ -231,6 +250,7 @@ MonoBehaviour:
   dropItem: {fileID: 175668089732633245, guid: c98c75ac33ad1864894280cfca175c1a, type: 3}
   myid: 0
   healthBar: {fileID: 0}
+  healthBarObject: {fileID: 0}
 --- !u!50 &4931198237088755386
 Rigidbody2D:
   serializedVersion: 4
@@ -324,6 +344,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7116902, y: 2.5967236}
   m_EdgeRadius: 0
+--- !u!114 &9005840896226600767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824711913052757386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a862aa8adf1134eaa98de6c60f2b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTickTimer: 0
+  freezeTicktimer: 0
 --- !u!4 &1997890458365298153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: c5c83164cbb87fd479bf48fc267dabd0, type: 3}
